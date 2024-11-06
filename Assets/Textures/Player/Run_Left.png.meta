@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wizard4_0
+      name: Run_Left_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 16
-        height: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 948632ad69cf8c747ae8ca5eb7e208d7
-      internalID: 774751643
+      spriteID: d39714eb88476c64a92f2a3f0d973298
+      internalID: 300836427
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wizard4_1
+      name: Run_Left_1
       rect:
         serializedVersion: 2
         x: 16
         y: 0
         width: 16
-        height: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dcda556dcf8d0bb43acb9b2356790466
-      internalID: -640595729
+      spriteID: b176582141ccbfc46884aec49c254b3b
+      internalID: -406347268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wizard4_2
+      name: Run_Left_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 16
-        height: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 214b4eab566015e4fb1d93927bdce860
-      internalID: 1205893883
+      spriteID: d9791c4200d223b488d44bfede09e4b3
+      internalID: 567887908
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wizard4_3
+      name: Run_Left_3
       rect:
         serializedVersion: 2
         x: 48
         y: 0
         width: 16
-        height: 22
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b87db109f3bbe446a9cae885fbfcd6b
-      internalID: -2018656916
+      spriteID: b2d8592805817204487639cc212b737a
+      internalID: 1581117977
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wizard4_0: 774751643
-      Wizard4_1: -640595729
-      Wizard4_2: 1205893883
-      Wizard4_3: -2018656916
+      Run_Left_0: 300836427
+      Run_Left_1: -406347268
+      Run_Left_2: 567887908
+      Run_Left_3: 1581117977
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
