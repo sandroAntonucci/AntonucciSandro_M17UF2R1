@@ -15,10 +15,6 @@ public class Player : MonoBehaviour
     Animator anim;
     private Vector2 lastMoveDirection;
 
-
-    
-
-
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -51,10 +47,11 @@ public class Player : MonoBehaviour
         moveInput = context.ReadValue<Vector2>();
 
 
+    }
 
-
-
-
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
     }
 
     void Animate()
@@ -64,6 +61,5 @@ public class Player : MonoBehaviour
         anim.SetFloat("MoveMagnitude", moveInput.magnitude);
         anim.SetFloat("lastMoveX", lastMoveDirection.x);
         anim.SetFloat("lastMoveY", lastMoveDirection.y);
-
     }
 }
