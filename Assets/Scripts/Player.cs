@@ -3,13 +3,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+
+    // Combat variables
+    public int health = 100;
     
+    // Movement variables
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
     private float acceleration = 8f; 
-
-    [SerializeField] float moveSpeed = 2f;
+    [SerializeField] float moveSpeed;
 
     // Animations
     Animator anim;
@@ -51,7 +54,28 @@ public class Player : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+            if (enemy != null)
+            {
+                // Subtract the enemy's damage from the player's health
+                TakeDamage(enemy.damage);
+
+                // Check if health is 0 or less, and destroy the player if so
+                if (health <= 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+
+        }
+    }
+
+    private void TakeDamage(int enemyDamage)
+    {
+        health -= enemyDamage;
     }
 
     void Animate()

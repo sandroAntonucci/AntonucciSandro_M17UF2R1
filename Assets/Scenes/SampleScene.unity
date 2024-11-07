@@ -3156,6 +3156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f6f3e23ba7e1ca43a85e67d2979a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
   moveSpeed: 5
 --- !u!114 &1957956190
 MonoBehaviour:
@@ -3277,7 +3278,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &1957956192
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3380,6 +3381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 1593137241646398409, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 3345043329251212859, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.09
@@ -3425,8 +3430,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6446024445652375994, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
+      propertyPath: dashForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446024445652375994, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
       propertyPath: dashCooldown
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446024445652375994, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
+      propertyPath: dashDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6446024445652375994, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
+      propertyPath: dashFriction
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6446024445652375994, guid: 4253fbf0e7ddec542bc5f9e3ea7b4406, type: 3}
       propertyPath: initialSpeed
