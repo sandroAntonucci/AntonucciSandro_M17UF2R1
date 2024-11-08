@@ -1,11 +1,17 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
+using System.Collections;
+using System;
 
 public class Player : MonoBehaviour
 {
 
     // Combat variables
     public int health = 100;
+    public bool invincible = false;
+    public FireOrbit spell;
+    public PlayerControls playerControls;
+    private InputAction fire;
     
     // Movement variables
     private Rigidbody2D rb;
@@ -14,9 +20,29 @@ public class Player : MonoBehaviour
     private float acceleration = 8f; 
     [SerializeField] float moveSpeed;
 
-    // Animations
+    // Animations and effects
     Animator anim;
     private Vector2 lastMoveDirection;
+    [SerializeField] private SimpleFlash damageFlash;
+    [SerializeField] private ParticleSystem damageParticles;
+
+    private void Awake()
+    {
+        playerControls = new PlayerControls();
+        
+    }
+
+    private void OnEnable()
+    {
+        fire = playerControls.Player.Fire;
+        fire.Enable();
+        fire.performed += Fire;
+    }
+
+    private void OnDisable()
+    {
+        fire.Disable();
+    }
 
     void Start()
     {
@@ -52,8 +78,20 @@ public class Player : MonoBehaviour
 
     }
 
-    public void OnCollisionEnter2D(Collision2D collision)
+    // Right trigger attack
+
+    public void Fire(InputAction.CallbackContext context)
     {
+        spell.Shoot();
+    }
+
+
+
+
+
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
@@ -66,16 +104,29 @@ public class Player : MonoBehaviour
                 // Check if health is 0 or less, and destroy the player if so
                 if (health <= 0)
                 {
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
 
         }
     }
 
+
     private void TakeDamage(int enemyDamage)
     {
+        if (invincible) return; // Skip if invincible
+
         health -= enemyDamage;
+        StartCoroutine(HandleInvincibility());
+        damageFlash.Flash();
+        damageParticles.Play();
+    }
+
+    private IEnumerator HandleInvincibility()
+    {
+        invincible = true;
+        yield return new WaitForSeconds(damageFlash.GetFlashDuration());
+        invincible = false;
     }
 
     void Animate()
@@ -86,4 +137,6 @@ public class Player : MonoBehaviour
         anim.SetFloat("lastMoveX", lastMoveDirection.x);
         anim.SetFloat("lastMoveY", lastMoveDirection.y);
     }
+
+
 }
