@@ -1,6 +1,7 @@
 using UnityEngine.InputSystem;
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class Player : MonoBehaviour
@@ -9,10 +10,18 @@ public class Player : MonoBehaviour
     // Combat variables
     public int health = 100;
     public bool invincible = false;
-    public FireOrbit spell;
+    
     public PlayerControls playerControls;
     private InputAction fire;
     
+    private bool canShoot = true;
+    [SerializeField] private float attackSpeed = 3f;
+
+    public GameObject spell;
+    public GameObject spellPrefab;
+    public Stack<GameObject> spellStack = new Stack<GameObject>();
+
+
     // Movement variables
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -25,6 +34,8 @@ public class Player : MonoBehaviour
     private Vector2 lastMoveDirection;
     [SerializeField] private SimpleFlash damageFlash;
     [SerializeField] private ParticleSystem damageParticles;
+
+    // -- Input Actions --
 
     private void Awake()
     {
@@ -43,6 +54,9 @@ public class Player : MonoBehaviour
     {
         fire.Disable();
     }
+
+    // --------------------
+
 
     void Start()
     {
@@ -78,17 +92,6 @@ public class Player : MonoBehaviour
 
     }
 
-    // Right trigger attack
-
-    public void Fire(InputAction.CallbackContext context)
-    {
-        spell.Shoot();
-    }
-
-
-
-
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
@@ -110,7 +113,6 @@ public class Player : MonoBehaviour
 
         }
     }
-
 
     private void TakeDamage(int enemyDamage)
     {
@@ -138,5 +140,46 @@ public class Player : MonoBehaviour
         anim.SetFloat("lastMoveY", lastMoveDirection.y);
     }
 
+
+    // Pooling 
+    public void Fire(InputAction.CallbackContext context)
+    {
+
+        // The player can only shoot if the shoot timer is done (attack speed)
+        if (!canShoot) return;
+
+        spell.GetComponent<SpellOrbit>().isShooting = true;
+        spell.GetComponent<FireSpell>().Shoot();
+
+        StartCoroutine(ShootTimer());
+
+    }
+
+    public IEnumerator ShootTimer()
+    {
+        canShoot = false;
+        yield return new WaitForSeconds(attackSpeed);
+
+        Debug.Log(spellStack.Count);
+        
+        // If the timer is back up and the stack is empty, it has to instantiate another spell
+        if (spellStack.Count == 0)
+        {
+            spell = Instantiate(spellPrefab);
+            
+        }
+        else
+        {
+            spell = spellStack.Pop();
+            spell.gameObject.SetActive(true);
+            
+            spell.GetComponent<SpellOrbit>().isShooting = false;
+            spell.GetComponent<SpellOrbit>().RotateInstantly();
+            spell.GetComponent<SpriteRenderer>().enabled = true;
+
+        }
+
+        canShoot = true;
+    }
 
 }

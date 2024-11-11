@@ -1,25 +1,30 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class FireOrbit : MonoBehaviour
+public class SpellOrbit : MonoBehaviour
 {
-    [SerializeField] private Transform player;            // Reference to the player (center point)
     [SerializeField] private float orbitRadius = 1f;      // Distance from the player
     [SerializeField] private float rotationSpeed = 5f;    // Speed of the rotation
-    [SerializeField] private float projectileSpeed = 10f; // Speed at which the projectile moves
-    [SerializeField] private Rigidbody2D rb;              // Reference to Rigidbody2D of the fire object (projectile)
 
     private Camera mainCamera;
     private Vector2 lookInput;        // Input from the mouse or the right stick on the controller
-    private float targetAngle;        // The target angle to rotate towards
-    private float currentAngle;       // The current angle of the fire object
-    private bool isShooting = false;  // A flag to check if the projectile is shot
+    public float targetAngle;        // The target angle to rotate towards
+    public float currentAngle;       // The current angle of the fire object
+    public bool isShooting = false;  // A flag to check if the projectile is shot
+    public Transform player;            // Reference to the player (center point)
+
 
     private void Start()
     {
+        isShooting = false;
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        player = GameObject.FindWithTag("Player").transform;
         mainCamera = Camera.main;
-        currentAngle = 0f; // Start the object at the initial angle
+        RotateInstantly();
+
     }
+
 
     private void Update()
     {
@@ -29,12 +34,9 @@ public class FireOrbit : MonoBehaviour
         // If we are not shooting, continue rotating the object around the player
         if (!isShooting)
         {
-            RotateAroundPlayer();
+            RotateInstantly();
         }
-        else
-        {
-            Shoot();
-        }
+
     }
 
     private Vector2 GetLookInput()
@@ -78,22 +80,22 @@ public class FireOrbit : MonoBehaviour
         transform.position = player.position + offset;
     }
 
-    // Called to start shooting
-    public void Shoot()
+    public void RotateInstantly()
     {
-
-        Debug.Log("ola");
-
-        isShooting = true;
-
-        if (rb != null)
+        // Calculate the target angle if we have valid input
+        if (lookInput != Vector2.zero)
         {
-            // Calculate the direction to shoot in (based on the current angle)
-            Vector2 shootDirection = new Vector2(Mathf.Cos(currentAngle * Mathf.Deg2Rad), Mathf.Sin(currentAngle * Mathf.Deg2Rad));
-
-            // Apply velocity to the Rigidbody2D to move the object in the shoot direction
-            rb.velocity = shootDirection * projectileSpeed; // Apply velocity in the direction of the current angle
-
+            targetAngle = Mathf.Atan2(lookInput.y, lookInput.x) * Mathf.Rad2Deg;
+            currentAngle = targetAngle; // Instantly set current angle to target angle
         }
+
+        // Calculate the new position based on the target angle and orbit radius
+        float radianAngle = currentAngle * Mathf.Deg2Rad;
+        Vector3 offset = new Vector3(Mathf.Cos(radianAngle), Mathf.Sin(radianAngle), 0) * orbitRadius;
+
+        // Set the object's position directly to the calculated position around the player
+        transform.position = player.position + offset;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
+
 }

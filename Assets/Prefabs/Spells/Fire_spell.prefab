@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9, y: 9}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -120,9 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b416eae1e5343774e81ba13d57a66606, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
   orbitRadius: 1.5
   rotationSpeed: 1500
+  targetAngle: 0
+  currentAngle: 0
+  isShooting: 0
+  player: {fileID: 0}
 --- !u!58 &4324199189206564833
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -155,6 +158,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0033033746, y: 0}
+  m_Offset: {x: -0.006261809, y: -0.13869657}
   serializedVersion: 2
-  m_Radius: 0.32491404
+  m_Radius: 0.18621743
