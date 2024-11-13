@@ -16,7 +16,7 @@ public abstract class Enemy : MonoBehaviour
     public float damage;
     public float health;
 
-    private void Start()
+    public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;

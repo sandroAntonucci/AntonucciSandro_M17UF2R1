@@ -99,8 +99,11 @@ public class Player : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
 
+        // Melee Enemies
         if (collision.gameObject.CompareTag("Enemy"))
         {
+
+
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             if (enemy != null)
@@ -118,6 +121,24 @@ public class Player : MonoBehaviour
                 }
             }
 
+        }
+        // Ranged enemies
+        else if (collision.gameObject.CompareTag("EnemySpell"))
+        {
+            EnemyProjectile enemyProjectile = collision.gameObject.GetComponent<EnemyProjectile>();
+
+            if (enemyProjectile != null)
+            {
+                hitAudio.PlayRandomSound();
+
+                TakeDamage(enemyProjectile.damage);
+
+                // Check if health is 0 or less, and destroy the player if so
+                if (health <= 0)
+                {
+                    gameObject.SetActive(false);
+                }
+            }
         }
     }
 
