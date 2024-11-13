@@ -48,7 +48,7 @@ public class FireProjectile : MonoBehaviour
             // Reset object state to rotation
             rb.velocity = Vector2.zero;
             anim.Play("Crash");
-            hitAudio.Play();
+            hitAudio.PlayOneShot(hitAudio.clip, 1f);
 
         }
     }

@@ -105,14 +105,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd760e928c01d044ac4f3446c40c23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageFlash: {fileID: 8527756689991823570}
+  damageParticles: {fileID: 3633237595794617146}
+  damageSound: {fileID: 2345999844572876134}
+  player: {fileID: 0}
+  rb: {fileID: 0}
   type: 
   damage: 20
   health: 60
   dashForce: 10
   dashFriction: 5
-  damageFlash: {fileID: 8527756689991823570}
-  damageParticles: {fileID: 3633237595794617146}
-  damageSound: {fileID: 2345999844572876134}
   splashSound: {fileID: 7751010444659480873}
 --- !u!95 &8415777932858822243
 Animator:
@@ -224,7 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00ff1c678a20e404990583ee9372a806, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audio: {fileID: 6975353086399443880}
+  audioPlayed: {fileID: 6975353086399443880}
   clips:
   - {fileID: 8300000, guid: 2661f251434813c458823c256a0dc6b6, type: 3}
   - {fileID: 8300000, guid: dcfbc6581769f1c409f19b273ed96c30, type: 3}
