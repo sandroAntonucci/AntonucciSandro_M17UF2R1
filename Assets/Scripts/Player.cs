@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private bool isFiring;
 
     public GameObject spell;
+    public float invincibilityDuration = 1f;
 
 
     // Movement variables
@@ -25,9 +26,10 @@ public class Player : MonoBehaviour
     private float acceleration = 8f; 
     [SerializeField] float moveSpeed;
 
-    // Animations and effects
+    // Animations, audio and effects
     Animator anim;
     private Vector2 lastMoveDirection;
+    [SerializeField] private GameAudioManager hitAudio;
     [SerializeField] private SimpleFlash damageFlash;
     [SerializeField] private ParticleSystem damageParticles;
 
@@ -103,6 +105,9 @@ public class Player : MonoBehaviour
 
             if (enemy != null)
             {
+
+                hitAudio.PlayRandomSound();
+
                 // Subtract the enemy's damage from the player's health
                 TakeDamage(enemy.damage);
 
@@ -129,7 +134,14 @@ public class Player : MonoBehaviour
     private IEnumerator HandleInvincibility()
     {
         invincible = true;
-        yield return new WaitForSeconds(damageFlash.GetFlashDuration());
+
+        BoxCollider2D collider = GetComponent<BoxCollider2D>();
+        collider.enabled = false;
+
+        yield return new WaitForSeconds(invincibilityDuration);
+
+        collider.enabled = true;
+
         invincible = false;
     }
 

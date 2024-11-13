@@ -7,20 +7,10 @@ public class SlimeEnemy : Enemy
     public float dashForce = 10f;
     public float dashFriction = 2f;
 
-    private Transform player;
-    private Rigidbody2D rb;
-
-    [SerializeField] private SimpleFlash damageFlash;
-    [SerializeField] private ParticleSystem damageParticles;
-    [SerializeField] private GameAudioManager damageSound;
     [SerializeField] private AudioSource splashSound;
 
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindWithTag("Player").transform;
-    }
 
+    // Dashes in the player direction
     private void Dash()
     {
         splashSound.Play();
@@ -30,18 +20,6 @@ public class SlimeEnemy : Enemy
 
     }
 
-    public override void ApplyDamage(float damageApplied)
-    {
-        health -= damageApplied;
-
-        damageSound.PlayRandomSound();
-        damageFlash.Flash();
-        damageParticles.Play();
-
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
+    
 
 }
