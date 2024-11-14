@@ -6,7 +6,6 @@ public class FireProjectile : MonoBehaviour
 {
 
     [SerializeField] private AudioSource hitAudio;
-    [SerializeField] private GameAudioManager audioManager;
 
     public float projectileSpeed = 10f;
     public float damage = 10f;
@@ -28,10 +27,8 @@ public class FireProjectile : MonoBehaviour
 
         if (rb != null)
         { 
-            audioManager.PlayRandomSound();
             Vector2 shootDirection = new Vector2(Mathf.Cos(spellOrbit.currentAngle * Mathf.Deg2Rad), Mathf.Sin(spellOrbit.currentAngle * Mathf.Deg2Rad));
             rb.velocity = shootDirection * projectileSpeed; // Apply velocity in the direction of the current angle
-
         }
     }
 

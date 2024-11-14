@@ -7,6 +7,9 @@ public class FireSpell : BaseSpell
 
     public GameObject fireProjectile;
     public Stack<GameObject> spellStack;
+
+    public GameAudioManager castSound;
+
     private bool canCast = true;
 
     public  void Start()
@@ -41,6 +44,8 @@ public class FireSpell : BaseSpell
             spellProjectile.GetComponent<FireProjectile>().Cast();
 
         }
+
+        castSound.PlayRandomSound();
 
         StartCoroutine(SpellCooldown());
 

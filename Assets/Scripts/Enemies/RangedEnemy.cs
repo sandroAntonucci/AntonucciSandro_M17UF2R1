@@ -6,6 +6,7 @@ using UnityEngine;
 public class RangedEnemy : Enemy
 {
     [SerializeField] private float distanceToPlayer;
+    [SerializeField] private AudioSource castSound;
 
     public Stack<GameObject> projectileStack;
     public GameObject projectile;
@@ -36,6 +37,9 @@ public class RangedEnemy : Enemy
     // Is called in the animator
     private void Shoot()
     {
+
+        castSound.Play();
+
         if (projectileStack.Count > 0)
         {
 
