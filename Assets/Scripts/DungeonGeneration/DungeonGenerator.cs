@@ -1,16 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DungeonGenerator : MonoBehaviour
 {
 
     public DungeonGenerationData dungeonGenerationData;
 
+    private int numberOfRooms;
+
     private List<Vector2Int> dungeonRooms;
 
     private void Start()
     {
+
+        // Get the number of rooms in the scene build settings for random room generation (substracts 3 for main, start and end)
+        numberOfRooms = SceneManager.sceneCountInBuildSettings - 3;
+
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
         SpawnRooms(dungeonRooms);
         foreach(Room room in RoomController.instance.loadedRooms)
@@ -22,10 +29,19 @@ public class DungeonGenerator : MonoBehaviour
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)
     {
         RoomController.instance.LoadRoom("Start", 0, 0);
+
+
+
+
+
+
         foreach(Vector2Int roomLocation in rooms)
         {
 
-            RoomController.instance.LoadRoom("Empty", roomLocation.x, roomLocation.y);
+            // Loads a random room starting from 0 to the number of rooms in the scene build settings
+            string sceneName = "Room" + Random.Range(0, numberOfRooms);
+
+            RoomController.instance.LoadRoom(sceneName, roomLocation.x, roomLocation.y);
 
         }
     }
