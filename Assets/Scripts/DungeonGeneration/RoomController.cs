@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class RoomInfo
 {
@@ -24,9 +25,14 @@ public class RoomController : MonoBehaviour
 
     Queue<RoomInfo> loadRoomQueue = new Queue<RoomInfo>();
 
-    public List<Room> loadedRooms = new List<Room>();
+    public List<Room> loadedRooms { get; } = new List<Room>();
 
     bool isLoadingRoom = false;
+
+    bool spawnedBossRoom = false;
+
+    bool updatedRooms = false;
+
 
     private void Awake()
     {
@@ -35,11 +41,13 @@ public class RoomController : MonoBehaviour
 
     private void Start()
     {
+        /*
         LoadRoom("Start", 0, 0);
         LoadRoom("Empty", 1, 0);
         LoadRoom("Empty", -1, 0);
         LoadRoom("Empty", 0, 1);
         LoadRoom("Empty", 0, -1);
+        */
     }
 
     private void Update()
@@ -51,12 +59,42 @@ public class RoomController : MonoBehaviour
     {
         if (isLoadingRoom) return;
 
-        if (loadRoomQueue.Count == 0) return;
+        if (loadRoomQueue.Count == 0)
+        {
+            if (!spawnedBossRoom)
+            {
+                StartCoroutine(SpawnBossRoom());
+            }
+            else if (spawnedBossRoom && !updatedRooms)
+            {
+                foreach (Room room in loadedRooms)
+                {
+                    room.RemoveUnconnectedDoors();
+                }
+                updatedRooms = true;
+            }
+            return;
+        }
 
         currentLoadRoomData = loadRoomQueue.Dequeue();
         isLoadingRoom = true;
 
         StartCoroutine(LoadRoomRoutine(currentLoadRoomData));
+    }
+
+    IEnumerator SpawnBossRoom()
+    {
+        spawnedBossRoom = true;
+        yield return new WaitForSeconds(0.5f);
+        if(loadRoomQueue.Count == 0)
+        {
+            Room bossRoom = loadedRooms[loadedRooms.Count - 1];
+            Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
+            Destroy(bossRoom.gameObject);
+            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            loadedRooms.Remove(roomToRemove);
+            LoadRoom("End", tempRoom.X, tempRoom.Y);
+        }
     }
 
     public void LoadRoom(string name, int x, int y)
@@ -90,31 +128,48 @@ public class RoomController : MonoBehaviour
     // Sets a room within the scene
     public void RegisterRoom(Room room)
     {
-        room.transform.position = new Vector3(
-            currentLoadRoomData.X * room.Width,
-            currentLoadRoomData.Y * room.Height,
-            0
-        );
 
-        room.X = currentLoadRoomData.X;
-        room.Y = currentLoadRoomData.Y;
-        room.name = currentWorldName + "-" + currentLoadRoomData.name + " " + room.X + ", " + room.Y;
-        room.transform.parent = transform;
-
-        isLoadingRoom = false;
-
-        if(loadedRooms.Count == 0)
+        if (!DoesRoomExist(currentLoadRoomData.X, currentLoadRoomData.Y))
         {
-            CameraController.instance.currRoom = room;
-        }
+            room.transform.position = new Vector3(
+                currentLoadRoomData.X * room.Width,
+                currentLoadRoomData.Y * room.Height,
+                0
+            );
 
-        loadedRooms.Add(room);
+            room.X = currentLoadRoomData.X;
+            room.Y = currentLoadRoomData.Y;
+            room.name = currentWorldName + "-" + currentLoadRoomData.name + " " + room.X + ", " + room.Y;
+            room.transform.parent = transform;
+
+            isLoadingRoom = false;
+
+            if (loadedRooms.Count == 0)
+            {
+                CameraController.instance.currRoom = room;
+            }
+
+            loadedRooms.Add(room);
+
+        }
+        else
+        {
+            Destroy(room.gameObject);
+            isLoadingRoom = false;
+        }
     }
 
     public bool DoesRoomExist(int x, int y)
     {
         return loadedRooms.Find(item => item.X == x && item.Y == y) != null;
-    }   
+    }
+
+    public Room FindRoom(int x, int y)
+    {
+        return loadedRooms.Find(item => item.X == x && item.Y == y);
+    }
+
+
 
     public void OnPlayerEnterRoom(Room room)
     {
