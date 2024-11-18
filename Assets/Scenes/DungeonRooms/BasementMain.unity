@@ -354,6 +354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currRoom: {fileID: 0}
+  player: {fileID: 0}
   moveSpeedWhenRoomChange: 100
 --- !u!1 &944174032
 GameObject:
@@ -368,7 +369,7 @@ GameObject:
   - component: {fileID: 944174035}
   m_Layer: 0
   m_Name: RoomController
-  m_TagString: Untagged
+  m_TagString: RoomController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -574,6 +575,7 @@ GameObject:
   - component: {fileID: 1957956193}
   - component: {fileID: 1957956194}
   - component: {fileID: 1957956195}
+  - component: {fileID: 1957956196}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -664,8 +666,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.09, y: 0.474, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 948967854}
   - {fileID: 1141301204}
@@ -688,7 +690,7 @@ MonoBehaviour:
   invincible: 0
   spell: {fileID: 342393197}
   invincibilityDuration: 0.6
-  moveSpeed: 5
+  moveSpeed: 7
   hitAudio: {fileID: 1957956194}
   damageFlash: {fileID: 1957956193}
   damageParticles: {fileID: 948967856}
@@ -900,7 +902,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1957956185}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 461790c3daa990c499ddf03b06dc5eb6, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -936,6 +938,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.36739635, y: 0.47120807}
   m_EdgeRadius: 0
+--- !u!114 &1957956196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957956185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5bead15445e07542b0a9e33a4ebeb76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slidingFactor: 0.1
 --- !u!1001 &1556065983409697675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1006,5 +1021,5 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
-  - {fileID: 1957956188}
   - {fileID: 944174034}
+  - {fileID: 1957956188}

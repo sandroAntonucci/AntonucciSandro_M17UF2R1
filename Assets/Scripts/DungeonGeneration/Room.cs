@@ -158,6 +158,7 @@ public class Room : MonoBehaviour
         return new Vector3(X * Width, Y * Height);
     }
 
+    // Room transition
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Player")
