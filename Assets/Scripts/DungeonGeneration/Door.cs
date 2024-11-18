@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
+
+    // This is used to make the door "inactive" without destroying it for collisions
+    public bool isActive = true;
     
     public enum DoorType
     {
