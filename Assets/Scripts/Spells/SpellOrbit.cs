@@ -12,20 +12,29 @@ public class SpellOrbit : MonoBehaviour
     public float currentAngle;       // The current angle of the fire object
     public Transform player;            // Reference to the player (center point)
 
+    public bool followsInput = true;
+
 
     private void Start()
     {
+        transform.position = player.position +  new Vector3(orbitRadius, 0f, 0f);
         player = GameObject.FindWithTag("Player").transform;
         mainCamera = Camera.main;
     }
 
     private void Update()
     {
-        // Get look input from either the mouse or the right stick on the controller
-        lookInput = GetLookInput();
 
-        RotateAroundPlayer();
+        if (followsInput)
+        {
+            lookInput = GetLookInput();
 
+            RotateAroundPlayer();
+        }
+        else
+        {
+            RotateAroundPlayerWithoutInput();
+        }
 
     }
 
@@ -64,6 +73,20 @@ public class SpellOrbit : MonoBehaviour
 
         // Calculate the new position based on the current angle and orbit radius
         float radianAngle = currentAngle * Mathf.Deg2Rad;
+        Vector3 offset = new Vector3(Mathf.Cos(radianAngle), Mathf.Sin(radianAngle), 0) * orbitRadius;
+
+        // Set the object's position at the new location, keeping it at the orbitRadius distance 
+        transform.position = player.position + offset;
+    }
+
+    private void RotateAroundPlayerWithoutInput()
+    {
+        // Update the current angle based on the rotation speed
+        currentAngle += -rotationSpeed * Time.deltaTime;
+        currentAngle %= 360; // Keep the angle within 0-360 degrees
+
+        // Calculate the new position based on the current angle and orbit radius
+        float radianAngle = currentAngle * Mathf.Deg2Rad; // Convert degrees to radians
         Vector3 offset = new Vector3(Mathf.Cos(radianAngle), Mathf.Sin(radianAngle), 0) * orbitRadius;
 
         // Set the object's position at the new location, keeping it at the orbitRadius distance 

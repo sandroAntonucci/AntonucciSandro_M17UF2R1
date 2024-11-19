@@ -209,7 +209,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1595339203
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 9bee6559567bd4544a4ab51f7a344761, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -258,6 +258,13 @@ MonoBehaviour:
   damageFlash: {fileID: 4213977209469839468}
   damageParticles: {fileID: 7009458153004296745}
   damageSound: {fileID: 2405831247316844380}
+  powerOrbs:
+  - {fileID: 3451027026227278185, guid: 10d97e2e05e5f58489f2850541656a33, type: 3}
+  - {fileID: 3451027026227278185, guid: 549cd1a8c6584eb4080a8a1631bc7d10, type: 3}
+  - {fileID: 3451027026227278185, guid: 4add5d21d386289498625115f402b623, type: 3}
+  rangeToDropOne: 100
+  rangeToDropTwo: 80
+  rangeToDropFive: 10
   player: {fileID: 0}
   rb: {fileID: 1283797505449432860}
   type: 

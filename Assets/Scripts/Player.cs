@@ -18,6 +18,9 @@ public class Player : MonoBehaviour
     public GameObject spell;
     public float invincibilityDuration = 1f;
 
+    // "Coins" that the player can use to buy spells or modifications
+    public int power;
+
 
     // Movement variables
     private Rigidbody2D rb;
@@ -173,6 +176,11 @@ public class Player : MonoBehaviour
         anim.SetFloat("MoveMagnitude", moveInput.magnitude);
         anim.SetFloat("lastMoveX", lastMoveDirection.x);
         anim.SetFloat("lastMoveY", lastMoveDirection.y);
+    }
+
+    public void AddPower(int powerQuant)
+    {
+        power += powerQuant;
     }
 
 }

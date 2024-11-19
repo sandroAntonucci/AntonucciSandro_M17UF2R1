@@ -9,6 +9,7 @@ TagManager:
   - EnemySpell
   - RoomController
   - Room
+  - PlayerProjectile
   layers:
   - Default
   - TransparentFX

@@ -10,16 +10,16 @@ EditorBuildSettings:
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/BasementStart.unity
-    guid: bbb8e5786c2345848a771337cd43ddfb
+    guid: b2f9278082b2fb44c985a6b4ff06be63
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/BasementMain.unity
     guid: 8b1f8f37240e3bd4298e397164516cfc
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/BasementEnd.unity
-    guid: 6894dcde9c4f2d8428082a8f1c7554b3
+    guid: 49697378e4b8db043b163694e45ebfc7
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom0.unity
-    guid: 9ba6d6198345b6b4da9ea4c39f9a54e8
+    guid: 2a0a7675293cb8c44ae84bfb5abb1e38
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom1.unity
     guid: 62047c8d53e858e4d963c69393c557c1
@@ -32,5 +32,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom4.unity
     guid: f490a76dcc99f494eacce8eb3fadd232
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom5.unity
+    guid: dcef600968427f14fb5ef3155840a9e9
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom6.unity
+    guid: fccae0981ce18984f98933ba17fbcdf0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom7.unity
+    guid: 35886a8bf193dcb46a208d7de99c3f64
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom8.unity
+    guid: c99bbe83a387ac449a17fb3d653fc323
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom9.unity
+    guid: 9ac07a4f160e1394987381411dad1f8c
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}

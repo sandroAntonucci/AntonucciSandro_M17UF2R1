@@ -39,9 +39,16 @@ public class FireSpell : BaseSpell
 
             // Instantiates a new projectile and shoots
             GameObject spellProjectile = Instantiate(fireProjectile, transform.position, Quaternion.identity);
-            spellProjectile.GetComponent<FireProjectile>().caster = this;
-            spellProjectile.GetComponent<FireProjectile>().spellOrbit = GetComponent<SpellOrbit>();
-            spellProjectile.GetComponent<FireProjectile>().Cast();
+
+            FireProjectile fireProjectileInstance = spellProjectile.GetComponent<FireProjectile>();
+
+            // Assigns stats and shoots
+            fireProjectileInstance.damage = damage;
+            fireProjectileInstance.projectileSpeed = projectileSpeed;
+            fireProjectileInstance.caster = this;
+            fireProjectileInstance.spellOrbit = GetComponent<SpellOrbit>();
+            fireProjectileInstance.Cast();
+
 
         }
 

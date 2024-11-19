@@ -37,7 +37,7 @@ public class EnemyProjectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if(collision.CompareTag("Enemy") || collision.CompareTag("Room")) return;
+        if(collision.CompareTag("Enemy") || collision.CompareTag("Room") || collision.CompareTag("PlayerProjectile")) return;
 
         // Reset object state to rotation
         rb.velocity = Vector2.zero;
