@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom0.unity
     guid: 9ba6d6198345b6b4da9ea4c39f9a54e8
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom1.unity
+    guid: 62047c8d53e858e4d963c69393c557c1
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}

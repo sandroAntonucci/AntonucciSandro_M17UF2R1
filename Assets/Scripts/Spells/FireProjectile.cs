@@ -40,7 +40,7 @@ public class FireProjectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
         }
         
-        if (!collision.CompareTag("Player"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("Room"))
         {
             // Reset object state to rotation
             rb.velocity = Vector2.zero;

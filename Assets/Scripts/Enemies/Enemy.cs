@@ -20,6 +20,10 @@ public abstract class Enemy : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
+
+        // Game object is active when the player enters the room
+        gameObject.SetActive(false);
+
     }
 
     // Applies damage to the enemy

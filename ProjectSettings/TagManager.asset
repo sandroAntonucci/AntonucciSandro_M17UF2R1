@@ -8,6 +8,7 @@ TagManager:
   - Spell
   - EnemySpell
   - RoomController
+  - Room
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -10,7 +11,12 @@ public class Room : MonoBehaviour
     public int X;
     public int Y;
 
+    public bool playerInRoom = false;  
+
+    public List<Enemy> enemyList;
+
     private bool updatedDoors = false;
+    
 
     public Room(int x, int y)
     {
@@ -65,6 +71,74 @@ public class Room : MonoBehaviour
             RemoveUnconnectedDoors();
             updatedDoors = true;
         }
+
+        if (playerInRoom) CheckEnemies();
+    }
+
+    public void AddEnemies()
+    {
+        // Clear the list to avoid duplicates
+        enemyList.Clear();
+
+        // Find all components with the "Enemy" script in children, including inactive ones
+        Enemy[] childEnemies = GetComponentsInChildren<Enemy>(true);
+
+        // Add each enemy to the list
+        foreach (Enemy enemy in childEnemies)
+        {
+            enemyList.Add(enemy);
+            enemy.gameObject.SetActive(true);
+        }
+
+    }
+
+    // Checks how many enemies are still alive in the room and opens or closes doors accordingly
+    public void CheckEnemies()
+    {
+
+        bool allEnemiesDead = true;
+
+        foreach (Enemy enemy in enemyList)
+        {
+            if (enemy != null)
+            {
+                allEnemiesDead = false;
+            }
+        }
+
+        if (allEnemiesDead)
+        {
+            OpenDoors();
+        }
+        else
+        {
+            CloseDoors();
+        }
+
+    }
+
+    // Opens doors when all enemies are defeated
+    public void OpenDoors()
+    {
+        foreach (Door door in doors)
+        {
+            if(door.isActive)
+            {
+                door.GetComponent<BoxCollider2D>().enabled = false;
+            }
+        }
+    }
+
+    // Closes doors when there are still enemies in the room
+    public void CloseDoors()
+    {
+        foreach (Door door in doors)
+        {
+            if (door.isActive)
+            {
+                door.GetComponent<BoxCollider2D>().enabled = true;
+            }
+        }
     }
 
     public void RemoveUnconnectedDoors()
@@ -76,29 +150,25 @@ public class Room : MonoBehaviour
                 case Door.DoorType.right:
                     if(GetRight() == null)
                     {
-                        door.GetComponent<SpriteRenderer>().enabled = false;
-                        door.GetComponent<Door>().isActive = false;
+                        door.GetComponent<Door>().RemoveDoor();
                     }
                     break;
                 case Door.DoorType.left:
                     if (GetLeft() == null)
                     {
-                        door.GetComponent<SpriteRenderer>().enabled = false;
-                        door.GetComponent<Door>().isActive = false;
+                        door.GetComponent<Door>().RemoveDoor();
                     }
                     break;
                 case Door.DoorType.top:
                     if (GetTop() == null)
                     {
-                        door.GetComponent<SpriteRenderer>().enabled = false;
-                        door.GetComponent<Door>().isActive = false;
+                        door.GetComponent<Door>().RemoveDoor();
                     }
                     break;
                 case Door.DoorType.bottom:
                     if (GetBottom() == null)
                     {
-                        door.GetComponent<SpriteRenderer>().enabled = false;
-                        door.GetComponent<Door>().isActive = false;
+                        door.GetComponent<Door>().RemoveDoor();
                     }
                     break;
             }
@@ -168,8 +238,17 @@ public class Room : MonoBehaviour
         if(other.tag == "Player")
         {
             RoomController.instance.OnPlayerEnterRoom(this);
+            AddEnemies();
+            playerInRoom = true;
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            playerInRoom = false;
+        }
+    }
 
 }
