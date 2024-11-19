@@ -355,7 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currRoom: {fileID: 0}
   player: {fileID: 0}
-  moveSpeedWhenRoomChange: 150
+  moveSpeedWhenRoomChange: 100
 --- !u!1 &944174032
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +643,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -406299191
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: -353046384, guid: 2031fe6ca44f74c479dc42ae4aae4241, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

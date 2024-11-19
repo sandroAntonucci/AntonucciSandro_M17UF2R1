@@ -125,6 +125,7 @@ public class Room : MonoBehaviour
             if(door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = false;
+                door.GetComponent<Animator>().Play("Door_Open");
             }
         }
     }
@@ -137,6 +138,7 @@ public class Room : MonoBehaviour
             if (door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = true;
+                door.GetComponent<Animator>().Play("Door_Closed");
             }
         }
     }

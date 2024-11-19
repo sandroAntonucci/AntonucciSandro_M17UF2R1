@@ -49,6 +49,9 @@ TagManager:
   - name: Ground
     uniqueID: 2736254729
     locked: 0
+  - name: GroundDetails
+    uniqueID: 2618342543
+    locked: 0
   - name: Door
     uniqueID: 2785839871
     locked: 0
