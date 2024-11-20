@@ -10,7 +10,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] public ParticleSystem damageParticles;
     [SerializeField] public GameAudioManager damageSound;
 
-    public List<PowerOrb> powerOrbs;
+    public List<GameObject> powerOrbs;
 
     public int rangeToDropOne;
     public int rangeToDropTwo;

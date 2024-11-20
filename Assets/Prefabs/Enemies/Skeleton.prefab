@@ -129,9 +129,9 @@ MonoBehaviour:
   damageParticles: {fileID: 4516821630045397599}
   damageSound: {fileID: 2935432823486842657}
   powerOrbs:
-  - {fileID: 3451027026227278185, guid: 10d97e2e05e5f58489f2850541656a33, type: 3}
-  - {fileID: 3451027026227278185, guid: 549cd1a8c6584eb4080a8a1631bc7d10, type: 3}
-  - {fileID: 3451027026227278185, guid: 4add5d21d386289498625115f402b623, type: 3}
+  - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
+  - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
+  - {fileID: 3651600680213569310, guid: 89b2e5eba26249345899503e1ecac369, type: 3}
   rangeToDropOne: 100
   rangeToDropTwo: 60
   rangeToDropFive: 10
@@ -140,7 +140,7 @@ MonoBehaviour:
   type: 
   damage: 20
   health: 40
-  speed: 2
+  speed: 2.1
 --- !u!50 &8473109170028090035
 Rigidbody2D:
   serializedVersion: 4
@@ -216,7 +216,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

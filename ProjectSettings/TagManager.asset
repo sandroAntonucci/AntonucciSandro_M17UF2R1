@@ -10,6 +10,7 @@ TagManager:
   - RoomController
   - Room
   - PlayerProjectile
+  - UpgradeCanvas
   layers:
   - Default
   - TransparentFX

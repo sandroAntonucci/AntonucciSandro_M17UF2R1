@@ -7,6 +7,8 @@ public class PowerOrb : MonoBehaviour
 
     public int powerQuant;
 
+    public FloatingMovement floatingMovement;
+
     public Vector2 playerPosition;
 
     public bool playerInRange = false;
@@ -15,6 +17,7 @@ public class PowerOrb : MonoBehaviour
     {
         if (playerInRange)
         {
+            floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.1f);
         }

@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     private bool isFiring;
 
     public GameObject spell;
+    public PassiveSpell passiveSpell;
     public float invincibilityDuration = 1f;
 
     // "Coins" that the player can use to buy spells or modifications
