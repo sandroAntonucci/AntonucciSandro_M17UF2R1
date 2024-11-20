@@ -19,7 +19,7 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
+  - Enemy
   - 
   - 
   - 
@@ -65,6 +65,9 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 3888668105
+    locked: 0
+  - name: Items
+    uniqueID: 2999197373
     locked: 0
   - name: Spells
     uniqueID: 680864027

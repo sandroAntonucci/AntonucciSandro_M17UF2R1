@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7566495082080843080}
   - component: {fileID: 1395944707635909246}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HitSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 2405831247316844380}
   - component: {fileID: 1283797505449432860}
   - component: {fileID: 1037492823625753130}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Priest
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -388,7 +388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4386947723330015259}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3752162854824211595}
   - component: {fileID: 163509335170818497}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: CastSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,6 +549,10 @@ PrefabInstance:
     - target: {fileID: 3228340691890935010, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_Name
       value: HurtParticlesEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228340691890935010, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalScale.x

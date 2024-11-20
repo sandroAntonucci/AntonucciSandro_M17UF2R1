@@ -36,10 +36,17 @@ public class PassiveUpgrade : ItemUpgrade
             {
                 case UpgradeType.Damage:
                     passiveSpell.damage += damageUpgrade;
-                    
+                    passiveSpell.passiveProjectile.transform.localScale = new Vector3(
+                                                                                    transform.localScale.x * 1.1f,
+                                                                                    transform.localScale.y * 1.1f,
+                                                                                    transform.localScale.z * 1.1f
+                                                                                );
                     break;
                 case UpgradeType.AttackSpeed:
-                    passiveSpell.attackSpeed += attackSpeedUpgrade;
+
+                    if(passiveSpell.attackSpeed - attackSpeedUpgrade < 0.2) passiveSpell.attackSpeed = 0.1f;
+                    else
+                        passiveSpell.attackSpeed -= attackSpeedUpgrade;
                     break;
                 case UpgradeType.ProjectileSpeed:
                     passiveSpell.projectileSpeed += projectileSpeedUpgrade;
@@ -50,6 +57,8 @@ public class PassiveUpgrade : ItemUpgrade
             }
 
             upgradeCanvas.ShowCanvas(upgradeName, upgradeText);
+
+            Destroy(gameObject);
 
         }
     }

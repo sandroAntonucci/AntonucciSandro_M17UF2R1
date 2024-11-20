@@ -7,6 +7,7 @@ public abstract class ItemUpgrade : MonoBehaviour
 
     public string upgradeName;
     public string upgradeText;
+    public int upgradePrice;
     public UpgradeCanvas upgradeCanvas;
 
     public void Start()
