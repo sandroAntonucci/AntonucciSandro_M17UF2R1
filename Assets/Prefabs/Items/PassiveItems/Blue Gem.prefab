@@ -198,12 +198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Blue Gem
-  upgradeText: Passive Attack Speed - 0.2s
+  upgradeText: Passive Attack Speed - 0.1s
   upgradePrice: 10
   upgradeCanvas: {fileID: 0}
   passiveSpell: {fileID: 0}
   upgradeType: 1
   damageUpgrade: 2
-  attackSpeedUpgrade: 0.2
+  attackSpeedUpgrade: 0.1
   projectileSpeedUpgrade: 0
   rangeUpgrade: 0

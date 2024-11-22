@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Blue Crystal
-  upgradeText: Passive Range +2
+  upgradeText: Passive Range +1
   upgradePrice: 10
   upgradeCanvas: {fileID: 0}
   passiveSpell: {fileID: 0}
@@ -206,4 +206,4 @@ MonoBehaviour:
   damageUpgrade: 0
   attackSpeedUpgrade: 0
   projectileSpeedUpgrade: 0
-  rangeUpgrade: 2
+  rangeUpgrade: 1

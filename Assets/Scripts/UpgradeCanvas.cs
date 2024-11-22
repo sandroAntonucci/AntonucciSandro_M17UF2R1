@@ -1,12 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using TMPro.Examples;
 using UnityEngine;
 
 public class UpgradeCanvas : MonoBehaviour
 {
-
+    public Animator nameBannerAnimator;
+    public Animator textBannerAnimator;
+    public RectTransform nameBannerRect;
+    public RectTransform textBannerRect;
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI upgradeName;
     public Canvas upgradeCanvas;
@@ -15,7 +16,10 @@ public class UpgradeCanvas : MonoBehaviour
     {
         SetUpgradeName(upgradeName);
         SetUpgradeText(upgradeText);
-        StartCoroutine(ShowCanvasCorroutine());
+
+        nameBannerAnimator.Play("ShowUpgradeNameAnim");
+        textBannerAnimator.Play("ShowUpgradeAnim");
+
     }
 
     public void SetUpgradeText(string text)
@@ -23,17 +27,9 @@ public class UpgradeCanvas : MonoBehaviour
         upgradeText.text = text;
     }
 
-    public void SetUpgradeName(string text) 
+    public void SetUpgradeName(string text)
     {
         upgradeName.text = text;
     }
-
-    public IEnumerator ShowCanvasCorroutine()
-    {
-        upgradeCanvas.enabled = true;
-        yield return new WaitForSeconds(2);
-        upgradeCanvas.enabled = false;
-    }
-
 
 }

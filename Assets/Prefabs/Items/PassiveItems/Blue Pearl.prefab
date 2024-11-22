@@ -198,12 +198,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeName: Blue Pearl
-  upgradeText: Passive Damage + 2
+  upgradeText: Passive Damage + 1
   upgradePrice: 15
   upgradeCanvas: {fileID: 0}
   passiveSpell: {fileID: 0}
   upgradeType: 0
-  damageUpgrade: 2
+  damageUpgrade: 1
   attackSpeedUpgrade: 0
   projectileSpeedUpgrade: 0
   rangeUpgrade: 0

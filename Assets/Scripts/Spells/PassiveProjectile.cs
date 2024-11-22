@@ -11,16 +11,19 @@ public class PassiveProjectile : MonoBehaviour
 
     public PassiveSpell caster;
     public Rigidbody2D rb;
-    //public Animator anim;
+    public Animator anim;
 
 
     // Shoots in the enemy position direction
     public void Cast(Vector3 enemyPosition)
     {
 
+        
+
         // Makes the object visible and active
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.SetActive(true);
+        anim.Play("PassiveSpellIdle");
 
         // Calculate the direction of the projectile
         Vector3 direction = enemyPosition - transform.position;
@@ -41,8 +44,8 @@ public class PassiveProjectile : MonoBehaviour
 
         if (!collision.CompareTag("Player") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell"))
         {
-            // Reset object state to rotation
-            ResetPool();
+            rb.velocity = Vector2.zero;
+            anim.Play("PassiveSpellCrash");
         }
     }
 
@@ -50,7 +53,6 @@ public class PassiveProjectile : MonoBehaviour
     {
         // Makes the object invisible and inactive
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
-        rb.velocity = Vector2.zero;
         gameObject.SetActive(false);
 
         // Add the spell back to the player's stack

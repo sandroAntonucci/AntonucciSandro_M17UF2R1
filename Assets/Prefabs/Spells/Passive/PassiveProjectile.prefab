@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1569016278445949157}
   - component: {fileID: 1674671025988678219}
   - component: {fileID: 5010586273205407158}
+  - component: {fileID: 5920974931955724505}
   m_Layer: 0
   m_Name: PassiveProjectile
   m_TagString: PlayerProjectile
@@ -103,6 +104,7 @@ MonoBehaviour:
   damage: 5
   caster: {fileID: 0}
   rb: {fileID: 1674671025988678219}
+  anim: {fileID: 5920974931955724505}
 --- !u!50 &1674671025988678219
 Rigidbody2D:
   serializedVersion: 4
@@ -165,3 +167,24 @@ CircleCollider2D:
   m_Offset: {x: 0.023374334, y: -0.038957186}
   serializedVersion: 2
   m_Radius: 0.29742262
+--- !u!95 &5920974931955724505
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356725334618884031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d1021faa1023ddf429786332a8c7f919, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
