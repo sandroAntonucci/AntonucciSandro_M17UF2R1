@@ -103,6 +103,8 @@ MonoBehaviour:
   doorClosed: {fileID: 21300000, guid: 84dfa47c76db94f43bb7938314b2d2e3, type: 3}
   itemDoorOpen: {fileID: 21300000, guid: 0549034c4361f624aa0fe3019fa848c1, type: 3}
   itemDoorClosed: {fileID: 21300000, guid: 7f2c9cd15fa74ff4cb7fb463a290cf86, type: 3}
+  shopDoorOpen: {fileID: 21300000, guid: 9395aedea40b48145aa8d74c79476f25, type: 3}
+  shopDoorClosed: {fileID: 21300000, guid: a2b8cd041a5d76541aced8da47f5627b, type: 3}
   spriteRenderer: {fileID: 6474643122367033554}
   doorType: 0
   connectedRoom: 

@@ -33,6 +33,8 @@ public class RoomController : MonoBehaviour
 
     bool spawnedItemRoom = false;
 
+    bool spawnedShopRoom = false;
+
     bool updatedRooms = false;
 
 
@@ -71,6 +73,10 @@ public class RoomController : MonoBehaviour
             {
                 StartCoroutine(SpawnItemRoom());
             }
+            else if (!spawnedShopRoom)
+            {
+                StartCoroutine(SpawnShopRoom());
+            }
             else if (spawnedBossRoom && !updatedRooms)
             {
                 foreach (Room room in loadedRooms)
@@ -94,7 +100,7 @@ public class RoomController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if(loadRoomQueue.Count == 0)
         {
-            Room bossRoom = loadedRooms[loadedRooms.Count - 1];
+            Room bossRoom = loadedRooms[loadedRooms.Count - 2];
             Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
             Destroy(bossRoom.gameObject);
             var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
@@ -110,7 +116,18 @@ public class RoomController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         if (loadRoomQueue.Count == 0)
         {
-            Room itemRoom = loadedRooms[loadedRooms.Count - 1];
+
+            int randRoomPosition;
+
+            // Checks that the random position doesnt overlap the shop
+            do
+            {
+                randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 2);
+            }while (loadedRooms[loadedRooms.Count - randRoomPosition].name.Contains("Shop"));
+
+
+
+            Room itemRoom = loadedRooms[loadedRooms.Count - randRoomPosition];
             Room tempRoom = new Room(itemRoom.X, itemRoom.Y);
             Destroy(itemRoom.gameObject);
             var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
@@ -119,6 +136,34 @@ public class RoomController : MonoBehaviour
         }
     }
 
+    IEnumerator SpawnShopRoom()
+    {
+
+        spawnedShopRoom = true;
+        yield return new WaitForSeconds(1f);
+       
+        if (loadRoomQueue.Count == 0)
+        {
+
+            int randRoomPosition;
+
+            // Checks that the random position doesnt overlap the item room
+            do
+            {
+                randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 2);
+            } while (loadedRooms[loadedRooms.Count - randRoomPosition].name.Contains("Item"));
+
+
+
+            Room shopRoom = loadedRooms[loadedRooms.Count - randRoomPosition];
+            Room tempRoom = new Room(shopRoom.X, shopRoom.Y);
+            Destroy(shopRoom.gameObject);
+            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            loadedRooms.Remove(roomToRemove);
+            LoadRoom("Shop", tempRoom.X, tempRoom.Y);
+            
+        }
+    }
 
     public void LoadRoom(string name, int x, int y)
     {

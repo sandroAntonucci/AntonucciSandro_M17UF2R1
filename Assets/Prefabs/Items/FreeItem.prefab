@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7583662141099116331}
   - component: {fileID: 6421284419020770017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OrbsShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6870482134625857236}
   - component: {fileID: 232426258997954558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pedestal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4936438097435174773}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ItemPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -210,7 +210,7 @@ GameObject:
   - component: {fileID: 4911830129690580358}
   - component: {fileID: 5974500033516006073}
   - component: {fileID: 4535245852195945233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FreeItem
   m_TagString: Untagged
   m_Icon: {fileID: 0}

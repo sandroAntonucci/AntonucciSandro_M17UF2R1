@@ -110,7 +110,7 @@ GameObject:
   m_Component:
   - component: {fileID: 361525868190385674}
   - component: {fileID: 3057640112200397001}
-  - component: {fileID: 8656002706467488747}
+  - component: {fileID: 8569440224447174550}
   m_Layer: 0
   m_Name: Golden Swords
   m_TagString: Untagged
@@ -186,7 +186,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8656002706467488747
+--- !u!114 &8569440224447174550
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -195,7 +195,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3364856694354440247}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a6a6bb8b156661f4ba52d3f3d58e7037, type: 3}
+  m_Script: {fileID: 11500000, guid: ff3475e8ae3ce154292c144ab5b90278, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spell: {fileID: 0}
@@ -203,8 +203,8 @@ MonoBehaviour:
   attackSpeedUpgrade: 0
   projectileSpeedUpgrade: 0
   rangeUpgrade: 0
-  upgradeName: Golden Swords
-  upgradeText: Spell Damage +6
+  upgradeName: 'Golden Swords '
+  upgradeText: Spell Damage + 6
   upgradePrice: 20
   upgradeType: 0
   upgradeCanvas: {fileID: 0}

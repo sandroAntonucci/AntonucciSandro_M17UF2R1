@@ -14,6 +14,9 @@ public class Door : MonoBehaviour
     public Sprite itemDoorOpen;
     public Sprite itemDoorClosed;
 
+    public Sprite shopDoorOpen;
+    public Sprite shopDoorClosed;
+
     public SpriteRenderer spriteRenderer;
 
     public enum DoorType
@@ -23,7 +26,7 @@ public class Door : MonoBehaviour
 
     public DoorType doorType;
 
-    public string connectedRoom = "Normal";
+    public string connectedRoom;
 
     public void Start()
     {
@@ -44,6 +47,8 @@ public class Door : MonoBehaviour
         if (doorSprite == "doorClosed") spriteRenderer.sprite = doorClosed;
         if (doorSprite == "itemDoorOpen") spriteRenderer.sprite = itemDoorOpen;
         if (doorSprite == "itemDoorClosed") spriteRenderer.sprite = itemDoorClosed;
+        if (doorSprite == "shopDoorOpen") spriteRenderer.sprite = shopDoorOpen;
+        if (doorSprite == "shopDoorClosed") spriteRenderer.sprite = shopDoorClosed;
     }
 
     

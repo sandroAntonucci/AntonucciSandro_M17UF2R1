@@ -60,13 +60,11 @@ public class ItemSpawner : MonoBehaviour
 
             if (isFree)
             {
-                Debug.Log("Is upgraded");
                 itemUpgrade.Upgrade();
                 Destroy(gameObject);
             }
             else if (collision.gameObject.GetComponent<Player>().power >= itemUpgrade.upgradePrice)
             {
-                Debug.Log("Is bought");
                 collision.gameObject.GetComponent<Player>().power -= itemUpgrade.upgradePrice;
                 itemUpgrade.Upgrade();
                 Destroy(gameObject);

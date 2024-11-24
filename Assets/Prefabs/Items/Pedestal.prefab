@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9043683121398743256}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ItemPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6870482134625857236}
   - component: {fileID: 232426258997954558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pedestal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 8871578578129532622}
   - component: {fileID: 8294687654839437991}
   - component: {fileID: 2268747945966413147}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PriceTag
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -296,7 +296,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8807293716114611124}
   - component: {fileID: 3290329390014374931}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: OrbsShadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   - component: {fileID: 4911830129690580358}
   - component: {fileID: 5974500033516006073}
   - component: {fileID: 4535245852195945233}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pedestal
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -69,12 +69,13 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
-        if ((name.Contains("End") || name.Contains("Item")) && !updatedDoors)
+        if ((name.Contains("End") || name.Contains("Item") || name.Contains("Shop") && !updatedDoors))
         {
             RemoveUnconnectedDoors();
 
             if (name.Contains("End")) ChangeAdjacentDoor("End");
             if (name.Contains("Item")) ChangeAdjacentDoor("Item");
+            if (name.Contains("Shop")) ChangeAdjacentDoor("Shop");
 
             updatedDoors = true;
         }
@@ -163,7 +164,8 @@ public class Room : MonoBehaviour
                 
                 
                 if (door.connectedRoom == "Normal") door.ChangeSprite("doorOpen");
-                if (door.connectedRoom == "Item") door.ChangeSprite("itemDoorOpen");
+                if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorOpen");
+                if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorOpen");
 
             }
         }
@@ -179,7 +181,8 @@ public class Room : MonoBehaviour
                 door.GetComponent<BoxCollider2D>().enabled = true;
 
                 if (door.connectedRoom == "Normal") door.ChangeSprite("doorClosed");
-                if (door.connectedRoom == "Item") door.ChangeSprite("itemDoorClosed");
+                if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorClosed");
+                if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorClosed");
 
 
             }
@@ -220,9 +223,6 @@ public class Room : MonoBehaviour
 
         }
     }
-
-
-
 
     public Room GetRight()
     {
