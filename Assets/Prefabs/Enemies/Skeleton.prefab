@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2935432823486842657}
   - component: {fileID: 899208710022021659}
   - component: {fileID: 633591618686794013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Skeleton
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -233,7 +233,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.016654015, y: -0.026646405}
+  m_Offset: {x: -0.012549281, y: -0.180574}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -244,7 +244,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.44784737, y: 0.787589}
+  m_Size: {x: 0.40680003, y: 0.34838223}
   m_EdgeRadius: 0
 --- !u!1 &8798058391035966518
 GameObject:
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7113938983226992706}
   - component: {fileID: 6697604810456012282}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HitAudio
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -385,6 +385,10 @@ PrefabInstance:
     - target: {fileID: 3228340691890935010, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_Name
       value: HurtParticlesEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3228340691890935010, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalScale.x

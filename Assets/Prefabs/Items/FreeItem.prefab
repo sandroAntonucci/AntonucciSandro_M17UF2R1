@@ -168,6 +168,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3507736212054263700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4936438097435174773}
+  m_Layer: 0
+  m_Name: ItemPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4936438097435174773
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3507736212054263700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4911830129690580358}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &9014225174756485666
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,6 +232,7 @@ Transform:
   m_Children:
   - {fileID: 7583662141099116331}
   - {fileID: 6870482134625857236}
+  - {fileID: 4936438097435174773}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5974500033516006073
@@ -215,13 +247,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6874aaff5cfc66143adbc61659bd23fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  items:
-  - {fileID: 3364856694354440247, guid: 21f6d611c7913db469e08f11759e1c67, type: 3}
-  - {fileID: 8703225582520397064, guid: de7b3b740a9971241a5c1682493e1566, type: 3}
+  normalItems:
   - {fileID: 3364856694354440247, guid: 7f31e88c3ed6a1f4bb9769c8eca2798d, type: 3}
+  - {fileID: 8703225582520397064, guid: de7b3b740a9971241a5c1682493e1566, type: 3}
+  - {fileID: 3364856694354440247, guid: 21f6d611c7913db469e08f11759e1c67, type: 3}
   - {fileID: 3364856694354440247, guid: ef46fb246f0c3c5418e9d41fe1bb3d8e, type: 3}
+  - {fileID: 3364856694354440247, guid: 36171cbf8120a6941b06f26f147b115e, type: 3}
+  - {fileID: 3364856694354440247, guid: dca4e7f545657d942bdf7fc8c85de8b4, type: 3}
+  - {fileID: 3364856694354440247, guid: 2b6913834c1726149b14d35bd7e8e19e, type: 3}
+  rareItems:
+  - {fileID: 3364856694354440247, guid: 3f1f05983e3bebc4cbb37edc0fad25ba, type: 3}
+  - {fileID: 8703225582520397064, guid: a76ad4c1cc0503a4ab008ab46f1eb9b0, type: 3}
+  - {fileID: 3364856694354440247, guid: c20d045ab7db35b49a7a5fdf9e300526, type: 3}
+  - {fileID: 3364856694354440247, guid: 397186f1ddd55034caded7385e4cd415, type: 3}
+  - {fileID: 3364856694354440247, guid: 56e7cd2ef6f03c24bbe073ce16e3476b, type: 3}
+  - {fileID: 3364856694354440247, guid: 7a92751b9d1dae5489d121d999201f07, type: 3}
+  - {fileID: 3364856694354440247, guid: 473e1db86aacdf84ea933da0980beab3, type: 3}
+  legendaryItems:
   - {fileID: 3364856694354440247, guid: f7e3a4915589a26428369a04d62c6586, type: 3}
+  - {fileID: 8703225582520397064, guid: bd15b1c3700a70440978d19075f5c6e8, type: 3}
+  - {fileID: 3364856694354440247, guid: 94732235eefa41244b375d36764c9a4a, type: 3}
+  - {fileID: 3364856694354440247, guid: bcc37ae1e7f1fb64ca08c26eee5ec06e, type: 3}
+  - {fileID: 3364856694354440247, guid: c16aa9ae1355bfd458337b4d8b9164bf, type: 3}
+  - {fileID: 3364856694354440247, guid: 85e15c7660b91ed4690c3616b72d22f3, type: 3}
+  - {fileID: 3364856694354440247, guid: 4969ab682f9274546b471a503efa1c4c, type: 3}
   itemPriceTag: {fileID: 0}
+  parentTransform: {fileID: 4936438097435174773}
   itemUpgrade: {fileID: 0}
   isFree: 1
 --- !u!61 &4535245852195945233

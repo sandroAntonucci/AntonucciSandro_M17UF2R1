@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using UnityEditor;
 using UnityEngine;
 
 public class Room : MonoBehaviour
@@ -33,7 +34,9 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
-        if(RoomController.instance == null)
+
+
+        if (RoomController.instance == null)
         {
             Debug.Log("You pressed play in the wrong scene!");
             return;
@@ -66,13 +69,45 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
-        if (name.Contains("End") && !updatedDoors)
+        if ((name.Contains("End") || name.Contains("Item")) && !updatedDoors)
         {
             RemoveUnconnectedDoors();
+
+            if (name.Contains("End")) ChangeAdjacentDoor("End");
+            if (name.Contains("Item")) ChangeAdjacentDoor("Item");
+
             updatedDoors = true;
         }
 
         if (playerInRoom) CheckEnemies();
+    }
+
+    // Changes adjacent door to the room type for the sprite change
+    public void ChangeAdjacentDoor(string type)
+    {
+
+        Room rightRoom = GetRight();
+        Room leftRoom = GetLeft();
+        Room topRoom = GetTop();
+        Room bottomRoom = GetBottom();
+
+        if (rightRoom != null)
+        {
+            rightRoom.leftDoor.connectedRoom = type;
+        }
+        if (leftRoom != null) 
+        {
+            leftRoom.rightDoor.connectedRoom = type;
+        }
+        if (topRoom != null)
+        {
+            topRoom.bottomDoor.connectedRoom = type;
+        }
+        if (bottomRoom != null)
+        {
+            bottomRoom.topDoor.connectedRoom = type;
+        }
+
     }
 
     public void AddEnemies()
@@ -125,7 +160,11 @@ public class Room : MonoBehaviour
             if(door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = false;
-                door.GetComponent<Animator>().Play("Door_Open");
+                
+                
+                if (door.connectedRoom == "Normal") door.ChangeSprite("doorOpen");
+                if (door.connectedRoom == "Item") door.ChangeSprite("itemDoorOpen");
+
             }
         }
     }
@@ -138,7 +177,11 @@ public class Room : MonoBehaviour
             if (door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = true;
-                door.GetComponent<Animator>().Play("Door_Closed");
+
+                if (door.connectedRoom == "Normal") door.ChangeSprite("doorClosed");
+                if (door.connectedRoom == "Item") door.ChangeSprite("itemDoorClosed");
+
+
             }
         }
     }
@@ -177,6 +220,9 @@ public class Room : MonoBehaviour
 
         }
     }
+
+
+
 
     public Room GetRight()
     {
@@ -220,8 +266,6 @@ public class Room : MonoBehaviour
         return null;
 
     }
-
-
 
     private void OnDrawGizmos()
     {

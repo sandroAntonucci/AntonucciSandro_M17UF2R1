@@ -9,6 +9,9 @@ public abstract class BaseSpell : MonoBehaviour
     public float attackSpeed;
     public float damage;
     public float projectileSpeed;
+    public float range;
+
+    public GameObject projectile;
 
     public abstract void CastSpell();
 

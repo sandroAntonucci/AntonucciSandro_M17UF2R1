@@ -515,11 +515,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c81203f60316f46479a3cdbea920c897, type: 3}
---- !u!1 &342393197 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7705027268072173829, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
-  m_PrefabInstance: {fileID: 1556065983409697675}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +892,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7305402525741997992, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
   m_PrefabInstance: {fileID: 1556065983409697675}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1141301206 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
+  m_PrefabInstance: {fileID: 1556065983409697675}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e93c8dfd2a8f243947eb8ba96ed13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1422949583
 GameObject:
   m_ObjectHideFlags: 0
@@ -1364,7 +1370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 1000
   invincible: 0
-  spell: {fileID: 342393197}
+  spell: {fileID: 1141301206}
   passiveSpell: {fileID: 1930712965}
   invincibilityDuration: 0.6
   power: 1000
@@ -1638,6 +1644,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1957956188}
     m_Modifications:
     - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 2600593159096486721, guid: f5448b61853c1704a96637324c683811, type: 3}
+    - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
       propertyPath: attackSpeed
       value: 0.8
       objectReference: {fileID: 0}
@@ -1732,7 +1742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433923527518002717, guid: ee0449fffb989814fbeab86b292cd807, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1433923527518002717, guid: ee0449fffb989814fbeab86b292cd807, type: 3}
       propertyPath: m_TagString
@@ -1762,6 +1772,10 @@ PrefabInstance:
       propertyPath: damage
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6210525639095588661, guid: ee0449fffb989814fbeab86b292cd807, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 1356725334618884031, guid: 5fc9e5c162a4cb74ca0d944772e89b19, type: 3}
     - target: {fileID: 6210525639095588661, guid: ee0449fffb989814fbeab86b292cd807, type: 3}
       propertyPath: projectileSpeed
       value: 8

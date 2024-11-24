@@ -31,6 +31,8 @@ public class RoomController : MonoBehaviour
 
     bool spawnedBossRoom = false;
 
+    bool spawnedItemRoom = false;
+
     bool updatedRooms = false;
 
 
@@ -65,6 +67,10 @@ public class RoomController : MonoBehaviour
             {
                 StartCoroutine(SpawnBossRoom());
             }
+            else if (!spawnedItemRoom)
+            {
+                StartCoroutine(SpawnItemRoom());
+            }
             else if (spawnedBossRoom && !updatedRooms)
             {
                 foreach (Room room in loadedRooms)
@@ -96,6 +102,23 @@ public class RoomController : MonoBehaviour
             LoadRoom("End", tempRoom.X, tempRoom.Y);
         }
     }
+
+    IEnumerator SpawnItemRoom()
+    {
+
+        spawnedItemRoom = true;
+        yield return new WaitForSeconds(0.5f);
+        if (loadRoomQueue.Count == 0)
+        {
+            Room itemRoom = loadedRooms[loadedRooms.Count - 1];
+            Room tempRoom = new Room(itemRoom.X, itemRoom.Y);
+            Destroy(itemRoom.gameObject);
+            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            loadedRooms.Remove(roomToRemove);
+            LoadRoom("Item", tempRoom.X, tempRoom.Y);
+        }
+    }
+
 
     public void LoadRoom(string name, int x, int y)
     {
@@ -168,8 +191,6 @@ public class RoomController : MonoBehaviour
     {
         return loadedRooms.Find(item => item.X == x && item.Y == y);
     }
-
-
 
     public void OnPlayerEnterRoom(Room room)
     {

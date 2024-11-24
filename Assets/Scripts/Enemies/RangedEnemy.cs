@@ -8,7 +8,6 @@ public class RangedEnemy : Enemy
     [SerializeField] private float distanceToPlayer;
     [SerializeField] private AudioSource castSound;
 
-    public Stack<GameObject> projectileStack;
     public GameObject projectile;
     public Transform shootPosition;
 

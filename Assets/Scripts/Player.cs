@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private InputAction fire;
     private bool isFiring;
 
-    public GameObject spell;
+    public BaseSpell spell;
     public PassiveSpell passiveSpell;
     public float invincibilityDuration = 1f;
 

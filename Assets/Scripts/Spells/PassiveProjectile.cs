@@ -18,12 +18,14 @@ public class PassiveProjectile : MonoBehaviour
     public void Cast(Vector3 enemyPosition)
     {
 
-        
-
         // Makes the object visible and active
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
         gameObject.SetActive(true);
         anim.Play("PassiveSpellIdle");
+
+        // Updates stats
+        damage = caster.damage;
+        projectileSpeed = caster.projectileSpeed;
 
         // Calculate the direction of the projectile
         Vector3 direction = enemyPosition - transform.position;
@@ -42,7 +44,7 @@ public class PassiveProjectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
         }
 
-        if (!collision.CompareTag("Player") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell") && !collision.CompareTag("Orb"))
         {
             rb.velocity = Vector2.zero;
             anim.Play("PassiveSpellCrash");

@@ -27,6 +27,11 @@ public class FireProjectile : MonoBehaviour
 
         if (rb != null)
         { 
+
+            // Updates stats
+            projectileSpeed = caster.projectileSpeed;
+            damage = caster.damage;
+
             Vector2 shootDirection = new Vector2(Mathf.Cos(spellOrbit.currentAngle * Mathf.Deg2Rad), Mathf.Sin(spellOrbit.currentAngle * Mathf.Deg2Rad));
             rb.velocity = shootDirection * projectileSpeed; // Apply velocity in the direction of the current angle
         }
@@ -40,7 +45,7 @@ public class FireProjectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
         }
         
-        if (!collision.CompareTag("Player") && !collision.CompareTag("Room") && !collision.CompareTag("PlayerProjectile"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("Room") && !collision.CompareTag("PlayerProjectile") && !collision.CompareTag("Orb"))
         {
             // Reset object state to rotation
             rb.velocity = Vector2.zero;

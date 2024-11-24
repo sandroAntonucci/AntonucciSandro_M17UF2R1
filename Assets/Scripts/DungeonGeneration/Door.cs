@@ -8,6 +8,28 @@ public class Door : MonoBehaviour
     // This is used to make the door "inactive" without destroying it for collisions
     public bool isActive = true;
 
+    public Sprite doorOpen;
+    public Sprite doorClosed;
+
+    public Sprite itemDoorOpen;
+    public Sprite itemDoorClosed;
+
+    public SpriteRenderer spriteRenderer;
+
+    public enum DoorType
+    {
+        left, right, top, bottom
+    }
+
+    public DoorType doorType;
+
+    public string connectedRoom = "Normal";
+
+    public void Start()
+    {
+        connectedRoom = "Normal";
+    }
+
     // Removes vision of the door so it's still collidable but not visible
     public void RemoveDoor()
     {
@@ -16,11 +38,14 @@ public class Door : MonoBehaviour
         isActive = false;
     }
 
-    public enum DoorType
+    public void ChangeSprite(string doorSprite)
     {
-        left, right, top, bottom
+        if (doorSprite == "doorOpen") spriteRenderer.sprite = doorOpen;
+        if (doorSprite == "doorClosed") spriteRenderer.sprite = doorClosed;
+        if (doorSprite == "itemDoorOpen") spriteRenderer.sprite = itemDoorOpen;
+        if (doorSprite == "itemDoorClosed") spriteRenderer.sprite = itemDoorClosed;
     }
 
-    public DoorType doorType;
+    
 
 }

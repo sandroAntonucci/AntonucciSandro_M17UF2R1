@@ -7,23 +7,49 @@ using UnityEngine.UIElements;
 public class ItemSpawner : MonoBehaviour
 {
 
-    public List<GameObject> items;
-    
+    public List<GameObject> normalItems;
+    public List<GameObject> rareItems;
+    public List<GameObject> legendaryItems;
+
     public TextMeshPro itemPriceTag;
+
+    public Transform parentTransform;
 
     public ItemUpgrade itemUpgrade;
 
     public bool isFree;
 
-    public void SpawnItem()
+    public List<GameObject> ChooseRarity()
+    {
+
+        int randomRarity = Random.Range(0, 100);
+
+        // 60% normal, 30% rare, 10% legendary
+        if (randomRarity < 60)
+        {
+            return normalItems;
+        }
+        else if (randomRarity < 90)
+        {
+            return rareItems;
+        }
+        else
+        {
+            return legendaryItems;
+        }
+    }
+
+    public void SpawnItem(List<GameObject> items)
     {
         int randomItem = Random.Range(0, items.Count);
-        itemUpgrade = Instantiate(items[randomItem], transform.position, Quaternion.identity).GetComponent<ItemUpgrade>();
+
+        itemUpgrade = Instantiate(items[randomItem], parentTransform).GetComponent<ItemUpgrade>();
+        itemUpgrade.transform.localPosition = Vector3.zero; // Reset position relative to parent
     }
 
     void Start()
     {
-        SpawnItem();
+        SpawnItem(ChooseRarity());
         if(!isFree) itemPriceTag.text = itemUpgrade.upgradePrice.ToString();
     }
 
@@ -34,11 +60,13 @@ public class ItemSpawner : MonoBehaviour
 
             if (isFree)
             {
+                Debug.Log("Is upgraded");
                 itemUpgrade.Upgrade();
                 Destroy(gameObject);
             }
             else if (collision.gameObject.GetComponent<Player>().power >= itemUpgrade.upgradePrice)
             {
+                Debug.Log("Is bought");
                 collision.gameObject.GetComponent<Player>().power -= itemUpgrade.upgradePrice;
                 itemUpgrade.Upgrade();
                 Destroy(gameObject);

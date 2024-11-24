@@ -5,7 +5,7 @@ using UnityEngine;
 public class FireSpell : BaseSpell
 {
 
-    public GameObject fireProjectile;
+    
     public Stack<GameObject> spellStack;
 
     public GameAudioManager castSound;
@@ -27,7 +27,7 @@ public class FireSpell : BaseSpell
 
             GameObject spellProjectile = spellStack.Pop();
 
-            // Resets projectile position, sets it to active and shoots
+            // Resets projectile position, updates stats, sets it to active and shoots
             spellProjectile.transform.position = transform.position;
             spellProjectile.SetActive(true);
             spellProjectile.GetComponent<SpriteRenderer>().enabled = true;
@@ -38,13 +38,11 @@ public class FireSpell : BaseSpell
         {
 
             // Instantiates a new projectile and shoots
-            GameObject spellProjectile = Instantiate(fireProjectile, transform.position, Quaternion.identity);
+            GameObject spellProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
 
             FireProjectile fireProjectileInstance = spellProjectile.GetComponent<FireProjectile>();
 
             // Assigns stats and shoots
-            fireProjectileInstance.damage = damage;
-            fireProjectileInstance.projectileSpeed = projectileSpeed;
             fireProjectileInstance.caster = this;
             fireProjectileInstance.spellOrbit = GetComponent<SpellOrbit>();
             fireProjectileInstance.Cast();

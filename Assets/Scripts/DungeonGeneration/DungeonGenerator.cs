@@ -16,7 +16,7 @@ public class DungeonGenerator : MonoBehaviour
     {
 
         // Get the number of rooms in the scene build settings for random room generation (substracts 3 for main, start and end)
-        numberOfRooms = SceneManager.sceneCountInBuildSettings - 3;
+        numberOfRooms = SceneManager.sceneCountInBuildSettings - 4;
 
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
         SpawnRooms(dungeonRooms);
@@ -29,11 +29,6 @@ public class DungeonGenerator : MonoBehaviour
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)
     {
         RoomController.instance.LoadRoom("Start", 0, 0);
-
-
-
-
-
 
         foreach(Vector2Int roomLocation in rooms)
         {

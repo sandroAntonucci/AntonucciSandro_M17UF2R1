@@ -11,6 +11,7 @@ TagManager:
   - Room
   - PlayerProjectile
   - UpgradeCanvas
+  - Orb
   layers:
   - Default
   - TransparentFX

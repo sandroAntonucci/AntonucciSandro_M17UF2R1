@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class PassiveSpell : BaseSpell
 {
-    public GameObject passiveProjectile;
-    public Stack<GameObject> spellStack;
 
-    public float range = 3f;
+    public Stack<GameObject> spellStack;
 
     private bool canCast = true;
 
@@ -47,12 +45,10 @@ public class PassiveSpell : BaseSpell
         else
         {
             // Instantiate a new projectile and shoot toward the enemy
-            GameObject spellProjectile = Instantiate(passiveProjectile, transform.position, Quaternion.identity);
+            GameObject spellProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
 
             PassiveProjectile passiveProjectileInstance = spellProjectile.GetComponent<PassiveProjectile>();
 
-            passiveProjectileInstance.damage = damage;
-            passiveProjectileInstance.projectileSpeed = projectileSpeed;
             passiveProjectileInstance.caster = this;
             passiveProjectileInstance.Cast(targetPosition);
         }

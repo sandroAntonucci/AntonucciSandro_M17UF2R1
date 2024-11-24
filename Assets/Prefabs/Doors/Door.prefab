@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 6474643122367033554}
   - component: {fileID: 6155963065427719397}
   - component: {fileID: 3258506724882049948}
-  - component: {fileID: 1998931079677967554}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -74,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1509127425
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 484c93615f216874198955b5d74d210b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,7 +99,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isActive: 1
+  doorOpen: {fileID: 21300000, guid: 484c93615f216874198955b5d74d210b, type: 3}
+  doorClosed: {fileID: 21300000, guid: 84dfa47c76db94f43bb7938314b2d2e3, type: 3}
+  itemDoorOpen: {fileID: 21300000, guid: 0549034c4361f624aa0fe3019fa848c1, type: 3}
+  itemDoorClosed: {fileID: 21300000, guid: 7f2c9cd15fa74ff4cb7fb463a290cf86, type: 3}
+  spriteRenderer: {fileID: 6474643122367033554}
   doorType: 0
+  connectedRoom: 
 --- !u!61 &3258506724882049948
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,24 +151,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.875, y: 1}
   m_EdgeRadius: 0
---- !u!95 &1998931079677967554
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8629565265613385105}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f65771864cccbbf4a93d5a6f272b2b16, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0

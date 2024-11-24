@@ -197,13 +197,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a6bb8b156661f4ba52d3f3d58e7037, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgradeName: Blue Crystal
-  upgradeText: Passive Range +1
-  upgradePrice: 10
-  upgradeCanvas: {fileID: 0}
-  passiveSpell: {fileID: 0}
-  upgradeType: 3
+  spell: {fileID: 0}
   damageUpgrade: 0
   attackSpeedUpgrade: 0
   projectileSpeedUpgrade: 0
   rangeUpgrade: 1
+  upgradeName: Blue Crystal
+  upgradeText: Passive Range +1
+  upgradePrice: 10
+  upgradeType: 3
+  upgradeCanvas: {fileID: 0}

@@ -11,6 +11,7 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] public GameAudioManager damageSound;
 
     public List<GameObject> powerOrbs;
+    public Stack<GameObject> projectileStack = new Stack<GameObject>();
 
     public int rangeToDropOne;
     public int rangeToDropTwo;
@@ -45,6 +46,7 @@ public abstract class Enemy : MonoBehaviour
         if (health <= 0)
         {
             DropPower();
+
             Destroy(gameObject);
         }
     }
