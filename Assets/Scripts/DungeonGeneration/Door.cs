@@ -17,6 +17,9 @@ public class Door : MonoBehaviour
     public Sprite shopDoorOpen;
     public Sprite shopDoorClosed;
 
+    public Sprite bossDoorOpen;
+    public Sprite bossDoorClosed;
+
     public SpriteRenderer spriteRenderer;
 
     public enum DoorType
@@ -49,6 +52,8 @@ public class Door : MonoBehaviour
         if (doorSprite == "itemDoorClosed") spriteRenderer.sprite = itemDoorClosed;
         if (doorSprite == "shopDoorOpen") spriteRenderer.sprite = shopDoorOpen;
         if (doorSprite == "shopDoorClosed") spriteRenderer.sprite = shopDoorClosed;
+        if (doorSprite == "bossDoorOpen") spriteRenderer.sprite = bossDoorOpen;
+        if (doorSprite == "bossDoorClosed") spriteRenderer.sprite = bossDoorClosed;
     }
 
     

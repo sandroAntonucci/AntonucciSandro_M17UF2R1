@@ -7,7 +7,7 @@ public class EnemyProjectile : MonoBehaviour
 
     [SerializeField] private AudioSource hitAudio;
 
-    public float projectileSpeed = 10f;
+    public float projectileSpeed = 20f;
     public float damage;
     public Animator anim;
 
@@ -18,11 +18,6 @@ public class EnemyProjectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-    }
-
-    private void Update()
-    {
-        if(caster == null) Destroy(gameObject);
     }
 
     // Shoots in the players direction

@@ -71,11 +71,12 @@ public class Room : MonoBehaviour
     {
         if ((name.Contains("End") || name.Contains("Item") || name.Contains("Shop") && !updatedDoors))
         {
+
             RemoveUnconnectedDoors();
 
-            if (name.Contains("End")) ChangeAdjacentDoor("End");
             if (name.Contains("Item")) ChangeAdjacentDoor("Item");
             if (name.Contains("Shop")) ChangeAdjacentDoor("Shop");
+            if (name.Contains("End")) ChangeAdjacentDoor("End");
 
             updatedDoors = true;
         }
@@ -83,10 +84,9 @@ public class Room : MonoBehaviour
         if (playerInRoom) CheckEnemies();
     }
 
-    // Changes adjacent door to the room type for the sprite change
+    // Changes adjacent door to the room type for the sprite change (enumerator to ensure all rooms are loaded)
     public void ChangeAdjacentDoor(string type)
     {
-
         Room rightRoom = GetRight();
         Room leftRoom = GetLeft();
         Room topRoom = GetTop();
@@ -166,6 +166,7 @@ public class Room : MonoBehaviour
                 if (door.connectedRoom == "Normal") door.ChangeSprite("doorOpen");
                 if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorOpen");
                 if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorOpen");
+                if (door.connectedRoom == "Boss" || name.Contains("Boss")) door.ChangeSprite("bossDoorOpen");
 
             }
         }
@@ -183,6 +184,7 @@ public class Room : MonoBehaviour
                 if (door.connectedRoom == "Normal") door.ChangeSprite("doorClosed");
                 if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorClosed");
                 if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorClosed");
+                if (door.connectedRoom == "Boss" || name.Contains("Boss")) door.ChangeSprite("bossDoorClosed");
 
 
             }

@@ -47,7 +47,18 @@ public abstract class Enemy : MonoBehaviour
         {
             DropPower();
 
+            StartCoroutine(DestroyProjectiles());
+
             Destroy(gameObject);
+        }
+    }
+
+    private IEnumerator DestroyProjectiles()
+    {
+        while (projectileStack.Count > 0)
+        {
+            Destroy(projectileStack.Pop());
+            yield return null;
         }
     }
 

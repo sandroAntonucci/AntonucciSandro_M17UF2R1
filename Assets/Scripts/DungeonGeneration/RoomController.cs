@@ -65,6 +65,7 @@ public class RoomController : MonoBehaviour
 
         if (loadRoomQueue.Count == 0)
         {
+            
             if (!spawnedBossRoom)
             {
                 StartCoroutine(SpawnBossRoom());
@@ -77,7 +78,7 @@ public class RoomController : MonoBehaviour
             {
                 StartCoroutine(SpawnShopRoom());
             }
-            else if (spawnedBossRoom && !updatedRooms)
+            else if (spawnedBossRoom && spawnedItemRoom && spawnedShopRoom && !updatedRooms)
             {
                 foreach (Room room in loadedRooms)
                 {
@@ -97,70 +98,62 @@ public class RoomController : MonoBehaviour
     IEnumerator SpawnBossRoom()
     {
         spawnedBossRoom = true;
+
         yield return new WaitForSeconds(0.5f);
-        if(loadRoomQueue.Count == 0)
+
+        if (loadRoomQueue.Count == 0)
         {
-            Room bossRoom = loadedRooms[loadedRooms.Count - 2];
-            Room tempRoom = new Room(bossRoom.X, bossRoom.Y);
+            Room bossRoom = loadedRooms[loadedRooms.Count - 1];
+            Room bossTempRoom = new Room(bossRoom.X, bossRoom.Y);
             Destroy(bossRoom.gameObject);
-            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            var roomToRemove = loadedRooms.Single(r => r.X == bossTempRoom.X && r.Y == bossTempRoom.Y);
             loadedRooms.Remove(roomToRemove);
-            LoadRoom("End", tempRoom.X, tempRoom.Y);
+            LoadRoom("End", bossTempRoom.X, bossTempRoom.Y);
         }
+
     }
 
     IEnumerator SpawnItemRoom()
     {
 
         spawnedItemRoom = true;
-        yield return new WaitForSeconds(0.5f);
+
+        yield return new WaitForSeconds(1f);
+
         if (loadRoomQueue.Count == 0)
         {
 
-            int randRoomPosition;
+            int randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 2);
 
-            // Checks that the random position doesnt overlap the shop
-            do
-            {
-                randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 2);
-            }while (loadedRooms[loadedRooms.Count - randRoomPosition].name.Contains("Shop"));
-
-
-
-            Room itemRoom = loadedRooms[loadedRooms.Count - randRoomPosition];
-            Room tempRoom = new Room(itemRoom.X, itemRoom.Y);
+            Room itemRoom = loadedRooms[randRoomPosition];
+            Room itemTempRoom = new Room(itemRoom.X, itemRoom.Y);
             Destroy(itemRoom.gameObject);
-            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            var roomToRemove = loadedRooms.Single(r => r.X == itemTempRoom.X && r.Y == itemTempRoom.Y);
             loadedRooms.Remove(roomToRemove);
-            LoadRoom("Item", tempRoom.X, tempRoom.Y);
+            LoadRoom("Item", itemTempRoom.X, itemTempRoom.Y);
         }
+
+        yield return null;
     }
 
     IEnumerator SpawnShopRoom()
     {
 
         spawnedShopRoom = true;
-        yield return new WaitForSeconds(1f);
-       
+
+        yield return new WaitForSeconds(1.5f);
+
         if (loadRoomQueue.Count == 0)
         {
 
-            int randRoomPosition;
+            int randRoomPosition = randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 3);
 
-            // Checks that the random position doesnt overlap the item room
-            do
-            {
-                randRoomPosition = UnityEngine.Random.Range(1, loadedRooms.Count - 2);
-            } while (loadedRooms[loadedRooms.Count - randRoomPosition].name.Contains("Item"));
-
-
-
-            Room shopRoom = loadedRooms[loadedRooms.Count - randRoomPosition];
-            Room tempRoom = new Room(shopRoom.X, shopRoom.Y);
+            Room shopRoom = loadedRooms[randRoomPosition];
+            Room shopTempRoom = new Room(shopRoom.X, shopRoom.Y);
             Destroy(shopRoom.gameObject);
-            var roomToRemove = loadedRooms.Single(r => r.X == tempRoom.X && r.Y == tempRoom.Y);
+            var roomToRemove = loadedRooms.Single(r => r.X == shopTempRoom.X && r.Y == shopTempRoom.Y);
             loadedRooms.Remove(roomToRemove);
-            LoadRoom("Shop", tempRoom.X, tempRoom.Y);
+            LoadRoom("Shop", shopTempRoom.X, shopTempRoom.Y);
             
         }
     }

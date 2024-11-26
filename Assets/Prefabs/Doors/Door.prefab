@@ -105,6 +105,8 @@ MonoBehaviour:
   itemDoorClosed: {fileID: 21300000, guid: 7f2c9cd15fa74ff4cb7fb463a290cf86, type: 3}
   shopDoorOpen: {fileID: 21300000, guid: 9395aedea40b48145aa8d74c79476f25, type: 3}
   shopDoorClosed: {fileID: 21300000, guid: a2b8cd041a5d76541aced8da47f5627b, type: 3}
+  bossDoorOpen: {fileID: 21300000, guid: 59448a8640ffae44d977ae430f205057, type: 3}
+  bossDoorClosed: {fileID: 21300000, guid: c0274c44d9e666f4fb8eb2cd612b2e5c, type: 3}
   spriteRenderer: {fileID: 6474643122367033554}
   doorType: 0
   connectedRoom: 
