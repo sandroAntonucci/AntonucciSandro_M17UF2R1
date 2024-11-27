@@ -20,6 +20,11 @@ public class EnemyProjectile : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Update()
+    {
+        if (caster == null) Destroy(gameObject);
+    }
+
     // Shoots in the players direction
     public void Cast()
     {
