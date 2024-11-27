@@ -35,6 +35,8 @@ public class RoomController : MonoBehaviour
 
     bool spawnedShopRoom = false;
 
+    bool allRoomsSpawned = false;   
+
     bool updatedRooms = false;
 
 
@@ -78,7 +80,7 @@ public class RoomController : MonoBehaviour
             {
                 StartCoroutine(SpawnShopRoom());
             }
-            else if (spawnedBossRoom && spawnedItemRoom && spawnedShopRoom && !updatedRooms)
+            else if (allRoomsSpawned && !updatedRooms)
             {
                 foreach (Room room in loadedRooms)
                 {
@@ -133,9 +135,9 @@ public class RoomController : MonoBehaviour
             LoadRoom("Item", itemTempRoom.X, itemTempRoom.Y);
         }
 
-        yield return null;
     }
 
+    // Last room to spawn
     IEnumerator SpawnShopRoom()
     {
 
@@ -156,6 +158,8 @@ public class RoomController : MonoBehaviour
             LoadRoom("Shop", shopTempRoom.X, shopTempRoom.Y);
             
         }
+
+        allRoomsSpawned = true;
     }
 
     public void LoadRoom(string name, int x, int y)
