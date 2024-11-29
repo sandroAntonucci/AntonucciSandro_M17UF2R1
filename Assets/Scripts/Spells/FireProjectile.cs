@@ -9,6 +9,7 @@ public class FireProjectile : MonoBehaviour
 
     public float projectileSpeed = 10f;
     public float damage = 10f;
+    public float projectileKnockback = 50f;
 
     public Rigidbody2D rb;
     public SpellOrbit spellOrbit;
@@ -43,6 +44,7 @@ public class FireProjectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
+            StartCoroutine(collision.gameObject.GetComponent<Enemy>().ApplyKnockback(rb.velocity.normalized, 5f));
         }
         
         if (!collision.CompareTag("Player") && !collision.CompareTag("Room") && !collision.CompareTag("PlayerProjectile") && !collision.CompareTag("Orb"))

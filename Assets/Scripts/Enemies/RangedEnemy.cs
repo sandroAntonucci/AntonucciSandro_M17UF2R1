@@ -67,6 +67,8 @@ public class RangedEnemy : Enemy
     private void Move()
     {
 
+        if (isKnockedBack) return;
+
         if (Vector2.Distance(transform.position, player.position) > distanceToPlayer)
         {
             Vector2 moveDirection = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);

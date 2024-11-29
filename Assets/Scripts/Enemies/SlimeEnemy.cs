@@ -12,7 +12,8 @@ public class SlimeEnemy : Enemy
 
     // Dashes in the player direction
     private void Dash()
-    {
+    { 
+
         splashSound.Play();
         Vector2 direction = (player.position - transform.position).normalized;
         rb.AddForce(direction * dashForce, ForceMode2D.Impulse);

@@ -21,6 +21,8 @@ public class SkeletonMeleeEnemy : Enemy
     private void Move()
     {
 
+        if (isKnockedBack) return;
+
         Vector2 direction = player.position - transform.position;
         rb.velocity = direction.normalized * speed;
 
