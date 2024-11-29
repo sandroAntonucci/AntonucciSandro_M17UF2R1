@@ -29,12 +29,6 @@ public class Door : MonoBehaviour
 
     public DoorType doorType;
 
-    public string connectedRoom;
-
-    public void Start()
-    {
-        connectedRoom = "Normal";
-    }
 
     // Removes vision of the door so it's still collidable but not visible
     public void RemoveDoor()
@@ -44,18 +38,28 @@ public class Door : MonoBehaviour
         isActive = false;
     }
 
-    public void ChangeSprite(string doorSprite)
+    public void ChangeSprite(string nextRoomName, bool isOpen)
     {
-        if (doorSprite == "doorOpen") spriteRenderer.sprite = doorOpen;
-        if (doorSprite == "doorClosed") spriteRenderer.sprite = doorClosed;
-        if (doorSprite == "itemDoorOpen") spriteRenderer.sprite = itemDoorOpen;
-        if (doorSprite == "itemDoorClosed") spriteRenderer.sprite = itemDoorClosed;
-        if (doorSprite == "shopDoorOpen") spriteRenderer.sprite = shopDoorOpen;
-        if (doorSprite == "shopDoorClosed") spriteRenderer.sprite = shopDoorClosed;
-        if (doorSprite == "bossDoorOpen") spriteRenderer.sprite = bossDoorOpen;
-        if (doorSprite == "bossDoorClosed") spriteRenderer.sprite = bossDoorClosed;
-    }
+        if (nextRoomName.Contains("Room"))
+        {
+            spriteRenderer.sprite = isOpen ? doorOpen : doorClosed;
+        }
 
+        else if (nextRoomName.Contains("Item"))
+        {
+            spriteRenderer.sprite = isOpen ? itemDoorOpen : itemDoorClosed;
+        }
+
+        else if (nextRoomName.Contains("Shop"))
+        {
+            spriteRenderer.sprite = isOpen ? shopDoorOpen : shopDoorClosed;
+        }
+
+        else if (nextRoomName.Contains("Boss"))
+        {
+            spriteRenderer.sprite = isOpen ? bossDoorOpen : bossDoorClosed;
+        }
+    }
     
 
 }

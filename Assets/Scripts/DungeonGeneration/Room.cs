@@ -12,11 +12,13 @@ public class Room : MonoBehaviour
     public int X;
     public int Y;
 
-    public bool playerInRoom = false;  
+    public bool playerInRoom = false;
+
+    public bool enemiesInRoom;
 
     public List<Enemy> enemyList;
 
-    private bool updatedDoors = false;
+    public bool updatedDoors = false;
     
 
     public Room(int x, int y)
@@ -34,7 +36,7 @@ public class Room : MonoBehaviour
 
     private void Start()
     {
-
+        enemiesInRoom = true;
 
         if (RoomController.instance == null)
         {
@@ -69,46 +71,13 @@ public class Room : MonoBehaviour
 
     private void Update()
     {
-        if ((name.Contains("End") || name.Contains("Item") || name.Contains("Shop")) && !updatedDoors)
+        if ((name.Contains("Boss") || name.Contains("Item") || name.Contains("Shop")) && !updatedDoors)
         {
-
             RemoveUnconnectedDoors();
-
-            if (name.Contains("Item")) ChangeAdjacentDoor("Item");
-            if (name.Contains("Shop")) ChangeAdjacentDoor("Shop");
-            if (name.Contains("End")) ChangeAdjacentDoor("End");
-
-            updatedDoors = true;
+            updatedDoors = true;    
         }
 
-        if (playerInRoom) CheckEnemies();
-    }
-
-    // Changes adjacent door to the room type for the sprite change (enumerator to ensure all rooms are loaded)
-    public void ChangeAdjacentDoor(string type)
-    {
-        Room rightRoom = GetRight();
-        Room leftRoom = GetLeft();
-        Room topRoom = GetTop();
-        Room bottomRoom = GetBottom();
-
-        if (rightRoom != null)
-        {
-            rightRoom.leftDoor.connectedRoom = type;
-        }
-        if (leftRoom != null) 
-        {
-            leftRoom.rightDoor.connectedRoom = type;
-        }
-        if (topRoom != null)
-        {
-            topRoom.bottomDoor.connectedRoom = type;
-        }
-        if (bottomRoom != null)
-        {
-            bottomRoom.topDoor.connectedRoom = type;
-        }
-
+        if (playerInRoom && enemiesInRoom) CheckEnemies();
     }
 
     public void AddEnemies()
@@ -131,7 +100,6 @@ public class Room : MonoBehaviour
     // Checks how many enemies are still alive in the room and opens or closes doors accordingly
     public void CheckEnemies()
     {
-
         bool allEnemiesDead = true;
 
         foreach (Enemy enemy in enemyList)
@@ -144,6 +112,7 @@ public class Room : MonoBehaviour
 
         if (allEnemiesDead)
         {
+            enemiesInRoom = false;
             OpenDoors();
         }
         else
@@ -151,6 +120,34 @@ public class Room : MonoBehaviour
             CloseDoors();
         }
 
+    }
+
+    // Changes the door sprite
+    public void ChangeDoor(Door door, bool isOpen)
+    {
+        if (door.doorType == Door.DoorType.right)
+        {
+            Room rightRoom = GetRight();
+            door.ChangeSprite(rightRoom.name, isOpen);
+        }
+
+        else if (door.doorType == Door.DoorType.left)
+        {
+            Room leftRoom = GetLeft();
+            door.ChangeSprite(leftRoom.name, isOpen);
+        }
+
+        else if (door.doorType == Door.DoorType.top)
+        {
+            Room topRoom = GetTop();
+            door.ChangeSprite(topRoom.name, isOpen);
+        }
+
+        else if (door.doorType == Door.DoorType.bottom)
+        {
+            Room bottomRoom = GetBottom();
+            door.ChangeSprite(bottomRoom.name, isOpen);
+        }
     }
 
     // Opens doors when all enemies are defeated
@@ -161,13 +158,7 @@ public class Room : MonoBehaviour
             if(door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = false;
-                
-                
-                if (door.connectedRoom == "Normal") door.ChangeSprite("doorOpen");
-                if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorOpen");
-                if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorOpen");
-                if (door.connectedRoom == "Boss" || name.Contains("Boss")) door.ChangeSprite("bossDoorOpen");
-
+                ChangeDoor(door, true);
             }
         }
     }
@@ -180,13 +171,7 @@ public class Room : MonoBehaviour
             if (door.isActive)
             {
                 door.GetComponent<BoxCollider2D>().enabled = true;
-
-                if (door.connectedRoom == "Normal") door.ChangeSprite("doorClosed");
-                if (door.connectedRoom == "Item" || name.Contains("Item")) door.ChangeSprite("itemDoorClosed");
-                if (door.connectedRoom == "Shop" || name.Contains("Shop")) door.ChangeSprite("shopDoorClosed");
-                if (door.connectedRoom == "Boss" || name.Contains("Boss")) door.ChangeSprite("bossDoorClosed");
-
-
+                ChangeDoor(door, false);
             }
         }
     }
@@ -285,6 +270,7 @@ public class Room : MonoBehaviour
     {
         if(other.tag == "Player")
         {
+            OpenDoors();
             RoomController.instance.OnPlayerEnterRoom(this);
             AddEnemies();
             playerInRoom = true;

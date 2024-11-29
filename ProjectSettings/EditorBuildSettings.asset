@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/DungeonRooms/BasementShop.unity
     guid: 0e9a63c0fb358e842938acc03165da95
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementEnd.unity
+    path: Assets/Scenes/DungeonRooms/BasementBoss.unity
     guid: 49697378e4b8db043b163694e45ebfc7
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/RandomRooms/BasementRoom0.unity
