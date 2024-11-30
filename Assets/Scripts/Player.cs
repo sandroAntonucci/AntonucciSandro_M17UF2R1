@@ -3,6 +3,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Xml;
 
 public class Player : MonoBehaviour
 {
@@ -100,14 +101,15 @@ public class Player : MonoBehaviour
 
     }
 
-    public void OnTriggerEnter2D(Collider2D collision)
+    // Handles collision with melee enemies
+    public void OnTriggerStay2D(Collider2D collision)
     {
 
-        // Melee Enemies
+        if (invincible) return;
+
+
         if (collision.gameObject.CompareTag("Enemy"))
         {
-
-
             Enemy enemy = collision.gameObject.GetComponent<Enemy>();
 
             if (enemy != null)
@@ -126,8 +128,15 @@ public class Player : MonoBehaviour
             }
 
         }
-        // Ranged enemies
-        else if (collision.gameObject.CompareTag("EnemySpell"))
+
+    }
+
+    // Handles collision with ranged enemies (projectiles)
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (invincible) return;
+
+        if (collision.gameObject.CompareTag("EnemySpell"))
         {
             EnemyProjectile enemyProjectile = collision.gameObject.GetComponent<EnemyProjectile>();
 
@@ -148,8 +157,6 @@ public class Player : MonoBehaviour
 
     private void TakeDamage(float enemyDamage)
     {
-        if (invincible) return; // Skip if invincible
-
         health -= enemyDamage;
         StartCoroutine(HandleInvincibility());
         damageFlash.Flash();
@@ -160,12 +167,9 @@ public class Player : MonoBehaviour
     {
         invincible = true;
 
-        BoxCollider2D collider = GetComponent<BoxCollider2D>();
-        collider.enabled = false;
 
         yield return new WaitForSeconds(invincibilityDuration);
 
-        collider.enabled = true;
 
         invincible = false;
     }

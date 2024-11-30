@@ -44,7 +44,7 @@ public class FireProjectile : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
-            StartCoroutine(collision.gameObject.GetComponent<Enemy>().ApplyKnockback(rb.velocity.normalized, 5f));
+            collision.gameObject.GetComponent<KnockbackFeedback>().PlayFeedback(gameObject);
         }
         
         if (!collision.CompareTag("Player") && !collision.CompareTag("Room") && !collision.CompareTag("PlayerProjectile") && !collision.CompareTag("Orb"))

@@ -206,7 +206,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Golden Wand
   upgradeText: Spell Attack Speed + 0.3
-  upgradePrice: 20
+  upgradePrice: 25
   upgradeType: 1
   upgradeCanvas: {fileID: 0}
 --- !u!1 &3710706132308931456

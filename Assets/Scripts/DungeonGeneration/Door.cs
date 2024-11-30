@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
 
     public void ChangeSprite(string nextRoomName, bool isOpen)
     {
-        if (nextRoomName.Contains("Room"))
+        if (nextRoomName.Contains("Room") || nextRoomName.Contains("Start"))
         {
             spriteRenderer.sprite = isOpen ? doorOpen : doorClosed;
         }

@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 2405831247316844380}
   - component: {fileID: 1283797505449432860}
   - component: {fileID: 1037492823625753130}
+  - component: {fileID: 238525292023462654}
   m_Layer: 7
   m_Name: Priest
   m_TagString: Enemy
@@ -268,9 +269,9 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 1283797505449432860}
   type: 
-  damage: 20
-  health: 50
-  distanceToPlayer: 4.5
+  damage: 10
+  health: 30
+  distanceToPlayer: 5
   castSound: {fileID: 163509335170818497}
   projectile: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 4386947723330015259}
@@ -379,6 +380,51 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5014248, y: 0.7360484}
   m_EdgeRadius: 0
+--- !u!114 &238525292023462654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706413108543378063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d951c2a761b9d6c49bba6a5f81a6122a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 1283797505449432860}
+  strength: 2
+  delay: 0.1
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7154345506847995753}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7154345506847995753}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &3288792017990976957
 GameObject:
   m_ObjectHideFlags: 0

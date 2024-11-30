@@ -1584,7 +1584,7 @@ MonoBehaviour:
   spell: {fileID: 1141301206}
   passiveSpell: {fileID: 1930712965}
   invincibilityDuration: 0.6
-  power: 1000
+  power: 0
   moveSpeed: 5
   hitAudio: {fileID: 1957956194}
   damageFlash: {fileID: 1957956193}
@@ -1915,17 +1915,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 1957956188}
     m_Modifications:
     - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
+      propertyPath: damage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
       propertyPath: projectile
       value: 
       objectReference: {fileID: 2600593159096486721, guid: f5448b61853c1704a96637324c683811, type: 3}
     - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
       propertyPath: attackSpeed
-      value: 0.8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
       propertyPath: fireProjectile
       value: 
       objectReference: {fileID: 2600593159096486721, guid: f5448b61853c1704a96637324c683811, type: 3}
+    - target: {fileID: 106008671875018570, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
+      propertyPath: projectileSpeed
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 2050278143494421130, guid: 61087dde1d071a14bb52d64b39709541, type: 3}
       propertyPath: m_Color.b
       value: 0

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5475247925732246646}
   - component: {fileID: 8527756689991823570}
   - component: {fileID: 2345999844572876134}
+  - component: {fileID: 6032083515952085004}
   m_Layer: 7
   m_Name: Slime
   m_TagString: Enemy
@@ -119,7 +120,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   type: 
   damage: 20
-  health: 60
+  health: 40
   dashForce: 15
   dashFriction: 5
   splashSound: {fileID: 7751010444659480873}
@@ -239,6 +240,51 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dcfbc6581769f1c409f19b273ed96c30, type: 3}
   - {fileID: 8300000, guid: 7a41293effc19174bb1a09707c5a0780, type: 3}
   clip: {fileID: 0}
+--- !u!114 &6032083515952085004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1593137241646398409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d951c2a761b9d6c49bba6a5f81a6122a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb2d: {fileID: 2568076097002720554}
+  strength: 2
+  delay: 0.1
+  OnBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6446024445652375994}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnDone:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6446024445652375994}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &3970552379799905827
 GameObject:
   m_ObjectHideFlags: 0

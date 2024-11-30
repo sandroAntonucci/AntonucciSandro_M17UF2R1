@@ -67,19 +67,18 @@ public class RangedEnemy : Enemy
     private void Move()
     {
 
-        if (isKnockedBack) return;
-
+        // Check if the enemy/player is far from the target
         if (Vector2.Distance(transform.position, player.position) > distanceToPlayer)
         {
-            Vector2 moveDirection = new Vector2(player.position.x - transform.position.x, player.position.y - transform.position.y);
-            rb.velocity = moveDirection.normalized * 2f;
+            Vector2 moveDirection = (player.position - transform.position).normalized;
+            rb.velocity = moveDirection * 2f; // Move towards the player
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            rb.velocity = Vector2.zero; // Stop when close to the player
         }
-
     }
+
 
     private void FlipHorizontally()
     {
