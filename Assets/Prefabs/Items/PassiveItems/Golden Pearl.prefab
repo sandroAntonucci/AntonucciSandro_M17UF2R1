@@ -206,7 +206,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Golden Pearl
   upgradeText: Passive Damage + 5
-  upgradePrice: 20
+  upgradePrice: 30
   upgradeType: 0
   upgradeCanvas: {fileID: 0}
 --- !u!1 &4508489333965781696

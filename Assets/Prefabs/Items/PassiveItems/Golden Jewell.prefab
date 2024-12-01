@@ -288,7 +288,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Golden Jewell
   upgradeText: Passive Attack Speed - 0.3s
-  upgradePrice: 20
+  upgradePrice: 35
   upgradeType: 1
   upgradeCanvas: {fileID: 0}
 --- !u!1001 &6718426557411203547

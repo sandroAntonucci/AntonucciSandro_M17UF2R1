@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Purple Ring
   upgradeText: Spell Projectile Speed + 4
-  upgradePrice: 12
+  upgradePrice: 15
   upgradeType: 2
   upgradeCanvas: {fileID: 0}
 --- !u!1 &7771160848247261932

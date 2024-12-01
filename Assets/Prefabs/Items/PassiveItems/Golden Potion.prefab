@@ -288,7 +288,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Golden Potion
   upgradeText: Projectile Speed  +5
-  upgradePrice: 15
+  upgradePrice: 20
   upgradeType: 2
   upgradeCanvas: {fileID: 0}
 --- !u!1001 &5895555019167373904

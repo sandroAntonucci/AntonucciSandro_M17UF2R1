@@ -287,6 +287,6 @@ MonoBehaviour:
   rangeUpgrade: 1
   upgradeName: Blue Crystal
   upgradeText: Passive Range +1
-  upgradePrice: 10
+  upgradePrice: 15
   upgradeType: 3
   upgradeCanvas: {fileID: 0}

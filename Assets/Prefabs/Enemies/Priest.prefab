@@ -269,7 +269,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 1283797505449432860}
   type: 
-  damage: 10
+  damage: 5
   health: 30
   distanceToPlayer: 5
   castSound: {fileID: 163509335170818497}

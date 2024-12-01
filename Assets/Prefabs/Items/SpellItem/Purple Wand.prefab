@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Purple Wand
   upgradeText: Spell Attack Speed + 0.2
-  upgradePrice: 15
+  upgradePrice: 25
   upgradeType: 1
   upgradeCanvas: {fileID: 0}
 --- !u!1 &5054194415815010137

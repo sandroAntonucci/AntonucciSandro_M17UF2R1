@@ -166,7 +166,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 8473109170028090035}
   type: 
-  damage: 20
+  damage: 5
   health: 20
   speed: 2.4
 --- !u!114 &2935432823486842657

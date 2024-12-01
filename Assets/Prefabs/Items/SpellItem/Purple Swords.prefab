@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Purple Swords
   upgradeText: Spell Damage + 4
-  upgradePrice: 15
+  upgradePrice: 20
   upgradeType: 0
   upgradeCanvas: {fileID: 0}
 --- !u!1 &4406395430068878180

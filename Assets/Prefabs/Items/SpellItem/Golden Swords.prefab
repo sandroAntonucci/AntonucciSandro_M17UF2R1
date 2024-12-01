@@ -206,7 +206,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: 'Golden Swords '
   upgradeText: Spell Damage + 6
-  upgradePrice: 20
+  upgradePrice: 30
   upgradeType: 0
   upgradeCanvas: {fileID: 0}
 --- !u!1 &8033672528874037516

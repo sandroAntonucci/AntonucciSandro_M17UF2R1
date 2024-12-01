@@ -4105,7 +4105,9 @@ MonoBehaviour:
   X: 0
   Y: 0
   playerInRoom: 0
+  enemiesInRoom: 0
   enemyList: []
+  updatedDoors: 0
   leftDoor: {fileID: 0}
   rightDoor: {fileID: 0}
   topDoor: {fileID: 0}

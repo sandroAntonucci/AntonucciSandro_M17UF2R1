@@ -288,7 +288,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Golden Ring
   upgradeText: Spell Projectile Speed + 6
-  upgradePrice: 15
+  upgradePrice: 20
   upgradeType: 2
   upgradeCanvas: {fileID: 0}
 --- !u!1001 &6375353543567350154

@@ -206,7 +206,7 @@ MonoBehaviour:
   rangeUpgrade: 4
   upgradeName: Golden Crystal
   upgradeText: Passive Range +4
-  upgradePrice: 15
+  upgradePrice: 25
   upgradeType: 3
   upgradeCanvas: {fileID: 0}
 --- !u!1 &5007938384712201223

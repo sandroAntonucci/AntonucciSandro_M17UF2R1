@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Purple Pearl
   upgradeText: Passive Damage + 3
-  upgradePrice: 15
+  upgradePrice: 20
   upgradeType: 0
   upgradeCanvas: {fileID: 0}
 --- !u!1 &7169316311498688428

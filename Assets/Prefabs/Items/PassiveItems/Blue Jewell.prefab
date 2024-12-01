@@ -287,6 +287,6 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Blue Jewell
   upgradeText: Passive Attack Speed - 0.1s
-  upgradePrice: 10
+  upgradePrice: 15
   upgradeType: 1
   upgradeCanvas: {fileID: 0}

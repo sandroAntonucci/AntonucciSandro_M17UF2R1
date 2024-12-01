@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 2
   upgradeName: Purple Crystal
   upgradeText: Passive Range +2
-  upgradePrice: 12
+  upgradePrice: 15
   upgradeType: 3
   upgradeCanvas: {fileID: 0}
 --- !u!1 &3861556646309569569

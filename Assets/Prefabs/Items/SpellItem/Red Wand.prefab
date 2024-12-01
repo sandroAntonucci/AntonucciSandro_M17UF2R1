@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Red Wand
   upgradeText: Spell Attack Speed + 0.1
-  upgradePrice: 10
+  upgradePrice: 20
   upgradeType: 1
   upgradeCanvas: {fileID: 0}
 --- !u!1 &7939065321177531798

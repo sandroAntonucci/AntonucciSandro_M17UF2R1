@@ -287,6 +287,6 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Blue Pearl
   upgradeText: Passive Damage + 1
-  upgradePrice: 10
+  upgradePrice: 15
   upgradeType: 0
   upgradeCanvas: {fileID: 0}

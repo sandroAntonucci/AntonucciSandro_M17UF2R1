@@ -205,7 +205,7 @@ MonoBehaviour:
   rangeUpgrade: 0
   upgradeName: Red Swords
   upgradeText: Spell Damage +2
-  upgradePrice: 10
+  upgradePrice: 15
   upgradeType: 0
   upgradeCanvas: {fileID: 0}
 --- !u!1 &8115989747374304156
