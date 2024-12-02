@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 {
 
     // Combat variables
-    public float health = 100;
+    public float health = 50;
     public bool invincible = false;
     
     public PlayerControls playerControls;
@@ -38,7 +38,9 @@ public class Player : MonoBehaviour
     [SerializeField] private SimpleFlash damageFlash;
     [SerializeField] private ParticleSystem damageParticles;
 
+    // Signals 
     public static event Action<int> OnPowerAdded;
+    public static event Action<int> OnHealthChanged;
 
     // -- Input Actions --
 
@@ -68,6 +70,8 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        OnHealthChanged?.Invoke((int)health / 10);
     }
 
     private void Update()
@@ -187,8 +191,14 @@ public class Player : MonoBehaviour
 
     public void AddPower(int powerQuant)
     {
-        OnPowerAdded?.Invoke(powerQuant);
         power += powerQuant;
+        OnPowerAdded?.Invoke(power);
+    }
+
+    // Used in item buying
+    public void EmitPowerAdded()
+    {
+        OnPowerAdded?.Invoke(power);
     }
 
 }

@@ -66,6 +66,7 @@ public class ItemSpawner : MonoBehaviour
             else if (collision.gameObject.GetComponent<Player>().power >= itemUpgrade.upgradePrice)
             {
                 collision.gameObject.GetComponent<Player>().power -= itemUpgrade.upgradePrice;
+                collision.gameObject.GetComponent<Player>().EmitPowerAdded();
                 itemUpgrade.Upgrade();
                 Destroy(gameObject);
             }
