@@ -196,7 +196,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 0}
   type: 
-  damage: 5
+  damage: 10
   health: 30
   dashForce: 15
   dashFriction: 5

@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     // Signals 
     public static event Action<int> OnPowerAdded;
     public static event Action<int> OnHealthChanged;
+    public static event Action<int> OnCurrentHealthChanged;
 
     // -- Input Actions --
 
@@ -164,6 +165,7 @@ public class Player : MonoBehaviour
     private void TakeDamage(float enemyDamage)
     {
         health -= enemyDamage;
+        OnCurrentHealthChanged?.Invoke((int)health / 10);
         StartCoroutine(HandleInvincibility());
         damageFlash.Flash();
         damageParticles.Play();

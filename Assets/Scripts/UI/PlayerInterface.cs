@@ -14,8 +14,9 @@ public class PlayerInterface : MonoBehaviour
 
     private void OnEnable()
     {
-        Player.OnPowerAdded += ChangeOrbsQuant; // Subscribe to the event
-        Player.OnHealthChanged += ChangeHearts; // Subscribe to the event
+        Player.OnPowerAdded += ChangeOrbsQuant;
+        Player.OnHealthChanged += ChangeHearts;
+        Player.OnCurrentHealthChanged += ChangeCurrentHealth;
     }
 
     public void ChangeOrbsQuant(int orbs)
@@ -25,9 +26,6 @@ public class PlayerInterface : MonoBehaviour
 
     private void ChangeHearts(int health)
     {
-
-        Debug.Log("Changing hearts to " + health);
-
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < health)
@@ -39,6 +37,20 @@ public class PlayerInterface : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+    }
+
+    private void ChangeCurrentHealth(int currentHealth)
+    {
+
+        for (int i = hearts.Length - 1; i >= 0; i--)
+        {
+            if (i+1 > currentHealth && hearts[i].IsActive())
+            {
+                hearts[i].color = new Color(150f / 255f, 150f / 255f, 150f / 255f, 1);
+            }
+        }
+
+
     }
 
 
