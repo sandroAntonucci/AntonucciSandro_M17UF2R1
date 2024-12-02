@@ -87,11 +87,19 @@ public class RangedEnemy : Enemy
         {
             isFlipped = true;
             transform.localScale = new Vector3(-1, 1, 1);
+
+            // Doesn't change healthbar
+            healthBar.transform.localScale = new Vector3(healthBar.transform.localScale.x * -1, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
         }
         else if (player.position.x > transform.position.x && isFlipped)
         {
             isFlipped = false;
             transform.localScale = new Vector3(1, 1, 1);
+
+            // Doesn't change healthbar
+            healthBar.transform.localScale = new Vector3(healthBar.transform.localScale.x * -1, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
         }
 
     }

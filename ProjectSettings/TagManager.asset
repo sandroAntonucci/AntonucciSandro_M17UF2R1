@@ -76,3 +76,6 @@ TagManager:
   - name: Particles
     uniqueID: 2498565323
     locked: 0
+  - name: HealthBar
+    uniqueID: 3937577983
+    locked: 0

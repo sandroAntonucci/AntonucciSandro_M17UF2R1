@@ -38,6 +38,8 @@ public class Player : MonoBehaviour
     [SerializeField] private SimpleFlash damageFlash;
     [SerializeField] private ParticleSystem damageParticles;
 
+    public static event Action<int> OnPowerAdded;
+
     // -- Input Actions --
 
     private void Awake()
@@ -185,6 +187,7 @@ public class Player : MonoBehaviour
 
     public void AddPower(int powerQuant)
     {
+        OnPowerAdded?.Invoke(powerQuant);
         power += powerQuant;
     }
 

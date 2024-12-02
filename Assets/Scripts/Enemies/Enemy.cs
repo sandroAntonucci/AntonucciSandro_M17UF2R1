@@ -6,9 +6,11 @@ using UnityEngine;
 public abstract class Enemy : MonoBehaviour
 {
 
-    [SerializeField] public SimpleFlash damageFlash;
-    [SerializeField] public ParticleSystem damageParticles;
-    [SerializeField] public GameAudioManager damageSound;
+    public SimpleFlash damageFlash;
+    public ParticleSystem damageParticles;
+    public GameAudioManager damageSound;
+
+    [SerializeField] protected FloatingHealthbar healthBar;
 
     public List<GameObject> powerOrbs;
     public Stack<GameObject> projectileStack = new Stack<GameObject>();
@@ -24,10 +26,19 @@ public abstract class Enemy : MonoBehaviour
     public float damage;
     public float health;
 
+    private float maxHealth;
+
+    private void Awake()
+    {
+        healthBar = GetComponentInChildren<FloatingHealthbar>();
+    }
+
     public virtual void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
+
+        maxHealth = health;
 
         // Game object is active when the player enters the room
         gameObject.SetActive(false);
@@ -44,6 +55,8 @@ public abstract class Enemy : MonoBehaviour
         damageFlash.Flash();
         damageParticles.Play();
 
+        healthBar.UpdateHealthBar(health, maxHealth);
+
         if (health <= 0)
         {
             DropPower();
@@ -52,8 +65,7 @@ public abstract class Enemy : MonoBehaviour
 
             Destroy(gameObject);
         }
-    }
-
+    } 
 
     private void DestroyProjectiles()
     {

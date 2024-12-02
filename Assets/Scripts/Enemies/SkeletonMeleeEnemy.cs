@@ -38,6 +38,10 @@ public class SkeletonMeleeEnemy : Enemy
     private void FlipHorizontal()
     {
         transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
+
+        // Doesn't change healthbar
+        healthBar.transform.localScale = new Vector3(healthBar.transform.localScale.x * -1, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
         isFlipped = !isFlipped;
     }
 
