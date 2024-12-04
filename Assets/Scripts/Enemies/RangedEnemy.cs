@@ -48,7 +48,7 @@ public class RangedEnemy : Enemy
             currentProjectile.transform.position = shootPosition.position;
             currentProjectile.SetActive(true);
             currentProjectile.GetComponent<SpriteRenderer>().enabled = true;
-            currentProjectile.GetComponent<EnemyProjectile>().Cast();
+            currentProjectile.GetComponent<EnemyProjectile>().CastTowardsPlayer();
 
         }
         else
@@ -58,7 +58,7 @@ public class RangedEnemy : Enemy
             GameObject currentProjectile = Instantiate(projectile, shootPosition.position, Quaternion.identity);
             currentProjectile.GetComponent<EnemyProjectile>().caster = this;
             currentProjectile.GetComponent<EnemyProjectile>().damage = damage;
-            currentProjectile.GetComponent<EnemyProjectile>().Cast();
+            currentProjectile.GetComponent<EnemyProjectile>().CastTowardsPlayer();
 
         }
     }

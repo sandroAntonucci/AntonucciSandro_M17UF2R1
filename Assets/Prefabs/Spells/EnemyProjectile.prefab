@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 7238292124419792395}
   - component: {fileID: 3511479110110703822}
   m_Layer: 7
-  m_Name: PriestProjectile
+  m_Name: EnemyProjectile
   m_TagString: EnemySpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyProjectile : MonoBehaviour
+public class RangedEnemyProjectile : MonoBehaviour
 {
 
     [SerializeField] private AudioSource hitAudio;
@@ -26,7 +26,7 @@ public class EnemyProjectile : MonoBehaviour
     }
 
     // Shoots in the players direction
-    public void Cast()
+    public void CastTowardsPlayer()
     {
 
         if (rb != null)
@@ -36,6 +36,13 @@ public class EnemyProjectile : MonoBehaviour
             rb.velocity = shootDirection.normalized * projectileSpeed; // Apply velocity in the direction of the player
 
         }
+    }
+
+    // Shoots in the given direction
+    public void Shoot(Vector3 direction)
+    {
+        direction = direction.normalized;
+        rb.velocity = direction * projectileSpeed;
     }
 
     // Puts the projectile back in the priest stack when it collides with something that is not the player
