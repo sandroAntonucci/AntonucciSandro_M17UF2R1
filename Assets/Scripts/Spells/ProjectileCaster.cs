@@ -14,7 +14,7 @@ public class ProjectileCaster : MonoBehaviour
 
     public bool isShooting = true;
 
-    private Stack<GameObject> projectilePool = new Stack<GameObject>();
+    public Stack<GameObject> projectilePool = new Stack<GameObject>();
 
     private void Start()
     {
@@ -38,7 +38,6 @@ public class ProjectileCaster : MonoBehaviour
     {
         GameObject newProjectile;
 
-        // Check if we can reuse a projectile from the pool
         if (projectilePool.Count > 0)
         {
             newProjectile = projectilePool.Pop();
@@ -47,27 +46,22 @@ public class ProjectileCaster : MonoBehaviour
         }
         else
         {
-            // Instantiate a new projectile if none are available
+
             newProjectile = Instantiate(projectilePrefab, shootPosition.position, Quaternion.identity);
         }
 
-        // Initialize the projectile
+
         BaseProjectile baseProjectile = newProjectile.GetComponent<BaseProjectile>();
+
         if (baseProjectile != null)
         {
             baseProjectile.caster = this;
             baseProjectile.projectileSpeed = projectileSpeed;
             baseProjectile.projectileDamage = damage;
 
-            // For 2D shooting, use right or up depending on orientation
             Vector2 shootDirection = shootPosition.right;
             baseProjectile.Shoot(shootDirection);
         }
     }
 
-    public void RecycleProjectile(GameObject recycledProjectile)
-    {
-        recycledProjectile.SetActive(false);
-        projectilePool.Push(recycledProjectile);
-    }
 }
