@@ -76,4 +76,21 @@ public class CasterBoss : MonoBehaviour
         }
     }
 
+    public void DestroyProjectiles()
+    {
+        foreach (var casterGroup in attackCasters)
+        {
+            foreach (var caster in casterGroup)
+            {
+                if (caster != null)
+                {
+                    foreach (var projectile in caster.projectilePool)
+                    {
+                        if (projectile != null) Destroy(projectile);
+                    }
+                }
+            }
+        }
+    }
+
 }

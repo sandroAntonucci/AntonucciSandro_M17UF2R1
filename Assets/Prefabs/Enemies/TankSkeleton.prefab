@@ -232,6 +232,7 @@ MonoBehaviour:
   damageFlash: {fileID: 899208710022021659}
   damageParticles: {fileID: 4516821630045397599}
   damageSound: {fileID: 2935432823486842657}
+  isBossMinion: 0
   healthBar: {fileID: 0}
   powerOrbs:
   - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
@@ -339,7 +340,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2

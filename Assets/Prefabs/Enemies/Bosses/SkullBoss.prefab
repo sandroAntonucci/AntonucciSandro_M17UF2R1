@@ -737,8 +737,8 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 5
+  m_Color: {r: 1, g: 0.25943398, b: 0.25943398, a: 1}
+  m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 0000000009ef17a38fbc109cff8a0ca631712250c3f1165fc95dc8e7bd1ec4b21b299528cb14ed94ffabb2ea
@@ -759,8 +759,8 @@ MonoBehaviour:
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 1
-  m_PointLightOuterRadius: 3
+  m_PointLightInnerRadius: 3
+  m_PointLightOuterRadius: 8
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0
   m_ShapeLightParametricRadius: 1
@@ -822,6 +822,7 @@ GameObject:
   - component: {fileID: 8791969953071942585}
   - component: {fileID: 3285294729070168465}
   - component: {fileID: 468855260799525914}
+  - component: {fileID: 4265690738677192766}
   m_Layer: 7
   m_Name: SkullBoss
   m_TagString: Enemy
@@ -986,6 +987,7 @@ MonoBehaviour:
   type: 
   damage: 10
   health: 200
+  itemDrop: {fileID: 0}
 --- !u!114 &8791969953071942585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1034,7 +1036,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 128
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -1051,9 +1053,30 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.01851958, y: 0.03909695}
+  m_Offset: {x: -0.003998518, y: 0.08252454}
   serializedVersion: 2
-  m_Radius: 0.38476682
+  m_Radius: 0.46679676
+--- !u!95 &4265690738677192766
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7924006490985891348}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6e5e931c5e7347243a3fa9803129016a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8993510849435572217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2466,15 +2489,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 5561005095270806606, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2522,15 +2545,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8628210657741843440, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
-      value: 1
+      value: 0.15227693
       objectReference: {fileID: 0}
     - target: {fileID: 8628210657741843440, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: InitialModule.startColor.maxColor.g
-      value: 0.3532274
+      value: 0.12549019
       objectReference: {fileID: 0}
     - target: {fileID: 8628210657741843440, guid: 055cb736dc9f8904db92c8b1b42baaa6, type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.12549019
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

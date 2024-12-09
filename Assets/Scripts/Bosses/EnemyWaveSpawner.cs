@@ -32,11 +32,8 @@ public class EnemyWaveSpawner : MonoBehaviour
         foreach (var enemy in wave)
             if (enemy != null)
             {
-
                 GameObject enemyCopy = Instantiate(enemy, enemy.transform.position, Quaternion.identity);
                 enemyCopy.SetActive(true);
-                Debug.Log("Enemy spawned");
-
             }
     }
 
