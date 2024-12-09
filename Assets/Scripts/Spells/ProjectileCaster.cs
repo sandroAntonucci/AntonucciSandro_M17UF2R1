@@ -11,15 +11,21 @@ public class ProjectileCaster : MonoBehaviour
     [SerializeField] private float shootRate = 0.5f;
     [SerializeField] private float damage = 10f;
     [SerializeField] private float projectileSpeed = 5f;
+    [SerializeField] private bool shootsTowardsPlayer = false;
 
     public bool isShooting = true;
 
     public Stack<GameObject> projectilePool = new Stack<GameObject>();
 
-    private void Start()
+    private void OnEnable()
     {
-        // Start the shooting coroutine
+        isShooting = true;
         StartCoroutine(Shoot());
+    }
+
+    private void OnDisable()
+    {
+        isShooting = false;
     }
 
     private IEnumerator Shoot()
@@ -46,12 +52,11 @@ public class ProjectileCaster : MonoBehaviour
         }
         else
         {
-
             newProjectile = Instantiate(projectilePrefab, shootPosition.position, Quaternion.identity);
         }
 
 
-        BaseProjectile baseProjectile = newProjectile.GetComponent<BaseProjectile>();
+        EnemyProjectile baseProjectile = newProjectile.GetComponent<EnemyProjectile>();
 
         if (baseProjectile != null)
         {
@@ -60,8 +65,24 @@ public class ProjectileCaster : MonoBehaviour
             baseProjectile.projectileDamage = damage;
 
             Vector2 shootDirection = shootPosition.right;
+
+            // Shoots towards the player if the property is set to true
+            if (shootsTowardsPlayer)
+            {
+                baseProjectile.CastTowardsPlayer();
+                return;
+            }
+
+            // Shoots in the given direction
             baseProjectile.Shoot(shootDirection);
         }
     }
 
+    public void DestroyProjectiles()
+    {
+        foreach (GameObject projectile in projectilePool)
+        {
+            Destroy(projectile);
+        }
+    }
 }

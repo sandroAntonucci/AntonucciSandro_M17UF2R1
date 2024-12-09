@@ -13,7 +13,6 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] protected FloatingHealthbar healthBar;
 
     public List<GameObject> powerOrbs;
-    public Stack<GameObject> projectileStack = new Stack<GameObject>();
 
     public int rangeToDropOne;
     public int rangeToDropTwo;
@@ -45,7 +44,6 @@ public abstract class Enemy : MonoBehaviour
 
     }
 
-
     // Applies damage to the enemy
     public void ApplyDamage(float damageApplied)
     {
@@ -59,21 +57,9 @@ public abstract class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            DropPower();
-
-            DestroyProjectiles();
-
-            Destroy(gameObject);
+            Die();
         }
     } 
-
-    private void DestroyProjectiles()
-    {
-        while (projectileStack.Count > 0)
-        {
-            Destroy(projectileStack.Pop());
-        }
-    }
 
     public void DropPower()
     {
@@ -93,5 +79,14 @@ public abstract class Enemy : MonoBehaviour
             Instantiate(powerOrbs[0], transform.position, Quaternion.identity);
         }
     }
+
+    public virtual void Die()
+    {
+        DropPower();
+        Destroy(gameObject);
+    }
+
+
+
 }
 

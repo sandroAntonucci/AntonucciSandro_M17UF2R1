@@ -151,7 +151,7 @@ public class Player : MonoBehaviour
             {
                 hitAudio.PlayRandomSound();
 
-                TakeDamage(enemyProjectile.damage);
+                TakeDamage(enemyProjectile.projectileDamage);
 
                 // Check if health is 0 or less, and destroy the player if so
                 if (health <= 0)

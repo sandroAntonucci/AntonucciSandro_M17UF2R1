@@ -6,19 +6,10 @@ using UnityEngine;
 public class RangedEnemy : Enemy
 {
     [SerializeField] private float distanceToPlayer;
-    [SerializeField] private AudioSource castSound;
-
-    public GameObject projectile;
-    public Transform shootPosition;
+    [SerializeField] private ProjectileCaster projectileCaster;
 
     private bool isFlipped = false;
     private bool isSpawned = false;
-
-    public override void Start()
-    {
-        base.Start();
-        projectileStack = new Stack<GameObject>();
-    }
 
     private void Update()
     {
@@ -31,55 +22,26 @@ public class RangedEnemy : Enemy
     private void Spawn()
     {
         isSpawned = true;
-    }
-
-    // Is called in the animator
-    private void Shoot()
-    {
-
-        castSound.Play();
-
-        if (projectileStack.Count > 0)
-        {
-
-            GameObject currentProjectile = projectileStack.Pop();
-
-            // Resets projectile position, sets it to active and shoots
-            currentProjectile.transform.position = shootPosition.position;
-            currentProjectile.SetActive(true);
-            currentProjectile.GetComponent<SpriteRenderer>().enabled = true;
-            currentProjectile.GetComponent<EnemyProjectile>().CastTowardsPlayer();
-
-        }
-        else
-        {
-
-            // Instantiates a new projectile and shoots
-            GameObject currentProjectile = Instantiate(projectile, shootPosition.position, Quaternion.identity);
-            currentProjectile.GetComponent<EnemyProjectile>().caster = this;
-            currentProjectile.GetComponent<EnemyProjectile>().damage = damage;
-            currentProjectile.GetComponent<EnemyProjectile>().CastTowardsPlayer();
-
-        }
+        projectileCaster.enabled = true;
     }
 
     // Moves towards the player and stops between a certain distance
     private void Move()
     {
 
-        // Check if the enemy/player is far from the target
+        // Check if the enemy is far from the target
         if (Vector2.Distance(transform.position, player.position) > distanceToPlayer)
         {
             Vector2 moveDirection = (player.position - transform.position).normalized;
-            rb.velocity = moveDirection * 2f; // Move towards the player
+            rb.velocity = moveDirection * 2f;
         }
         else
         {
-            rb.velocity = Vector2.zero; // Stop when close to the player
+            rb.velocity = Vector2.zero; 
         }
     }
 
-
+    // Flips the player horizontally
     private void FlipHorizontally()
     {
 
@@ -104,7 +66,17 @@ public class RangedEnemy : Enemy
 
     }
 
+    public override void Die()
+    {
+        StartCoroutine(DestroyProjectiles());
+        base.Die();
+    }
 
+    private IEnumerator DestroyProjectiles()
+    {
+        projectileCaster.DestroyProjectiles();
+        yield return null;
+    }
 }
 
 

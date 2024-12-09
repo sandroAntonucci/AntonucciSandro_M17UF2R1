@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 1283797505449432860}
   - component: {fileID: 1037492823625753130}
   - component: {fileID: 238525292023462654}
+  - component: {fileID: 7594021997106777857}
   m_Layer: 7
   m_Name: Priest
   m_TagString: Enemy
@@ -310,9 +311,7 @@ MonoBehaviour:
   damage: 10
   health: 30
   distanceToPlayer: 5
-  castSound: {fileID: 163509335170818497}
-  projectile: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
-  shootPosition: {fileID: 4386947723330015259}
+  projectileCaster: {fileID: 7594021997106777857}
 --- !u!114 &4213977209469839468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,6 +462,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &7594021997106777857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706413108543378063}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da1f6930b2e9d80459546672d32afdc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
+  shootPosition: {fileID: 4386947723330015259}
+  shootRate: 1
+  damage: 10
+  projectileSpeed: 7
+  shootsTowardsPlayer: 1
+  isShooting: 1
 --- !u!1 &3288792017990976957
 GameObject:
   m_ObjectHideFlags: 0

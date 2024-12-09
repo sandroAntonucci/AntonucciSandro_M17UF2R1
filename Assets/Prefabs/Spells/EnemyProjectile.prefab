@@ -139,9 +139,9 @@ GameObject:
   - component: {fileID: 6368731052645270438}
   - component: {fileID: 8348705844679216377}
   - component: {fileID: 3995385514854792804}
-  - component: {fileID: 5358037517277544890}
   - component: {fileID: 7238292124419792395}
   - component: {fileID: 3511479110110703822}
+  - component: {fileID: 8361299544678841679}
   m_Layer: 7
   m_Name: EnemyProjectile
   m_TagString: EnemySpell
@@ -239,25 +239,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5358037517277544890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4913771829183224224}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cab59a79e3dc4054e9c62dc2e496f525, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitAudio: {fileID: 4307764746013201110}
-  projectileSpeed: 7
-  damage: 10
-  anim: {fileID: 3995385514854792804}
-  rb: {fileID: 7238292124419792395}
-  playerPosition: {fileID: 0}
-  caster: {fileID: 0}
 --- !u!50 &7238292124419792395
 Rigidbody2D:
   serializedVersion: 4
@@ -320,6 +301,23 @@ CircleCollider2D:
   m_Offset: {x: -0.032788612, y: -0.034002934}
   serializedVersion: 2
   m_Radius: 0.1854732
+--- !u!114 &8361299544678841679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913771829183224224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6940e0a8605f1a4493cf3cce30b563f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 3995385514854792804}
+  caster: {fileID: 0}
+  rb: {fileID: 7238292124419792395}
+  projectileSpeed: 7
+  projectileDamage: 10
 --- !u!1 &5091416098427618259
 GameObject:
   m_ObjectHideFlags: 0
