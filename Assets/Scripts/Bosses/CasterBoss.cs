@@ -6,11 +6,13 @@ using UnityEngine;
 public class CasterBoss : MonoBehaviour
 {
     [SerializeField] private float attackChangeTime = 5f;
+    [SerializeField] private float attackCooldown = 0.5f;
 
     // Different attack patterns
     public ProjectileCaster[] attackCasterOne;
     public ProjectileCaster[] attackCasterTwo;
     public ProjectileCaster[] attackCasterThree;
+    public ProjectileCaster[] attackCasterFour;
 
     // List of all attack patterns
     private List<ProjectileCaster[]> attackCasters;
@@ -22,7 +24,8 @@ public class CasterBoss : MonoBehaviour
         {
             attackCasterOne,
             attackCasterTwo,
-            attackCasterThree
+            attackCasterThree,
+            attackCasterFour
         };
 
         StartCoroutine(AttackLoop());
@@ -60,6 +63,8 @@ public class CasterBoss : MonoBehaviour
         {
             // Stop all attacks before starting a new one
             StopAllCasters();
+
+            yield return new WaitForSeconds(attackCooldown);
 
             // Randomly choose an attack index
             int attackIndex = Random.Range(0, attackCasters.Count);

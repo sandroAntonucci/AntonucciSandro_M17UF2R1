@@ -10,6 +10,9 @@ public abstract class Enemy : MonoBehaviour
     public ParticleSystem damageParticles;
     public GameAudioManager damageSound;
 
+    // If the enemy is a boss minion, it will be active from the start
+    [SerializeField] private bool isBossMinion = false;
+
     [SerializeField] protected FloatingHealthbar healthBar;
 
     public List<GameObject> powerOrbs;
@@ -40,7 +43,7 @@ public abstract class Enemy : MonoBehaviour
         maxHealth = health;
 
         // Game object is active when the player enters the room
-        gameObject.SetActive(false);
+        if(!isBossMinion) gameObject.SetActive(false);
 
     }
 
