@@ -91,6 +91,9 @@ public class Room : MonoBehaviour
         // Add each enemy to the list
         foreach (Enemy enemy in childEnemies)
         {
+
+            if (enemy.isBossMinion) return;
+
             enemyList.Add(enemy);
             enemy.gameObject.SetActive(true);
         }

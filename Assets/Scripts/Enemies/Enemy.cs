@@ -11,7 +11,7 @@ public abstract class Enemy : MonoBehaviour
     public GameAudioManager damageSound;
 
     // If the enemy is a boss minion, it will be active from the start
-    [SerializeField] private bool isBossMinion = false;
+    [SerializeField] public bool isBossMinion = false;
 
     [SerializeField] protected FloatingHealthbar healthBar;
 
@@ -50,6 +50,7 @@ public abstract class Enemy : MonoBehaviour
     // Applies damage to the enemy
     public void ApplyDamage(float damageApplied)
     {
+
         health -= damageApplied;
 
         damageSound.PlayRandomSound();
@@ -85,7 +86,9 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
-        DropPower();
+        // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms, too broken)
+        if (!isBossMinion) DropPower();
+
         Destroy(gameObject);
     }
 

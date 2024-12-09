@@ -3586,6 +3586,14 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2796321619033395184, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796321619033395184, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3459511189433705547, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
       propertyPath: shootRate
       value: 0.5
@@ -3695,6 +3703,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5835108682856695016, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943762208940335867, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943762208940335867, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro.Examples;
 using UnityEngine;
 
-public class SpawnerBoss : MonoBehaviour
+public class EnemyWaveSpawner : MonoBehaviour
 {
 
     [SerializeField] private float waveSpawnTime = 8f;
@@ -32,8 +32,10 @@ public class SpawnerBoss : MonoBehaviour
         foreach (var enemy in wave)
             if (enemy != null)
             {
+
                 GameObject enemyCopy = Instantiate(enemy, enemy.transform.position, Quaternion.identity);
                 enemyCopy.SetActive(true);
+                Debug.Log("Enemy spawned");
 
             }
     }

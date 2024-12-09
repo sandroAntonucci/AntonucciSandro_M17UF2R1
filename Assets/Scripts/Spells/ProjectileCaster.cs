@@ -13,19 +13,13 @@ public class ProjectileCaster : MonoBehaviour
     [SerializeField] private float projectileSpeed = 5f;
     [SerializeField] private bool shootsTowardsPlayer = false;
 
-    public bool isShooting = true;
+    public bool isShooting;
 
     public Stack<GameObject> projectilePool = new Stack<GameObject>();
 
     private void OnEnable()
     {
-        isShooting = true;
         StartCoroutine(Shoot());
-    }
-
-    private void OnDisable()
-    {
-        isShooting = false;
     }
 
     private IEnumerator Shoot()
