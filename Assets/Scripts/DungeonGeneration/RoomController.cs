@@ -45,12 +45,6 @@ public class RoomController : MonoBehaviour
         instance = this;
     }
 
-    private void Start()
-    {
-        Debug.Log("Is started");
-    }
-
-
     private void Update()
     {
         UpdateRoomQueue();
@@ -102,6 +96,7 @@ public class RoomController : MonoBehaviour
         {
             Room bossRoom = loadedRooms[loadedRooms.Count - 1];
             Room bossTempRoom = new Room(bossRoom.X, bossRoom.Y);
+
             Destroy(bossRoom.gameObject);
             var roomToRemove = loadedRooms.Single(r => r.X == bossTempRoom.X && r.Y == bossTempRoom.Y);
             loadedRooms.Remove(roomToRemove);
@@ -124,6 +119,7 @@ public class RoomController : MonoBehaviour
 
             Room itemRoom = loadedRooms[randRoomPosition];
             Room itemTempRoom = new Room(itemRoom.X, itemRoom.Y);
+
             Destroy(itemRoom.gameObject);
             var roomToRemove = loadedRooms.Single(r => r.X == itemTempRoom.X && r.Y == itemTempRoom.Y);
             loadedRooms.Remove(roomToRemove);
@@ -147,6 +143,8 @@ public class RoomController : MonoBehaviour
 
             Room shopRoom = loadedRooms[randRoomPosition];
             Room shopTempRoom = new Room(shopRoom.X, shopRoom.Y);
+
+
             Destroy(shopRoom.gameObject);
             var roomToRemove = loadedRooms.Single(r => r.X == shopTempRoom.X && r.Y == shopTempRoom.Y);
             loadedRooms.Remove(roomToRemove);

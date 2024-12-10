@@ -128,27 +128,34 @@ public class Room : MonoBehaviour
     // Changes the door sprite
     public void ChangeDoor(Door door, bool isOpen)
     {
+
+        if (door == null) return;
+
         if (door.doorType == Door.DoorType.right)
         {
             Room rightRoom = GetRight();
+            if (rightRoom == null) return;
             door.ChangeSprite(rightRoom.name, isOpen);
         }
 
         else if (door.doorType == Door.DoorType.left)
         {
             Room leftRoom = GetLeft();
+            if (leftRoom == null) return;
             door.ChangeSprite(leftRoom.name, isOpen);
         }
 
         else if (door.doorType == Door.DoorType.top)
         {
             Room topRoom = GetTop();
+            if (topRoom == null) return;
             door.ChangeSprite(topRoom.name, isOpen);
         }
 
         else if (door.doorType == Door.DoorType.bottom)
         {
             Room bottomRoom = GetBottom();
+            if (bottomRoom == null) return;
             door.ChangeSprite(bottomRoom.name, isOpen);
         }
     }

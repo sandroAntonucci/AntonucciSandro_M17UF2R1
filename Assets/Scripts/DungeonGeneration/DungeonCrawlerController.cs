@@ -27,6 +27,7 @@ public class DungeonCrawlerController : MonoBehaviour
     {
         List<DungeonCrawler> dungeonCrawlers = new List<DungeonCrawler>();
 
+        positionsVisited.Clear();
 
         for (int i = 0; i < dungeonData.numberOfCrawlers; i++)
         {

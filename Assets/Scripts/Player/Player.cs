@@ -222,4 +222,18 @@ public class Player : MonoBehaviour
         passiveSpell.DestroyProjectiles();
     }
 
+    public IEnumerator ReloadPlayer()
+    {
+
+        lastMoveDirection = Vector2.zero;
+        DestroyProjectiles();
+        Instance.enabled = false;
+
+        yield return new WaitForSeconds(3f);
+
+        // The 0.0001 is used because, for some reason, if I use 0 the player spawns in the wrong position
+        gameObject.transform.position = new Vector3(0.0001f, 0, 0);
+        Instance.enabled = true;
+    }
+
 }

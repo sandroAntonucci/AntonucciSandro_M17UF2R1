@@ -15,10 +15,8 @@ public class Pedestal : MonoBehaviour
 
     private IEnumerator ChangeScene()
     {
-
         yield return new WaitForSeconds(1f);
-
-        GameManager.Instance.LoadScene("BasementLevel2");
+        GameManager.Instance.LoadScene("BasementMain");
     }
 
 

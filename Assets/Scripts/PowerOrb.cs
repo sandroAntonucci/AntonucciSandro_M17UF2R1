@@ -13,15 +13,14 @@ public class PowerOrb : MonoBehaviour
 
     public bool playerInRange = false;
 
-    public void Update()
+    public void FixedUpdate()
     {
         if (playerInRange)
         {
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.05f);
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.1f);
         }
-
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
