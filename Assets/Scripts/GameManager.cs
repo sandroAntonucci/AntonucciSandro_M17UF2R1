@@ -29,7 +29,10 @@ public class GameManager : MonoBehaviour
     {
 
 
-        StartCoroutine(LoadSceneCanvas.Instance.ShowLoadingScreen(4f));
+        StartCoroutine(LoadSceneCanvas.Instance.ShowLoadingScreen(3.5f));
+
+
+        StartCoroutine(Player.Instance.ReloadPlayer());
 
 
         DungeonCrawlerController.GenerateDungeon(DungeonGenerator.instance.dungeonGenerationData);
@@ -44,7 +47,6 @@ public class GameManager : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        StartCoroutine(Player.Instance.ReloadPlayer());
 
         StartCoroutine(RemoveScenes());
 

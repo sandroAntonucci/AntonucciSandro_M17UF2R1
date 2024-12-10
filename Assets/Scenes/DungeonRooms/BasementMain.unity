@@ -542,7 +542,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5121379284465888997, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: damage
-      value: 50
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5641978685214640873, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -777,6 +777,22 @@ PrefabInstance:
     - target: {fileID: 4274406773125103595, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435377637198526608, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 2584.8486
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435377637198526608, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1801.6943
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435377637198526608, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -3.5466
+      objectReference: {fileID: 0}
+    - target: {fileID: 5435377637198526608, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 3.5446
       objectReference: {fileID: 0}
     - target: {fileID: 6022613827120984648, guid: 6c80c9815543d0443bcb2ea13708a795, type: 3}
       propertyPath: canvas
