@@ -8,6 +8,8 @@ public class DungeonGenerator : MonoBehaviour
 
     public static DungeonGenerator instance;
 
+    public RoomController roomController;
+
     public DungeonGenerationData dungeonGenerationData;
 
     private int numberOfRooms;
@@ -26,11 +28,11 @@ public class DungeonGenerator : MonoBehaviour
 
     public void ReloadRooms()
     {
-        // Get the number of rooms in the scene build settings for random room generation (substracts 5 for main, start, item shop, free item and end)
-        numberOfRooms = SceneManager.sceneCountInBuildSettings - 5;
 
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
+
         SpawnRooms(dungeonRooms);
+
         foreach (Room room in RoomController.instance.loadedRooms)
         {
             room.RemoveUnconnectedDoors();
@@ -39,15 +41,30 @@ public class DungeonGenerator : MonoBehaviour
 
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)
     {
-        RoomController.instance.LoadRoom("Start", 0, 0);
+        
 
-        foreach(Vector2Int roomLocation in rooms)
+        roomController.LoadRoom("Start", 0, 0);
+
+        // Counts the number of scenes that contain the dungeon name
+
+        foreach (Scene scene in SceneManager.GetAllScenes() )
+        {
+            if (scene.name.Contains(roomController.currentWorldName))
+            {
+                numberOfRooms++;
+            }
+        }
+
+
+
+
+        foreach (Vector2Int roomLocation in rooms)
         {
 
             // Loads a random room starting from 0 to the number of rooms in the scene build settings
-            string sceneName = "Room" + Random.Range(0, numberOfRooms);
+            string sceneName = "Room" + Random.Range(0, numberOfRooms - 1);
 
-            RoomController.instance.LoadRoom(sceneName, roomLocation.x, roomLocation.y);
+            roomController.LoadRoom(sceneName, roomLocation.x, roomLocation.y);
 
         }
     }

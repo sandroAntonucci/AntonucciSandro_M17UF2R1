@@ -16,7 +16,15 @@ public class Pedestal : MonoBehaviour
     private IEnumerator ChangeScene()
     {
         yield return new WaitForSeconds(1f);
-        GameManager.Instance.LoadScene("BasementMain");
+
+        switch (RoomController.instance.currentWorldName)
+        {
+            case "Catacombs":
+                RoomController.instance.currentWorldName = "Basement";
+                GameManager.Instance.LoadScene("BasementMain");
+                break;
+        }
+
     }
 
 

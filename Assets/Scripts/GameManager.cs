@@ -66,13 +66,15 @@ public class GameManager : MonoBehaviour
     public IEnumerator RemoveScenes()
     {
 
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName("BasementMain"));
+        string currentMain = RoomController.instance.currentWorldName + "Main";
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentMain));
 
         for (int i = 0; i < SceneManager.sceneCount; i++)
         {
             Scene scene = SceneManager.GetSceneAt(i);
 
-            if (scene.name != "BasementMain")
+            if (scene.name != currentMain)
             {
                 SceneManager.UnloadSceneAsync(scene);
             }
