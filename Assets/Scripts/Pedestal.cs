@@ -18,8 +18,7 @@ public class Pedestal : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        GameManager.Instance.ReloadCurrentScene();
-
+        GameManager.Instance.LoadScene("BasementLevel2");
     }
 
 

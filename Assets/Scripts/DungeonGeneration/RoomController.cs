@@ -45,6 +45,11 @@ public class RoomController : MonoBehaviour
         instance = this;
     }
 
+    private void Start()
+    {
+        Debug.Log("Is started");
+    }
+
 
     private void Update()
     {

@@ -22,12 +22,13 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        StartCoroutine(RemoveScenes());
         StartCoroutine(LoadSceneAsync(sceneName));
     }
 
     private IEnumerator LoadSceneAsync(string sceneName)
     {
+
+        DungeonCrawlerController.GenerateDungeon(DungeonGenerator.instance.dungeonGenerationData);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
@@ -38,6 +39,17 @@ public class GameManager : MonoBehaviour
 
         Player.Instance.transform.position = Vector3.zero;
         Player.Instance.DestroyProjectiles();
+
+
+    }
+
+    public IEnumerator RemoveScene(string sceneName) 
+    {
+        Scene scene = SceneManager.GetSceneByName(sceneName);
+
+        SceneManager.UnloadSceneAsync(scene);
+
+        yield return null;
 
     }
 
@@ -54,12 +66,12 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.UnloadSceneAsync(scene);
             }
+
         }
 
         yield return null;
 
     }
-
 
     public void ReloadCurrentScene()
     {

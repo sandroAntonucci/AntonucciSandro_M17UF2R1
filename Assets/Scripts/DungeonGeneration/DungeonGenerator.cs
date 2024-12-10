@@ -6,21 +6,32 @@ using UnityEngine.SceneManagement;
 public class DungeonGenerator : MonoBehaviour
 {
 
+    public static DungeonGenerator instance;
+
     public DungeonGenerationData dungeonGenerationData;
 
     private int numberOfRooms;
 
     private List<Vector2Int> dungeonRooms;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private void Start()
     {
+        ReloadRooms();
+    }
 
+    public void ReloadRooms()
+    {
         // Get the number of rooms in the scene build settings for random room generation (substracts 5 for main, start, item shop, free item and end)
-        numberOfRooms = SceneManager.sceneCountInBuildSettings - 5;
+        numberOfRooms = SceneManager.sceneCountInBuildSettings - 6;
 
         dungeonRooms = DungeonCrawlerController.GenerateDungeon(dungeonGenerationData);
         SpawnRooms(dungeonRooms);
-        foreach(Room room in RoomController.instance.loadedRooms)
+        foreach (Room room in RoomController.instance.loadedRooms)
         {
             room.RemoveUnconnectedDoors();
         }
