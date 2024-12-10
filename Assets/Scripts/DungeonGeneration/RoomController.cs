@@ -201,7 +201,7 @@ public class RoomController : MonoBehaviour
 
             if (loadedRooms.Count == 0)
             {
-                CameraController.instance.currRoom = room;
+                CameraController.Instance.currRoom = room;
             }
 
             loadedRooms.Add(room);
@@ -226,7 +226,7 @@ public class RoomController : MonoBehaviour
 
     public void OnPlayerEnterRoom(Room room)
     {
-        CameraController.instance.currRoom = room;
+        CameraController.Instance.currRoom = room;
         currRoom = room;
     }
 

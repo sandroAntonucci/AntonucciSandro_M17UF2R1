@@ -15,5 +15,6 @@ public abstract class BaseSpell : MonoBehaviour
 
     public abstract void CastSpell();
 
+    public abstract void DestroyProjectiles();
 
 }

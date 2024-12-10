@@ -19,7 +19,7 @@ public class PowerOrb : MonoBehaviour
         {
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.1f);
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.05f);
         }
 
     }

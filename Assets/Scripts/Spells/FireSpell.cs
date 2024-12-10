@@ -64,5 +64,18 @@ public class FireSpell : BaseSpell
         canCast = true;
     }
 
+    public override void DestroyProjectiles()
+    {
+        foreach (GameObject projectile in spellStack)
+        {
+            Destroy(projectile);
+        }
+
+        spellStack.Clear();
+
+    }
+
+
+
 
 }

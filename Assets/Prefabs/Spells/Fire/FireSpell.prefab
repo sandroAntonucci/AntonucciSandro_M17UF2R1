@@ -480,11 +480,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e93c8dfd2a8f243947eb8ba96ed13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 1
+  attackSpeed: 0.5
   damage: 8
   projectileSpeed: 8
   range: 0
-  projectile: {fileID: 0}
+  projectile: {fileID: 2600593159096486721, guid: f5448b61853c1704a96637324c683811, type: 3}
   castSound: {fileID: 5065739567099012782}
 --- !u!114 &5065739567099012782
 MonoBehaviour:

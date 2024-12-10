@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public static CameraController instance;
+    public static CameraController Instance { get; private set; }
     public Room currRoom;
     public GameObject player;
 
@@ -18,7 +18,14 @@ public class CameraController : MonoBehaviour
 
     void Awake()
     {
-        instance = this;
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); // Destroy duplicate instance
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); // Persist across scenes
     }
 
     void Update()

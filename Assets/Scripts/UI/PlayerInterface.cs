@@ -7,10 +7,23 @@ using Unity.VisualScripting;
 
 public class PlayerInterface : MonoBehaviour
 {
+    public static PlayerInterface Instance { get; private set; }
 
     [SerializeField] private Image[] hearts;
 
     [SerializeField] private TextMeshProUGUI orbsText;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     private void OnEnable()
     {

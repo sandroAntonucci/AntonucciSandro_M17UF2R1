@@ -6,6 +6,7 @@ public class Boss : Enemy
 {
 
     [SerializeField] private GameObject itemDrop;
+    [SerializeField] private GameObject pedestal;
 
     public override void Start()
     {
@@ -34,6 +35,7 @@ public class Boss : Enemy
         }
 
         itemDrop.SetActive(true);
+        pedestal.SetActive(true);
 
         base.Die();
 

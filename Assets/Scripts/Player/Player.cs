@@ -8,6 +8,8 @@ using System.Xml;
 public class Player : MonoBehaviour
 {
 
+    public static Player Instance { get; private set; }
+
     // Combat variables
     public float health = 50;
     public bool invincible = false;
@@ -47,8 +49,16 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject); 
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject); 
+
         playerControls = new PlayerControls();
-        
     }
 
     private void OnEnable()
@@ -71,6 +81,9 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        // If the player is loaded it means that all referenced scenes are loaded in the main scene, so we can remove them 
+        StartCoroutine(GameManager.Instance.RemoveScenes());
 
         OnHealthChanged?.Invoke((int)health / 10);
     }
@@ -201,6 +214,12 @@ public class Player : MonoBehaviour
     public void EmitPowerAdded()
     {
         OnPowerAdded?.Invoke(power);
+    }
+
+    public void DestroyProjectiles()
+    {
+        spell.DestroyProjectiles();
+        passiveSpell.DestroyProjectiles();
     }
 
 }
