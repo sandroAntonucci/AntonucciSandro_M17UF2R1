@@ -9,112 +9,112 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/BasementStart.unity
+    path: Assets/Scenes/DungeonRooms/Basement/BasementStart.unity
     guid: b2f9278082b2fb44c985a6b4ff06be63
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/BasementMain.unity
+    path: Assets/Scenes/DungeonRooms/Basement/BasementMain.unity
     guid: 8b1f8f37240e3bd4298e397164516cfc
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/BasementItem.unity
+    path: Assets/Scenes/DungeonRooms/Basement/BasementItem.unity
     guid: c6fb8afb6f75aeb48abee2ce42e99b59
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/BasementShop.unity
+    path: Assets/Scenes/DungeonRooms/Basement/BasementShop.unity
     guid: 0e9a63c0fb358e842938acc03165da95
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/BasementBoss.unity
+    path: Assets/Scenes/DungeonRooms/Basement/BasementBoss.unity
     guid: 49697378e4b8db043b163694e45ebfc7
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom0.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom0.unity
     guid: 2a0a7675293cb8c44ae84bfb5abb1e38
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom1.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom1.unity
     guid: 62047c8d53e858e4d963c69393c557c1
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom2.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom2.unity
     guid: 8f6a5b4b255407a4bbd45a606130ea6e
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom3.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom3.unity
     guid: 6666fde03b93ade46abc6d62191509a0
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom4.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom4.unity
     guid: f490a76dcc99f494eacce8eb3fadd232
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom5.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom5.unity
     guid: dcef600968427f14fb5ef3155840a9e9
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom6.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom6.unity
     guid: fccae0981ce18984f98933ba17fbcdf0
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom7.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom7.unity
     guid: 35886a8bf193dcb46a208d7de99c3f64
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom8.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom8.unity
     guid: c99bbe83a387ac449a17fb3d653fc323
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom9.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom9.unity
     guid: 9ac07a4f160e1394987381411dad1f8c
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom10.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom10.unity
     guid: 1b9b27c57753a9b43a670d266f6c07db
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom11.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom11.unity
     guid: 6be4ca2d86df7c14e9d4e0180a98090e
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom12.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom12.unity
     guid: efb0926455d5bb34285daee38c116a32
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom13.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom13.unity
     guid: b537e837e5f6d81498c9bfcd6bbb2743
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom14.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom14.unity
     guid: 83acf816353b05048a06c2d837feefc0
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom15.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom15.unity
     guid: 18ec32a0d2f566943a19c0667cf3d77e
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom16.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom16.unity
     guid: 3d3076fef47091247a9236480ac08258
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom17.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom17.unity
     guid: fe5191c7aaa9c9c409f0e77350504c7b
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom18.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom18.unity
     guid: 58ac69212b327404b86cbb606f127fe3
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom19.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom19.unity
     guid: ac74503f3ae6ef049b6f7dec42c493d1
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/BasementRooms/RandomRoomsBasement/BasementRoom20.unity
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom20.unity
     guid: 409cfb956d881d14dbb50eadc064745c
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/CatacombsStart.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsStart.unity
     guid: 73130c246c5fc70489e491e15d8a5208
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/CatacombsMain.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsMain.unity
     guid: 6fd4cc6e17a08a74c806f407881254ad
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/CatacombsItem.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsItem.unity
     guid: f3949cee9df44914ea16a9f9d9d47287
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/CatacombsShop.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsShop.unity
     guid: 47dfc99ea00d22949ac710650c4e37ca
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/CatacombsBoss.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsBoss.unity
     guid: d5466ec32a6dfbc49a52dfaafb598a28
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/RandomRoomsCatacombs/CatacombsRoom0.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom0.unity
     guid: 9dfedf60e13294f4db85797dc643dc1e
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/RandomRoomsCatacombs/CatacombsRoom1.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom1.unity
     guid: 2ca8bc4cc82144d4394228aa82365af8
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/RandomRoomsCatacombs/CatacombsRoom2.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom2.unity
     guid: cef4088068e44934a985ee473e146588
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/RandomRoomsCatacombs/CatacombsRoom3.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom3.unity
     guid: c962bf83d65bffb40ad822d00b6f6eb5
   - enabled: 1
-    path: Assets/Scenes/DungeonRooms/CatacombsRooms/RandomRoomsCatacombs/CatacombsRoom4.unity
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom4.unity
     guid: 8443d6dfc52929e41bf2c7b5f90b99bf
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}

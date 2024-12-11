@@ -9,6 +9,7 @@ public class ProjectileCaster : MonoBehaviour
 
     // Caster properties
     [SerializeField] private float shootRate = 0.5f;
+    [SerializeField] private float delay = 0f;
     [SerializeField] private float damage = 10f;
     [SerializeField] private float projectileSpeed = 5f;
     [SerializeField] private bool shootsTowardsPlayer = false;
@@ -24,6 +25,9 @@ public class ProjectileCaster : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+
+        yield return new WaitForSeconds(delay);
+
         while (true) // Keeps trying to shoot as long as the script is active
         {
             if (isShooting)
