@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -45,24 +46,23 @@ public class DungeonGenerator : MonoBehaviour
 
         roomController.LoadRoom("Start", 0, 0);
 
-        // Counts the number of scenes that contain the dungeon name
+        int numberOfRooms = 0;
 
-        foreach (Scene scene in SceneManager.GetAllScenes() )
+        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+
+        foreach (EditorBuildSettingsScene scene in scenes)
         {
-            if (scene.name.Contains(roomController.currentWorldName))
+            if (scene.path.Contains(roomController.currentWorldName + "Room"))
             {
                 numberOfRooms++;
             }
         }
 
-
-
-
         foreach (Vector2Int roomLocation in rooms)
         {
 
             // Loads a random room starting from 0 to the number of rooms in the scene build settings
-            string sceneName = "Room" + Random.Range(0, numberOfRooms - 1);
+            string sceneName = "Room" + Random.Range(0, numberOfRooms);
 
             roomController.LoadRoom(sceneName, roomLocation.x, roomLocation.y);
 
