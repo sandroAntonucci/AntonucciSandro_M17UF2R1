@@ -24,7 +24,6 @@ public abstract class Enemy : MonoBehaviour
     public Transform player;
     public Rigidbody2D rb;
 
-    public string type;
     public float damage;
     public float health;
 

@@ -116,5 +116,53 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom4.unity
     guid: 8443d6dfc52929e41bf2c7b5f90b99bf
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom5.unity
+    guid: 57d6361b4f8ffcb428df8be3c13d025a
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom6.unity
+    guid: 2c96c4a2f22e1a141a9c59f9fb4c57f4
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom7.unity
+    guid: 578ec97a4ff4af94ea4a7bb951f46756
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom8.unity
+    guid: 70f6f6f446c29e641be168d8f03e5966
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom9.unity
+    guid: e6d398b038fe59f45ba19f308f5dc627
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom10.unity
+    guid: b015fa091907e0248a4cb839a409a352
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom11.unity
+    guid: 34330726069b42442b3feb89e6cb75d5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom12.unity
+    guid: 10c0788869f090a4aaebfaad2470a575
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom13.unity
+    guid: ec7f3d933f1012445b0127adc6822016
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom14.unity
+    guid: eff9fc1afbb5f2d499ce0dcfa36aa12a
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom15.unity
+    guid: 22f1df6ca000d19478a37a9fb5a15263
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom16.unity
+    guid: 8343ce01293bc8a47b181e97b9c21a7f
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom17.unity
+    guid: 843a683693d70c044b244c4c6ef2171f
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom18.unity
+    guid: b47eb9aa360b81242abb5e3f00d2b170
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom19.unity
+    guid: aad5fc1be7f275d409ce4368e975ab6e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom20.unity
+    guid: d748ba141ca5ee84f911cf2d85ccfdd2
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}

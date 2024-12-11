@@ -3697,11 +3697,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2601000693616004800, guid: a1912194b31a6c949befd3b314b194eb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.0040729344
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2601000693616004800, guid: a1912194b31a6c949befd3b314b194eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.82
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2601000693616004800, guid: a1912194b31a6c949befd3b314b194eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3776,7 +3776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4911830129690580358, guid: 422690f9608d02b4d83ccec0ca552f5d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.38
+      value: 2.99
       objectReference: {fileID: 0}
     - target: {fileID: 4911830129690580358, guid: 422690f9608d02b4d83ccec0ca552f5d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4119,6 +4119,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2169195329771640921, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169195329771640921, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169195329771640921, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2169195329771640921, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
     - target: {fileID: 2585325357954516316, guid: cc54f5b1fb3c7c34da526f6aa8f48f94, type: 3}
       propertyPath: isBossMinion
       value: 1
