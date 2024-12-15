@@ -7,20 +7,25 @@ public class SlimeBoss : Boss
 
     private DashComponent dashComponent;
 
+    [SerializeField] private EnemyWaveSpawner waveSpawner;
     [SerializeField] private Animator anim;
     
     public override void Start()
     {
         base.Start();
-
-        dashComponent = GetComponent<DashComponent>();
-
-
+        dashComponent = GetComponent<DashComponent>(); 
     }
 
     private void OnEnable()
     {
+        waveSpawner.enabled = true;
         StartCoroutine(Idle());
+    }
+
+    private void OnDisable()
+    {
+        waveSpawner.enabled = false;
+        StopAllCoroutines();
     }
 
     private IEnumerator Idle()
@@ -41,7 +46,6 @@ public class SlimeBoss : Boss
         yield return new WaitForSeconds(4.5f);
         StartCoroutine(Idle());
     }
-
 
 
 }
