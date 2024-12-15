@@ -30,10 +30,10 @@ public class SlimeBoss : Boss
 
         yield return new WaitForSeconds(2f);
 
-        StartCoroutine(Attack());
+        StartCoroutine(DashAttack());
     }
 
-    private IEnumerator Attack()
+    private IEnumerator DashAttack()
     {
         anim.Play("Move");
         dashComponent.canDash = true;
