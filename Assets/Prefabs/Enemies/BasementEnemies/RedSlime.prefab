@@ -183,8 +183,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd760e928c01d044ac4f3446c40c23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashForce: 20
+  dashForce: 30
   dashFriction: 4
+  canDash: 1
   splashSound: {fileID: 7751010444659480873}
 --- !u!95 &8415777932858822243
 Animator:
@@ -373,9 +374,8 @@ MonoBehaviour:
   rangeToDropFive: 5
   player: {fileID: 0}
   rb: {fileID: 2568076097002720554}
-  type: 
   damage: 10
-  health: 25
+  health: 35
 --- !u!1 &3970552379799905827
 GameObject:
   m_ObjectHideFlags: 0

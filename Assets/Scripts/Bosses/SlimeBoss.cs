@@ -7,31 +7,42 @@ public class SlimeBoss : Boss
 
     private DashComponent dashComponent;
 
+    [SerializeField] private CasterComponent casterComponent;
     [SerializeField] private EnemyWaveSpawner waveSpawner;
     [SerializeField] private Animator anim;
-    
-    public override void Start()
-    {
-        base.Start();
-        dashComponent = GetComponent<DashComponent>(); 
-    }
+
+    private bool isSpawning = true;
 
     private void OnEnable()
     {
+        dashComponent = GetComponent<DashComponent>();
+        casterComponent.enabled = true;
         waveSpawner.enabled = true;
         StartCoroutine(Idle());
     }
 
     private void OnDisable()
     {
-        waveSpawner.enabled = false;
         StopAllCoroutines();
+        casterComponent.enabled = false;
+        waveSpawner.enabled = false;
     }
 
     private IEnumerator Idle()
     {
         dashComponent.canDash = false;
-        anim.Play("Idle");
+
+        if(anim != null) anim.Play("Idle");
+
+        if (isSpawning)
+        {
+            yield return new WaitForSeconds(1f);
+            isSpawning = false;
+        }
+
+        // Resets caster attack patterns
+        casterComponent.isActive = true;
+        StartCoroutine(casterComponent.AttackLoop());
 
         yield return new WaitForSeconds(2f);
 
@@ -40,6 +51,11 @@ public class SlimeBoss : Boss
 
     private IEnumerator DashAttack()
     {
+
+        // Stops caster attack patterns
+        casterComponent.isActive = false;
+        casterComponent.StopAllCasters();
+
         anim.Play("Move");
         dashComponent.canDash = true;
 

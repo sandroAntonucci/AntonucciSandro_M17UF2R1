@@ -496,7 +496,6 @@ MonoBehaviour:
   rangeToDropFive: 5
   player: {fileID: 0}
   rb: {fileID: 8473109170028090035}
-  type: 
   damage: 10
   health: 20
   speed: 3
@@ -546,8 +545,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb2d: {fileID: 8473109170028090035}
-  strength: 3
-  delay: 0.2
+  strength: 2
+  delay: 0.1
   OnBegin:
     m_PersistentCalls:
       m_Calls:

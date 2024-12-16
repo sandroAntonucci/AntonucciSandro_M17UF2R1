@@ -447,10 +447,10 @@ MonoBehaviour:
   rangeToDropFive: 10
   player: {fileID: 0}
   rb: {fileID: 2989074192029868549}
-  type: 
   damage: 10
   health: 30
   rotationSpeed: 5
+  caster: {fileID: 3471778631402720081}
 --- !u!114 &3471778631402720081
 MonoBehaviour:
   m_ObjectHideFlags: 0

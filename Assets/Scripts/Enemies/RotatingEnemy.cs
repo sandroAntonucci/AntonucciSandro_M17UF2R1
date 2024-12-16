@@ -5,6 +5,8 @@ public class RotatingEnemy : Enemy
 
     public float rotationSpeed = 5f;
 
+    [SerializeField] private ProjectileCaster caster;
+
     void FixedUpdate()
     {
         if (player != null)
@@ -22,5 +24,11 @@ public class RotatingEnemy : Enemy
 
             transform.rotation = Quaternion.Euler(0, 0, smoothAngle);
         }
+    }
+
+    public override void Die()
+    {
+        caster.DestroyProjectiles();
+        base.Die();
     }
 }

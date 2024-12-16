@@ -815,6 +815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackChangeTime: 5
   attackCooldown: 0.5
+  isActive: 1
   attackCasterOne:
   - {fileID: 3553791524210061553}
   - {fileID: 936186124521597553}

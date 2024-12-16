@@ -185,6 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dashForce: 15
   dashFriction: 5
+  canDash: 1
   splashSound: {fileID: 7751010444659480873}
 --- !u!95 &8415777932858822243
 Animator:
@@ -374,7 +375,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 2568076097002720554}
   damage: 10
-  health: 30
+  health: 60
 --- !u!1 &2433323972175947322
 GameObject:
   m_ObjectHideFlags: 0

@@ -413,10 +413,9 @@ MonoBehaviour:
   rangeToDropFive: 10
   player: {fileID: 0}
   rb: {fileID: 8473109170028090035}
-  type: 
   damage: 10
   health: 20
-  speed: 2.4
+  speed: 3.4
 --- !u!114 &2935432823486842657
 MonoBehaviour:
   m_ObjectHideFlags: 0

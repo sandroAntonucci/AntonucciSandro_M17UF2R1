@@ -26,12 +26,12 @@ public class Boss : Enemy
     public override void Die()
     {
 
-        CasterBoss casterBoss = GetComponent<CasterBoss>();
+        CasterComponent casterComponent = GetComponent<CasterComponent>();
 
         // Destroys all projectiles when the boss dies
-        if (casterBoss != null)
+        if (casterComponent != null)
         {
-            casterBoss.DestroyProjectiles();
+            casterComponent.DestroyProjectiles();
         }
 
         itemDrop.SetActive(true);

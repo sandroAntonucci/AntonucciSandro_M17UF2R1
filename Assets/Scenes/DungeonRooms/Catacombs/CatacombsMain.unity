@@ -544,7 +544,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5121379284465888997, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: damage
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5641978685214640873, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -589,6 +589,14 @@ PrefabInstance:
     - target: {fileID: 6784392601285067938, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093684355152074955, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
+      propertyPath: range
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093684355152074955, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
+      propertyPath: damage
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

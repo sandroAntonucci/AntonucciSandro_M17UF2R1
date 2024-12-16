@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spell: {fileID: 0}
   damageUpgrade: 0
-  attackSpeedUpgrade: 0.1
+  attackSpeedUpgrade: 0.05
   projectileSpeedUpgrade: 0
   rangeUpgrade: 0
   upgradeName: Red Wand
