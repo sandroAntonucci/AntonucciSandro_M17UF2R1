@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 824432841622244966}
   - component: {fileID: 457166817329200503}
   - component: {fileID: 8718765516909827242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PowerOrbOne
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerQuant: 1
+  isHealthOrb: 0
   floatingMovement: {fileID: 3746351851382882996}
   playerPosition: {x: 0, y: 0}
   playerInRange: 0
@@ -161,7 +162,7 @@ GameObject:
   - component: {fileID: 2871555291354663144}
   - component: {fileID: 4613280804392423659}
   - component: {fileID: 3746351851382882996}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PowerOrbOne
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}

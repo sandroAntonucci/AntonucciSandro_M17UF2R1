@@ -442,7 +442,7 @@ MonoBehaviour:
   passiveSpell: {fileID: 9093684355152074955}
   invincibilityDuration: 0.6
   power: 0
-  moveSpeed: 6
+  baseMoveSpeed: 6
   hitAudio: {fileID: 4915234443768386069}
   damageFlash: {fileID: 5345051138686971925}
   damageParticles: {fileID: 7936509619975561986}

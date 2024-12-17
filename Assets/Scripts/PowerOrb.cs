@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class PowerOrb : MonoBehaviour
 {
 
     public int powerQuant;
+
+    public bool isHealthOrb;
 
     public FloatingMovement floatingMovement;
 
@@ -35,7 +38,15 @@ public class PowerOrb : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            collision.collider.GetComponent<Player>().AddPower(powerQuant);
+            if (isHealthOrb)
+            {
+                collision.collider.GetComponent<Player>().AddHealth(powerQuant);
+            }
+            else
+            {
+                collision.collider.GetComponent<Player>().AddPower(powerQuant);
+            }
+
             Destroy(gameObject);
         }
     }

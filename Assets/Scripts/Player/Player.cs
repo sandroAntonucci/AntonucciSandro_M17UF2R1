@@ -12,7 +12,9 @@ public class Player : MonoBehaviour
 
     // Combat variables
     public float health = 50;
+    public float maxHealth = 50;
     public bool invincible = false;
+
     
     public PlayerControls playerControls;
     private InputAction fire;
@@ -30,8 +32,11 @@ public class Player : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
-    private float acceleration = 8f; 
-    [SerializeField] float moveSpeed;
+    private float acceleration = 8f;
+
+    private float moveSpeed;
+
+    [SerializeField] float baseMoveSpeed;
 
     // Animations, audio and effects
     Animator anim;
@@ -65,8 +70,8 @@ public class Player : MonoBehaviour
     {
         fire = playerControls.Player.Fire;
         fire.Enable();
-        fire.started += context => isFiring = true;
-        fire.canceled += context => isFiring = false;
+        fire.performed += context => StartShooting();
+        fire.canceled += context => StopShooting();
     }
 
     private void OnDisable()
@@ -85,17 +90,40 @@ public class Player : MonoBehaviour
         // If the player is loaded it means that all referenced scenes are loaded in the main scene, so we can remove them 
         StartCoroutine(GameManager.Instance.RemoveScenes());
 
+        moveSpeed = baseMoveSpeed;
+
         OnHealthChanged?.Invoke((int)health / 10);
+    }
+
+    // This is done because you can't start a coroutine from context in player controls
+    private void StartShooting()
+    {
+        if(isFiring) return;
+        StartCoroutine(Shoot());
+    }
+
+    private IEnumerator Shoot()
+    {
+        isFiring = true;
+
+        while (isFiring) 
+        {
+            spell.GetComponent<BaseSpell>().CastSpell(); 
+
+            yield return null; 
+        }
+
+        moveSpeed = baseMoveSpeed;
+    }
+
+    private void StopShooting()
+    {
+        isFiring = false; // This will exit the while loop in the Shoot coroutine
     }
 
     private void Update()
     {
         Animate();
-
-        if (isFiring)
-        {
-            spell.GetComponent<BaseSpell>().CastSpell();
-        }
     }
 
     void FixedUpdate()
@@ -229,11 +257,26 @@ public class Player : MonoBehaviour
         DestroyProjectiles();
         Instance.enabled = false;
 
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(3.5f);
 
         // The 0.0001 is used because, for some reason, if I use 0 the player spawns in the wrong position
         gameObject.transform.position = new Vector3(0.0001f, 0, 0);
         Instance.enabled = true;
+    }
+
+    public void AddHealth(int healthQuant)
+    {
+
+        if (health + healthQuant > maxHealth)
+        {
+            health = maxHealth;
+        }
+        else
+        {
+            health += healthQuant;
+        }
+
+        OnCurrentHealthChanged?.Invoke((int)health / 10);
     }
 
 }

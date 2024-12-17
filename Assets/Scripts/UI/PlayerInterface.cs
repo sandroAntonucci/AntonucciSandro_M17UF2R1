@@ -61,6 +61,10 @@ public class PlayerInterface : MonoBehaviour
             {
                 hearts[i].color = new Color(150f / 255f, 150f / 255f, 150f / 255f, 1);
             }
+            else if (i + 1 <= currentHealth && hearts[i].IsActive())
+            {
+                hearts[i].color = new Color(1, 1, 1, 1);
+            }
         }
 
 

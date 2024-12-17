@@ -19,9 +19,7 @@ public abstract class Enemy : MonoBehaviour
 
     public List<GameObject> powerOrbs;
 
-    public int rangeToDropOne;
-    public int rangeToDropTwo;
-    public int rangeToDropFive;
+    public int[] rangesToDrop;
 
     public Transform player;
     public Rigidbody2D rb;
@@ -71,18 +69,16 @@ public abstract class Enemy : MonoBehaviour
 
         int powerDrop = Random.Range(0, 100);
 
-        if (powerDrop < rangeToDropFive)
+        for (int i = rangesToDrop.Length; i > 0; i--)
         {
-            Instantiate(powerOrbs[2], transform.position, Quaternion.identity);
+            if (powerDrop < rangesToDrop[i-1])
+            {
+                GameObject powerOrb = Instantiate(powerOrbs[i-1], transform.position, Quaternion.identity);
+                powerOrb.GetComponent<PowerOrb>().playerPosition = player.position;
+                break;
+            }
         }
-        else if (powerDrop < rangeToDropTwo)
-        {
-            Instantiate(powerOrbs[1], transform.position, Quaternion.identity);
-        }
-        else if (powerDrop < rangeToDropOne)
-        {
-            Instantiate(powerOrbs[0], transform.position, Quaternion.identity);
-        }
+
     }
 
     public virtual void Die()

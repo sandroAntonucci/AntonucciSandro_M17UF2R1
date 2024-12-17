@@ -279,7 +279,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 372959174143849832}
@@ -402,6 +402,7 @@ MonoBehaviour:
   damageFlash: {fileID: 899208710022021659}
   damageParticles: {fileID: 4516821630045397599}
   damageSound: {fileID: 2935432823486842657}
+  projectileCaster: {fileID: 0}
   isBossMinion: 0
   healthBar: {fileID: 0}
   powerOrbs:
@@ -415,7 +416,7 @@ MonoBehaviour:
   rb: {fileID: 8473109170028090035}
   damage: 10
   health: 55
-  speed: 4
+  speed: 3.4
 --- !u!114 &2935432823486842657
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -526,7 +527,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.1504601, y: -0.083075106}
+  m_Offset: {x: -0.11995041, y: -0.14748436}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -537,7 +538,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47938472, y: 0.8409771}
+  m_Size: {x: 0.41836536, y: 0.71215856}
   m_EdgeRadius: 0
 --- !u!1 &4567153109038837463
 GameObject:
