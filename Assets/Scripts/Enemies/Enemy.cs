@@ -10,6 +10,8 @@ public abstract class Enemy : MonoBehaviour
     public ParticleSystem damageParticles;
     public GameAudioManager damageSound;
 
+    [SerializeField] protected ProjectileCaster projectileCaster;
+
     // If the enemy is a boss minion, it will be active from the start
     [SerializeField] public bool isBossMinion = false;
 
@@ -88,10 +90,16 @@ public abstract class Enemy : MonoBehaviour
         // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms, too broken)
         if (!isBossMinion) DropPower();
 
+        StartCoroutine(DestroyProjectiles());
+
         Destroy(gameObject);
     }
 
-
+    private IEnumerator DestroyProjectiles()
+    {
+        if(projectileCaster != null) projectileCaster.DestroyProjectiles();
+        yield return null;
+    }
 
 }
 

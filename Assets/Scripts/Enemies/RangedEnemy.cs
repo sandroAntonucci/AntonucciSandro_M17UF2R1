@@ -6,7 +6,6 @@ using UnityEngine;
 public class RangedEnemy : Enemy
 {
     [SerializeField] private float distanceToPlayer;
-    [SerializeField] private ProjectileCaster projectileCaster;
 
     private bool isFlipped = false;
     private bool isSpawned = false;
@@ -66,17 +65,7 @@ public class RangedEnemy : Enemy
 
     }
 
-    public override void Die()
-    {
-        StartCoroutine(DestroyProjectiles());
-        base.Die();
-    }
 
-    private IEnumerator DestroyProjectiles()
-    {
-        projectileCaster.DestroyProjectiles();
-        yield return null;
-    }
 }
 
 
