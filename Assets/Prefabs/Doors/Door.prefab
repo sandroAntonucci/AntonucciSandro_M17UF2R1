@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -109,7 +109,6 @@ MonoBehaviour:
   bossDoorClosed: {fileID: 21300000, guid: c0274c44d9e666f4fb8eb2cd612b2e5c, type: 3}
   spriteRenderer: {fileID: 6474643122367033554}
   doorType: 0
-  connectedRoom: 
 --- !u!61 &3258506724882049948
 BoxCollider2D:
   m_ObjectHideFlags: 0

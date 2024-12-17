@@ -164,5 +164,83 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom20.unity
     guid: d748ba141ca5ee84f911cf2d85ccfdd2
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryMain.unity
+    guid: 5fee2e396b9f7754db279fbabf8a6118
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryStart.unity
+    guid: 853e14247cff7c4408dd24096ec255a3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryShop.unity
+    guid: 8063af856e5b78943af1c5c155de8a55
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryItem.unity
+    guid: 3f1aa0ddada779847b5c95260d8d7f18
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryBoss.unity
+    guid: 1def3f6b8e25fee4793fe98e5080189e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom0.unity
+    guid: 7ada781f9cb0b7842bbb4adf7cc7dbcd
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom1.unity
+    guid: d20cbb1c67b10d54fabbb74283335dc5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom2.unity
+    guid: 2d431a77dd9717d40b7dd1fed9e1a056
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom3.unity
+    guid: 10c1c71471d31394995c02d2f0681712
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom4.unity
+    guid: 9265a86a2cbf83b46a96617fb3012b53
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom5.unity
+    guid: 338b936ca64689543a7407815b55cf64
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom6.unity
+    guid: a4c85b6bce0786e46a741c6c61dd3e60
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom7.unity
+    guid: 9d9964c2abd1b9c49b085bd6c4409fa6
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom8.unity
+    guid: 568bf9dc53f133f40b2650eb1fed5729
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom9.unity
+    guid: d48d8796324e3704d9532420780ea3b0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom10.unity
+    guid: 500b02b2fd2894942b32f594c28ff2b5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom11.unity
+    guid: 43bc2260461a2a94491eff7008911ba9
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom12.unity
+    guid: 3a65bc10edf83a14b8c12cc5ea28c143
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom13.unity
+    guid: 08502df432c09ee43a55eb09663a5aff
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom14.unity
+    guid: 70f7701fec2b35847a5b73edf9f57eb1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom15.unity
+    guid: 41145295d8bfdcb489f39ae7aa0adfa3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom16.unity
+    guid: d77904daaf8f2d5419831e869022b719
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom17.unity
+    guid: d69cf6302be5d0843a2c45d74b2159e1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom18.unity
+    guid: 15d20d378a606df41a507892004a2cab
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom19.unity
+    guid: a978d99b071eb5447b4fb0307e09bdcf
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom20.unity
+    guid: 86ab0fbdeed87344e864e3138cbf4e77
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}
