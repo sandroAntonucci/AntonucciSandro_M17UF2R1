@@ -47,6 +47,7 @@ public class MeleeEnemy : Enemy
 
     private void Spawn()
     {
+        enemyCollider.enabled = true;
         isSpawned = true;
     }
 

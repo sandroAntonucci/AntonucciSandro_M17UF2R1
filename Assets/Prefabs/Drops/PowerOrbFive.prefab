@@ -48,7 +48,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada8fea48015f5945bc8dfa3866f11f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerQuant: 3
+  powerQuant: 5
+  isHealthOrb: 0
   floatingMovement: {fileID: 2542882792092958201}
   playerPosition: {x: 0, y: 0}
   playerInRange: 0

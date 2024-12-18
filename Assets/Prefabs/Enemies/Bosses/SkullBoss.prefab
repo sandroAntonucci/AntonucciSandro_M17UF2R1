@@ -630,7 +630,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 0.48584908, b: 0.48584908, a: 1}
   m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -888,13 +888,11 @@ MonoBehaviour:
   isBossMinion: 1
   healthBar: {fileID: 9141075324099225956}
   powerOrbs: []
-  rangeToDropOne: 0
-  rangeToDropTwo: 0
-  rangeToDropFive: 0
+  rangesToDrop: 
   player: {fileID: 0}
   rb: {fileID: 0}
   damage: 10
-  health: 200
+  health: 300
   itemDrop: {fileID: 0}
   pedestal: {fileID: 0}
 --- !u!114 &8791969953071942585

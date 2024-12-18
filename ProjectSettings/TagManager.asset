@@ -12,6 +12,7 @@ TagManager:
   - PlayerProjectile
   - UpgradeCanvas
   - Orb
+  - LevelCanvas
   layers:
   - Default
   - TransparentFX

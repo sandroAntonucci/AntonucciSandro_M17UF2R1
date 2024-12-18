@@ -260,6 +260,7 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(3.5f);
 
         // The 0.0001 is used because, for some reason, if I use 0 the player spawns in the wrong position
+        Debug.Log("Player reloaded");
         gameObject.transform.position = new Vector3(0.0001f, 0, 0);
         Instance.enabled = true;
     }

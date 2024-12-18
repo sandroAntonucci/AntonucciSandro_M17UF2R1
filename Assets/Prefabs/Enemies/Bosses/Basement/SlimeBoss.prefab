@@ -373,12 +373,11 @@ MonoBehaviour:
   damageFlash: {fileID: 8527756689991823570}
   damageParticles: {fileID: 3633237595794617146}
   damageSound: {fileID: 2345999844572876134}
+  projectileCaster: {fileID: 0}
   isBossMinion: 1
   healthBar: {fileID: 891110060964569359}
   powerOrbs: []
-  rangeToDropOne: 0
-  rangeToDropTwo: 0
-  rangeToDropFive: 0
+  rangesToDrop: 
   player: {fileID: 0}
   rb: {fileID: 2568076097002720554}
   damage: 10
@@ -1541,7 +1540,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 27167095514706213, guid: fa6b672337cbb7f4c84ad53c1e58e8e7, type: 3}
       propertyPath: shootRate
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 27167095514706213, guid: fa6b672337cbb7f4c84ad53c1e58e8e7, type: 3}
       propertyPath: isShooting
@@ -1835,7 +1834,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 27167095514706213, guid: fa6b672337cbb7f4c84ad53c1e58e8e7, type: 3}
       propertyPath: shootRate
-      value: 0.05
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 27167095514706213, guid: fa6b672337cbb7f4c84ad53c1e58e8e7, type: 3}
       propertyPath: isShooting

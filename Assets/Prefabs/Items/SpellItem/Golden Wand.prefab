@@ -205,7 +205,7 @@ MonoBehaviour:
   projectileSpeedUpgrade: 0
   rangeUpgrade: 0
   upgradeName: Golden Wand
-  upgradeText: Spell Attack Speed + 0.3
+  upgradeText: Spell Attack Speed + 0.15
   upgradePrice: 30
   upgradeType: 1
   upgradeCanvas: {fileID: 0}

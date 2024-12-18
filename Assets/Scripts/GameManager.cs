@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -29,7 +30,7 @@ public class GameManager : MonoBehaviour
     {
 
 
-        StartCoroutine(LoadSceneCanvas.Instance.ShowLoadingScreen(3f));
+        StartCoroutine(LoadSceneCanvas.Instance.ShowLoadingScreen(3.5f));
 
         StartCoroutine(Player.Instance.ReloadPlayer());
 
@@ -44,10 +45,10 @@ public class GameManager : MonoBehaviour
         }
 
 
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(3.5f);
 
         StartCoroutine(RemoveScenes());
+
 
     }
 
@@ -64,7 +65,6 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator RemoveScenes()
     {
-        Debug.Log("This is executed");
 
         string currentMain = RoomController.instance.currentWorldName + "Main";
 

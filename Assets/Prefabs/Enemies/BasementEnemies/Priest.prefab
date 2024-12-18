@@ -297,21 +297,19 @@ MonoBehaviour:
   damageFlash: {fileID: 4213977209469839468}
   damageParticles: {fileID: 7009458153004296745}
   damageSound: {fileID: 2405831247316844380}
+  projectileCaster: {fileID: 7594021997106777857}
   isBossMinion: 0
   healthBar: {fileID: 0}
   powerOrbs:
   - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
   - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
   - {fileID: 3651600680213569310, guid: 89b2e5eba26249345899503e1ecac369, type: 3}
-  rangeToDropOne: 100
-  rangeToDropTwo: 80
-  rangeToDropFive: 10
+  rangesToDrop: 64000000460000000a00000005000000
   player: {fileID: 0}
   rb: {fileID: 1283797505449432860}
   damage: 10
-  health: 45
+  health: 55
   distanceToPlayer: 5
-  projectileCaster: {fileID: 7594021997106777857}
 --- !u!114 &4213977209469839468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -379,7 +377,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706413108543378063}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -476,10 +474,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 4386947723330015259}
-  shootRate: 0.8
+  shootRate: 0.7
   delay: 0
   damage: 10
-  projectileSpeed: 8
+  projectileSpeed: 7
   shootsTowardsPlayer: 1
   isShooting: 1
 --- !u!1 &3288792017990976957

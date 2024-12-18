@@ -20,6 +20,7 @@ public class RangedEnemy : Enemy
 
     private void Spawn()
     {
+        enemyCollider.enabled = true;
         isSpawned = true;
         projectileCaster.enabled = true;
     }

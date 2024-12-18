@@ -10,6 +10,8 @@ public class LoadSceneCanvas : MonoBehaviour
     public Canvas canvas;
     public TextAnimation textAnimation;
 
+    public LevelCanvas levelCanvas;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -34,6 +36,8 @@ public class LoadSceneCanvas : MonoBehaviour
         StartCoroutine(textAnimation.TypeText(textAnimation.message));
         yield return new WaitForSeconds(time);
         canvas.enabled = false;
+
+        levelCanvas.ShowCanvas();
     }
 
 }

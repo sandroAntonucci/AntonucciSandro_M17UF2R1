@@ -17,6 +17,8 @@ public abstract class Enemy : MonoBehaviour
 
     [SerializeField] protected FloatingHealthbar healthBar;
 
+    protected Collider2D enemyCollider;
+
     public List<GameObject> powerOrbs;
 
     public int[] rangesToDrop;
@@ -36,6 +38,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Start()
     {
+        enemyCollider = GetComponent<Collider2D>();
         rb = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player").transform;
 

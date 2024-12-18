@@ -283,10 +283,10 @@ MonoBehaviour:
   spell: {fileID: 0}
   damageUpgrade: 0
   attackSpeedUpgrade: 0
-  projectileSpeedUpgrade: 2
+  projectileSpeedUpgrade: 1
   rangeUpgrade: 0
   upgradeName: Red Ring
-  upgradeText: Spell Projectile Speed + 2
+  upgradeText: Spell Projectile Speed + 1
   upgradePrice: 15
   upgradeType: 2
   upgradeCanvas: {fileID: 0}

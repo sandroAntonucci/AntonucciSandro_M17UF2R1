@@ -493,9 +493,8 @@ MonoBehaviour:
   - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
   - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
   - {fileID: 3651600680213569310, guid: 89b2e5eba26249345899503e1ecac369, type: 3}
-  rangeToDropOne: 100
-  rangeToDropTwo: 60
-  rangeToDropFive: 10
+  - {fileID: 3651600680213569310, guid: 78318457c2bc4b24d9a075cbf2f5fe61, type: 3}
+  rangesToDrop: 64000000320000000500000003000000
   player: {fileID: 0}
   rb: {fileID: 8473109170028090035}
   damage: 10
@@ -586,7 +585,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3772878884986408529}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

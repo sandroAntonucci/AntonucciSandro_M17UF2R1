@@ -201,10 +201,10 @@ MonoBehaviour:
   spell: {fileID: 0}
   damageUpgrade: 0
   attackSpeedUpgrade: 0
-  projectileSpeedUpgrade: 4
+  projectileSpeedUpgrade: 2
   rangeUpgrade: 0
   upgradeName: Purple Ring
-  upgradeText: Spell Projectile Speed + 4
+  upgradeText: Spell Projectile Speed + 2
   upgradePrice: 15
   upgradeType: 2
   upgradeCanvas: {fileID: 0}

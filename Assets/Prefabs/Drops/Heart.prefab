@@ -198,7 +198,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0.27450982, g: 0.6862745, b: 0.9803922, a: 1}
+  m_Color: {r: 0.87843144, g: 0, b: 0, a: 1}
   m_Intensity: 3
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 56361897c6bf83745aa820af436dfd59, type: 3}
-  m_Color: {r: 0.7372549, g: 0.15686275, b: 0.7372549, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -369,23 +369,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5677114095007423961, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.9433962
       objectReference: {fileID: 0}
     - target: {fileID: 5677114095007423961, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_Color.g
-      value: 1
+      value: 0.5206479
       objectReference: {fileID: 0}
     - target: {fileID: 5677114095007423961, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_Color.r
-      value: 1
+      value: 0.9433962
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.11
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.092
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 7152191558114648260, guid: c74bffd5d52332942a7eb7a56bb21050, type: 3}
       propertyPath: m_LocalPosition.z
