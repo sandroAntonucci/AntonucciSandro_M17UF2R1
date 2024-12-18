@@ -27,16 +27,19 @@ public class LoadSceneCanvas : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(ShowLoadingScreen(3f));
+        ShowLoadingScreen();
     }
 
-    public IEnumerator ShowLoadingScreen(float time)
+    public void ShowLoadingScreen()
     {
         canvas.enabled = true;
         StartCoroutine(textAnimation.TypeText(textAnimation.message));
-        yield return new WaitForSeconds(time);
-        canvas.enabled = false;
 
+    }
+
+    public void HideLoadingScreen()
+    {
+        canvas.enabled = false;
         levelCanvas.ShowCanvas();
     }
 

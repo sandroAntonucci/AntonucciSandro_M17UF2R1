@@ -29,28 +29,39 @@ public class GameManager : MonoBehaviour
     private IEnumerator LoadSceneAsync(string sceneName)
     {
 
+        LoadSceneCanvas.Instance.ShowLoadingScreen();
 
-        StartCoroutine(LoadSceneCanvas.Instance.ShowLoadingScreen(3.5f));
-
-        StartCoroutine(Player.Instance.ReloadPlayer());
-
+        // Disables player (not the game object)
+        Player.Instance.gameObject.GetComponent<PlayerSpawn>().DisablePlayer();
 
         DungeonCrawlerController.GenerateDungeon(DungeonGenerator.instance.dungeonGenerationData);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
+        asyncLoad.allowSceneActivation = false; 
+
+        while (asyncLoad.progress < 0.9f)
+        {
+            yield return null; 
+        }
+
+        asyncLoad.allowSceneActivation = true;
 
         while (!asyncLoad.isDone)
         {
             yield return null;
         }
 
+        // Minimum time to show the loading screen
+        yield return new WaitForSeconds(2f);
 
-        yield return new WaitForSeconds(3.5f);
+        LoadSceneCanvas.Instance.HideLoadingScreen();
 
-        StartCoroutine(RemoveScenes());
+        // Reloads player
+        Player.Instance.ReloadPlayer();
 
-
+        yield return StartCoroutine(RemoveScenes());
     }
+
 
 
     public IEnumerator RemoveScene(string sceneName) 

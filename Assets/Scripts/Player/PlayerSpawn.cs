@@ -18,12 +18,26 @@ public class PlayerSpawn : MonoBehaviour
     private IEnumerator Spawn()
     {
 
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(3f);
 
+        LoadSceneCanvas.Instance.HideLoadingScreen();
+
+        EnablePlayer();
+    }
+
+    public void DisablePlayer()
+    {
+        player.rb.velocity = Vector2.zero;
+        player.enabled = false;
+        playerCollider.enabled = false;
+        triggerCollider.enabled = false;
+    }
+
+    public void EnablePlayer()
+    {
         triggerCollider.enabled = true;
         player.enabled = true;
         playerCollider.enabled = true;
-
     }
 
 }

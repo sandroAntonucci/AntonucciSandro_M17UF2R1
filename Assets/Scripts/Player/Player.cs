@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     public float maxHealth = 50;
     public bool invincible = false;
 
-    
     public PlayerControls playerControls;
     private InputAction fire;
     private bool isFiring;
@@ -29,7 +28,7 @@ public class Player : MonoBehaviour
 
 
     // Movement variables
-    private Rigidbody2D rb;
+    public Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
     private float acceleration = 8f;
@@ -120,6 +119,8 @@ public class Player : MonoBehaviour
     {
         isFiring = false; // This will exit the while loop in the Shoot coroutine
     }
+
+    
 
     private void Update()
     {
@@ -250,19 +251,12 @@ public class Player : MonoBehaviour
         passiveSpell.DestroyProjectiles();
     }
 
-    public IEnumerator ReloadPlayer()
+    public void ReloadPlayer()
     {
-
-        lastMoveDirection = Vector2.zero;
         DestroyProjectiles();
-        Instance.enabled = false;
-
-        yield return new WaitForSeconds(3.5f);
-
-        // The 0.0001 is used because, for some reason, if I use 0 the player spawns in the wrong position
-        Debug.Log("Player reloaded");
+        gameObject.GetComponent<PlayerSpawn>().EnablePlayer();
+        lastMoveDirection = Vector2.zero;
         gameObject.transform.position = new Vector3(0.0001f, 0, 0);
-        Instance.enabled = true;
     }
 
     public void AddHealth(int healthQuant)
