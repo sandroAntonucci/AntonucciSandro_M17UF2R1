@@ -44,7 +44,7 @@ public class PassiveProjectile : MonoBehaviour
             collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
         }
 
-        if (!collision.CompareTag("Player") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell") && !collision.CompareTag("Orb"))
+        if (!collision.CompareTag("Player") && !collision.CompareTag("PlayerProjectile") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell") && !collision.CompareTag("Orb"))
         {
             rb.velocity = Vector2.zero;
             anim.Play("PassiveSpellCrash");

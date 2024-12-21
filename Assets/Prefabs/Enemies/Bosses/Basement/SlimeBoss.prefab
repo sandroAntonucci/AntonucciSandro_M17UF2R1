@@ -354,8 +354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dd760e928c01d044ac4f3446c40c23f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dashForce: 150
-  dashFriction: 15
+  dashForce: 110
+  dashFriction: 20
   canDash: 1
   splashSound: {fileID: 7751010444659480873}
 --- !u!114 &5179291822624925532

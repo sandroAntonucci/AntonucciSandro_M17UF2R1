@@ -465,10 +465,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 1859359918352989375}
-  shootRate: 0.8
+  shootRate: 1
   delay: 1
   damage: 10
-  projectileSpeed: 10
+  projectileSpeed: 8
   shootsTowardsPlayer: 1
   isShooting: 1
 --- !u!58 &7883439734003096022

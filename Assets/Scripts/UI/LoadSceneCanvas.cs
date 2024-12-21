@@ -10,6 +10,8 @@ public class LoadSceneCanvas : MonoBehaviour
     public Canvas canvas;
     public TextAnimation textAnimation;
 
+
+
     public LevelCanvas levelCanvas;
 
     private void Awake()
