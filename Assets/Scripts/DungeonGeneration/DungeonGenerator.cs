@@ -46,6 +46,12 @@ public class DungeonGenerator : MonoBehaviour
 
         roomController.LoadRoom("Start", 0, 0);
 
+        // If the current world is the final boss room, do not load any other rooms
+        if (RoomController.instance.currentWorldName == "FinalBoss")
+        {
+            return;
+        }
+
         int numberOfRooms = 0;
 
         EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;

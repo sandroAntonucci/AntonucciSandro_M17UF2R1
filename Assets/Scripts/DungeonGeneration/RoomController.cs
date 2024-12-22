@@ -57,15 +57,15 @@ public class RoomController : MonoBehaviour
         if (loadRoomQueue.Count == 0)
         {
             
-            if (!spawnedBossRoom)
+            if (!spawnedBossRoom && currentWorldName != "FinalBoss")
             {
                 StartCoroutine(SpawnBossRoom());
             }
-            else if (!spawnedItemRoom)
+            else if (!spawnedItemRoom && currentWorldName != "FinalBoss")
             {
                 StartCoroutine(SpawnItemRoom());
             }
-            else if (!spawnedShopRoom)
+            else if (!spawnedShopRoom && currentWorldName != "FinalBoss")
             {
                 StartCoroutine(SpawnShopRoom());
             }

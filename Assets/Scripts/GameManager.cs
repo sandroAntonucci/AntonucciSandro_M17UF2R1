@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -60,6 +61,15 @@ public class GameManager : MonoBehaviour
         Player.Instance.ReloadPlayer();
 
         yield return StartCoroutine(RemoveScenes());
+
+        if(sceneName == "FinalBossMain")
+        {
+            Player.Instance.gameObject.transform.position = new Vector3(0, 6, 0);
+            CameraController.Instance.gameObject.transform.position = new Vector3(0, 0, -10);
+            CameraController.Instance.GetComponent<Camera>().orthographicSize = 10;
+            Debug.Log("This is executing");
+        }
+
     }
 
 

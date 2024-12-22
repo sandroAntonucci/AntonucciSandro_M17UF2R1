@@ -24,8 +24,6 @@ public class Pedestal : MonoBehaviour
 
         yield return new WaitForSeconds(1f);
 
-        Debug.Log(RoomController.instance.currentWorldName);
-
         switch (RoomController.instance.currentWorldName)
         {
             case "Catacombs":
@@ -36,6 +34,10 @@ public class Pedestal : MonoBehaviour
             case "Basement":
                 RoomController.instance.currentWorldName = "Sanctuary";
                 GameManager.Instance.LoadScene("SanctuaryMain");
+                break;
+
+            case "Sanctuary":
+                GameManager.Instance.LoadScene("FinalBossMain");
                 break;
         }
 

@@ -16,13 +16,13 @@ EditorBuildSettings:
     guid: 8b1f8f37240e3bd4298e397164516cfc
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Basement/BasementItem.unity
-    guid: c6fb8afb6f75aeb48abee2ce42e99b59
+    guid: f04e1412d7b51284c93ae0012637c5cc
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Basement/BasementShop.unity
     guid: 0e9a63c0fb358e842938acc03165da95
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Basement/BasementBoss.unity
-    guid: 49697378e4b8db043b163694e45ebfc7
+    guid: 7564041cf2a06f84089a99716c8d1ba6
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom0.unity
     guid: 2a0a7675293cb8c44ae84bfb5abb1e38
@@ -242,5 +242,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom20.unity
     guid: 86ab0fbdeed87344e864e3138cbf4e77
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Final Boss/FinalBossStart.unity
+    guid: 33579ca8c16362c4ab2ce6da0164e720
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Final Boss/FinalBossMain.unity
+    guid: 0fad2aa09e6cc854d9520079b7bbebda
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}
