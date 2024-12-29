@@ -23,8 +23,8 @@ TagManager:
   - Player
   - Enemy
   - Items
-  - 
-  - 
+  - Block
+  - PlayerProjectile
   - 
   - 
   - 

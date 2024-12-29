@@ -601,6 +601,10 @@ PrefabInstance:
       propertyPath: damage
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 5121379284465888997, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
+      propertyPath: attackSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5334433083183597919, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: m_Layer
       value: 0
@@ -660,6 +664,10 @@ PrefabInstance:
     - target: {fileID: 9093684355152074955, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
       propertyPath: damage
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9093684355152074955, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}
+      propertyPath: attackSpeed
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7054296558639680041, guid: 4a4fca030c778574a8dd897f01ffbe9f, type: 3}

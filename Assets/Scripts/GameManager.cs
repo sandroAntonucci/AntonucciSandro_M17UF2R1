@@ -64,10 +64,9 @@ public class GameManager : MonoBehaviour
 
         if(sceneName == "FinalBossMain")
         {
-            Player.Instance.gameObject.transform.position = new Vector3(0, 6, 0);
+            Player.Instance.gameObject.transform.position = new Vector3(0, 7, 0);
             CameraController.Instance.gameObject.transform.position = new Vector3(0, 0, -10);
-            CameraController.Instance.GetComponent<Camera>().orthographicSize = 10;
-            Debug.Log("This is executing");
+            CameraController.Instance.GetComponent<Camera>().orthographicSize = 9;
         }
 
     }

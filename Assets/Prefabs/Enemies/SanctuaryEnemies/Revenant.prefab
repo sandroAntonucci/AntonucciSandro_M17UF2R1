@@ -415,7 +415,7 @@ MonoBehaviour:
   rb: {fileID: 8473109170028090035}
   damage: 10
   health: 45
-  speed: 3.6
+  speed: 3.4
 --- !u!114 &2935432823486842657
 MonoBehaviour:
   m_ObjectHideFlags: 0

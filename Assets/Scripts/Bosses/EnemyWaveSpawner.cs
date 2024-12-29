@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyWaveSpawner : MonoBehaviour
 {
 
+    [SerializeField] private bool spawnedByBoss = false;
+
     [SerializeField] private float waveSpawnTime = 8f;
 
     public GameObject[] waveOne;
@@ -23,6 +25,9 @@ public class EnemyWaveSpawner : MonoBehaviour
             waveThree
         };
 
+        // If the spawner is spawned by a boss, it will not spawn waves by itself
+        if (spawnedByBoss) return;
+
         StartCoroutine(SpawnLoop());
     }
 
@@ -37,17 +42,20 @@ public class EnemyWaveSpawner : MonoBehaviour
             }
     }
 
-    // Spawns random waves
     private IEnumerator SpawnLoop()
     {
-
         while (true)
         {
-            int randomWave = Random.Range(0, waves.Count);
-            StartWave(waves[randomWave]);
-
+            SpawnWave();
             yield return new WaitForSeconds(waveSpawnTime);
         }
+    }
+
+    // Spawns a random wave
+    public void SpawnWave()
+    {
+        int randomWave = Random.Range(0, waves.Count);
+        StartWave(waves[randomWave]);
 
     }
 }

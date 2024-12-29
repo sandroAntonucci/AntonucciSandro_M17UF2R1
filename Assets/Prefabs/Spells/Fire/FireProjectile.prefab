@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2508886044661377452}
   - component: {fileID: 1871928612574647741}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Light 2D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 4324199189206564833}
   - component: {fileID: 673962272596986064}
   - component: {fileID: 1963236015588412930}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: FireProjectile
   m_TagString: PlayerProjectile
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1792
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -285,7 +285,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2802841731638557320}
   - component: {fileID: 7440571230849393606}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Audio Hit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
