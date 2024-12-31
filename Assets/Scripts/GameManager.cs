@@ -33,9 +33,9 @@ public class GameManager : MonoBehaviour
         LoadSceneCanvas.Instance.ShowLoadingScreen();
 
         // Disables player (not the game object)
-        Player.Instance.gameObject.GetComponent<PlayerSpawn>().DisablePlayer();
+        if(Player.Instance != null) Player.Instance.gameObject.GetComponent<PlayerSpawn>().DisablePlayer();
 
-        DungeonCrawlerController.GenerateDungeon(DungeonGenerator.instance.dungeonGenerationData);
+        if(DungeonGenerator.instance != null) DungeonCrawlerController.GenerateDungeon(DungeonGenerator.instance.dungeonGenerationData);
 
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
         asyncLoad.allowSceneActivation = false; 
@@ -57,8 +57,13 @@ public class GameManager : MonoBehaviour
 
         LoadSceneCanvas.Instance.HideLoadingScreen();
 
-        // Reloads player
-        Player.Instance.ReloadPlayer();
+        if (sceneName == "MainScene")
+        {
+            Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
+        }
+
+            // Reloads player
+            if (Player.Instance != null) Player.Instance.ReloadPlayer();
 
         yield return StartCoroutine(RemoveScenes());
 
@@ -86,19 +91,22 @@ public class GameManager : MonoBehaviour
     public IEnumerator RemoveScenes()
     {
 
-        string currentMain = RoomController.instance.currentWorldName + "Main";
-
-        SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentMain));
-
-        for (int i = 0; i < SceneManager.sceneCount; i++)
+        if (RoomController.instance != null)
         {
-            Scene scene = SceneManager.GetSceneAt(i);
+            string currentMain = RoomController.instance.currentWorldName + "Main";
 
-            if (scene.name != currentMain)
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentMain));
+
+            for (int i = 0; i < SceneManager.sceneCount; i++)
             {
-                SceneManager.UnloadSceneAsync(scene);
-            }
+                Scene scene = SceneManager.GetSceneAt(i);
 
+                if (scene.name != currentMain)
+                {
+                    SceneManager.UnloadSceneAsync(scene);
+                }
+
+            }
         }
 
         yield return null;

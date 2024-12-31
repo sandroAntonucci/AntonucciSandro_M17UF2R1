@@ -37,7 +37,14 @@ public class Pedestal : MonoBehaviour
                 break;
 
             case "Sanctuary":
+                RoomController.instance.currentWorldName = "FinalBoss";
                 GameManager.Instance.LoadScene("FinalBossMain");
+                break;
+
+            case "FinalBoss":
+                Destroy(GameObject.FindGameObjectWithTag("Player"));
+                GameObject finalMenu = GameObject.FindGameObjectWithTag("FinalMenuCanvas");
+                finalMenu.GetComponent<Canvas>().enabled = true;
                 break;
         }
 

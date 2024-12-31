@@ -10,8 +10,6 @@ public class LoadSceneCanvas : MonoBehaviour
     public Canvas canvas;
     public TextAnimation textAnimation;
 
-
-
     public LevelCanvas levelCanvas;
 
     private void Awake()
@@ -25,11 +23,6 @@ public class LoadSceneCanvas : MonoBehaviour
         Instance = this;
 
         DontDestroyOnLoad(gameObject);
-    }
-
-    public void Start()
-    {
-        ShowLoadingScreen();
     }
 
     public void ShowLoadingScreen()

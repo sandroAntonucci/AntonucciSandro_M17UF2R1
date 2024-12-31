@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
         moveSpeed = baseMoveSpeed;
 
         OnHealthChanged?.Invoke((int)health / 10);
+        OnCurrentHealthChanged?.Invoke((int)health / 10);
     }
 
     // This is done because you can't start a coroutine from context in player controls

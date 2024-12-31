@@ -86,7 +86,7 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
-        // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms, too broken)
+        // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms)
         if (!isBossMinion) DropPower();
 
         StartCoroutine(DestroyProjectiles());

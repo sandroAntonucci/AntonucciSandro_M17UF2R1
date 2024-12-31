@@ -13,6 +13,10 @@ TagManager:
   - UpgradeCanvas
   - Orb
   - LevelCanvas
+  - GameManager
+  - LoadSceneCanvas
+  - FinalMenuCanvas
+  - PlayerInterface
   layers:
   - Default
   - TransparentFX

@@ -15,6 +15,8 @@ public class ScrollingBackground : MonoBehaviour
 
     void Update()
     {
+        if (player == null) return;
+
         offset.x = player.position.x * parallaxFactor;
         offset.y = player.position.y * parallaxFactor;
 
