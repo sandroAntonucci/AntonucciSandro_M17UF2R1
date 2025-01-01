@@ -17,6 +17,7 @@ TagManager:
   - LoadSceneCanvas
   - FinalMenuCanvas
   - PlayerInterface
+  - DeathCanvas
   layers:
   - Default
   - TransparentFX

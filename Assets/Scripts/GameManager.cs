@@ -62,8 +62,8 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
         }
 
-            // Reloads player
-            if (Player.Instance != null) Player.Instance.ReloadPlayer();
+        // Reloads player
+        if (Player.Instance != null) Player.Instance.ReloadPlayer();
 
         yield return StartCoroutine(RemoveScenes());
 

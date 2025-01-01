@@ -3553,6 +3553,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3772878884986408529, guid: 7b60220b712f1664da25fb62361ef037, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758684116845639380, guid: 7b60220b712f1664da25fb62361ef037, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758684116845639380, guid: 7b60220b712f1664da25fb62361ef037, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

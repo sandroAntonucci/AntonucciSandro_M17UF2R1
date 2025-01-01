@@ -23,6 +23,9 @@ public class Player : MonoBehaviour
     public PassiveSpell passiveSpell;
     public float invincibilityDuration = 1f;
 
+    [SerializeField] private ParticleSystem deathParticles;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+
     // "Coins" that the player can use to buy spells or modifications
     public int power;
 
@@ -93,6 +96,7 @@ public class Player : MonoBehaviour
 
         OnHealthChanged?.Invoke((int)health / 10);
         OnCurrentHealthChanged?.Invoke((int)health / 10);
+        OnPowerAdded?.Invoke(power);
     }
 
     // This is done because you can't start a coroutine from context in player controls
@@ -173,12 +177,33 @@ public class Player : MonoBehaviour
                 // Check if health is 0 or less, and destroy the player if so
                 if (health <= 0)
                 {
-                    gameObject.SetActive(false);
+                    StartCoroutine(Die());
                 }
             }
 
         }
 
+    }
+
+    public IEnumerator Die()
+    {
+        deathParticles.Play();
+        spriteRenderer.enabled = false; 
+
+        // Disables all enemies in the scene
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<Enemy>().enabled = false;
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        GameObject deathCanvas = GameObject.FindGameObjectWithTag("DeathCanvas");
+        deathCanvas.GetComponent<Canvas>().enabled = true;
+
+        Destroy(gameObject);
     }
 
     // Handles collision with ranged enemies (projectiles)

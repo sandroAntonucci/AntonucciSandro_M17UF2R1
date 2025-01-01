@@ -32,6 +32,9 @@ public class EnemyProjectile : MonoBehaviour
     {
         if (rb != null)
         {
+
+            if(GameObject.FindGameObjectWithTag("Player") == null) return;
+
             gameObject.GetComponent<SpriteRenderer>().enabled = true;
             playerPosition = GameObject.FindGameObjectWithTag("Player").transform;
             Vector2 shootDirection = new Vector2(playerPosition.position.x - transform.position.x, playerPosition.position.y - transform.position.y);

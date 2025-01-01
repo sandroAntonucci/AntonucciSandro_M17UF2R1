@@ -76,6 +76,9 @@ public abstract class Enemy : MonoBehaviour
         {
             if (powerDrop < rangesToDrop[i-1])
             {
+
+                if (!GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().enabled) return;
+
                 GameObject powerOrb = Instantiate(powerOrbs[i-1], transform.position, Quaternion.identity);
                 powerOrb.GetComponent<PowerOrb>().playerPosition = player.position;
                 break;
