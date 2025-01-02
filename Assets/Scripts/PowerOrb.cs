@@ -20,6 +20,9 @@ public class PowerOrb : MonoBehaviour
     {
         if (playerInRange)
         {
+
+            if(GameObject.FindGameObjectWithTag("Player") == null) return;
+
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
             transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.1f);

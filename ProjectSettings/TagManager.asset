@@ -18,6 +18,7 @@ TagManager:
   - FinalMenuCanvas
   - PlayerInterface
   - DeathCanvas
+  - PauseCanvas
   layers:
   - Default
   - TransparentFX

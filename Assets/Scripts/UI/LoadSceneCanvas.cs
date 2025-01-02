@@ -4,7 +4,6 @@ using TMPro;
 
 public class LoadSceneCanvas : MonoBehaviour
 {
-    // Singleton Instance
     public static LoadSceneCanvas Instance { get; private set; }
 
     public Canvas canvas;
@@ -29,7 +28,6 @@ public class LoadSceneCanvas : MonoBehaviour
     {
         canvas.enabled = true;
         StartCoroutine(textAnimation.TypeText(textAnimation.message));
-
     }
 
     public void HideLoadingScreen()

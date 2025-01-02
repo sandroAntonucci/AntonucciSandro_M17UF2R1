@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
     private InputAction fire;
     private bool isFiring;
 
+
     public BaseSpell spell;
     public PassiveSpell passiveSpell;
     public float invincibilityDuration = 1f;
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
         fire.Enable();
         fire.performed += context => StartShooting();
         fire.canceled += context => StopShooting();
+
     }
 
     private void OnDisable()
@@ -203,6 +205,9 @@ public class Player : MonoBehaviour
         GameObject deathCanvas = GameObject.FindGameObjectWithTag("DeathCanvas");
         deathCanvas.GetComponent<Canvas>().enabled = true;
 
+        GameObject pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
+        pauseCanvas.SetActive(false);
+
         Destroy(gameObject);
     }
 
@@ -224,7 +229,7 @@ public class Player : MonoBehaviour
                 // Check if health is 0 or less, and destroy the player if so
                 if (health <= 0)
                 {
-                    gameObject.SetActive(false);
+                    StartCoroutine(Die());
                 }
             }
         }

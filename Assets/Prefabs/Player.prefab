@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 1208634838884540219}
   - component: {fileID: 5345051138686971925}
   - component: {fileID: 4915234443768386069}
-  - component: {fileID: 7054296558639680041}
   - component: {fileID: 3667894008325079705}
   m_Layer: 6
   m_Name: Player
@@ -443,6 +442,8 @@ MonoBehaviour:
   spell: {fileID: 5121379284465888997}
   passiveSpell: {fileID: 9093684355152074955}
   invincibilityDuration: 0.6
+  deathParticles: {fileID: 0}
+  spriteRenderer: {fileID: 0}
   power: 0
   rb: {fileID: 0}
   baseMoveSpeed: 6
@@ -599,19 +600,6 @@ MonoBehaviour:
   - {fileID: 8300000, guid: dcfbc6581769f1c409f19b273ed96c30, type: 3}
   - {fileID: 8300000, guid: 7a41293effc19174bb1a09707c5a0780, type: 3}
   clip: {fileID: 0}
---- !u!114 &7054296558639680041
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6784392601285067938}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5bead15445e07542b0a9e33a4ebeb76, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slidingFactor: 0.1
 --- !u!114 &3667894008325079705
 MonoBehaviour:
   m_ObjectHideFlags: 0

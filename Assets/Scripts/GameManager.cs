@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Rendering.Universal.Internal;
 using UnityEngine.SceneManagement;
 
@@ -21,6 +22,28 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
+
+    public void PauseOrUnpauseGame()
+    {
+        Canvas pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas").GetComponent<Canvas>();
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if (player == null) return;
+
+        if (pauseCanvas.enabled)
+        {
+            pauseCanvas.enabled = false;
+            Time.timeScale = 1; // Resume the game
+            player.enabled = true; // Enable player input
+        }
+        else
+        {
+            pauseCanvas.enabled = true;
+            Time.timeScale = 0; // Pause the game
+            player.enabled = false; // Disable player input
+        }
+    }
+
 
     public void LoadScene(string sceneName)
     {
@@ -52,15 +75,22 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
+        // Disables Pausing
+        GameObject pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
+        if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false; 
+
         // Minimum time to show the loading screen
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
 
         LoadSceneCanvas.Instance.HideLoadingScreen();
 
         if (sceneName == "MainScene")
         {
+            if (Player.Instance != null) Destroy(Player.Instance.gameObject);
+            if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false;
             Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
         }
+
 
         // Reloads player
         if (Player.Instance != null) Player.Instance.ReloadPlayer();
@@ -73,6 +103,9 @@ public class GameManager : MonoBehaviour
             CameraController.Instance.gameObject.transform.position = new Vector3(0, 0, -10);
             CameraController.Instance.GetComponent<Camera>().orthographicSize = 9;
         }
+
+        // Enables pausing
+        if (pauseCanvas != null && sceneName != "MainScene") pauseCanvas.GetComponent<PauseMenu>().enabled = true;
 
     }
 

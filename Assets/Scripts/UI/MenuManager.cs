@@ -15,7 +15,7 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void ReturnToMenu()
+    public virtual void ReturnToMenu()
     {
         GameManager.Instance.LoadScene("MainScene");
     }
