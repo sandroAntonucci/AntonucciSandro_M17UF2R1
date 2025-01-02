@@ -19,6 +19,7 @@ TagManager:
   - PlayerInterface
   - DeathCanvas
   - PauseCanvas
+  - ChooseCharacterCanvas
   layers:
   - Default
   - TransparentFX

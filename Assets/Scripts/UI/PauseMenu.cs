@@ -6,13 +6,22 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MenuManager
 {
 
-    private PauseMenu Instance;
+    public static PauseMenu Instance { get; private set; }
+
     private InputAction pause;
+    
     [SerializeField] private PlayerControls playerControls;
 
     private void Awake()
     {
-        if (Instance != null )
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
     }
 
     public void OnEnable()

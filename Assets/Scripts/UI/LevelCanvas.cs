@@ -15,6 +15,7 @@ public class LevelCanvas : MonoBehaviour
     public Sprite catacombsBanner;
     public Sprite basementBanner;
     public Sprite sanctuaryBanner;
+    public Sprite finalBossBanner;
 
     public TextMeshProUGUI levelName;
 
@@ -48,6 +49,11 @@ public class LevelCanvas : MonoBehaviour
 
             case "Sanctuary":
                 bannerImage.sprite = sanctuaryBanner;
+                break;
+
+            case "FinalBoss":
+                levelName.text = "Knekromancer";
+                bannerImage.sprite = finalBossBanner;
                 break;
         }
 

@@ -107,6 +107,7 @@ public class GameManager : MonoBehaviour
         // Enables pausing
         if (pauseCanvas != null && sceneName != "MainScene") pauseCanvas.GetComponent<PauseMenu>().enabled = true;
 
+
     }
 
 

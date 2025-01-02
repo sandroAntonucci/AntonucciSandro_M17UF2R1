@@ -206,7 +206,9 @@ public class Player : MonoBehaviour
         deathCanvas.GetComponent<Canvas>().enabled = true;
 
         GameObject pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
-        pauseCanvas.SetActive(false);
+        pauseCanvas.GetComponent<PauseMenu>().enabled = false;
+
+        Time.timeScale = 0;
 
         Destroy(gameObject);
     }

@@ -45,6 +45,11 @@ public class Pedestal : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
                 GameObject finalMenu = GameObject.FindGameObjectWithTag("FinalMenuCanvas");
                 finalMenu.GetComponent<Canvas>().enabled = true;
+
+                // Disables the pause menu
+                GameObject pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
+                if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false;
+
                 break;
         }
 

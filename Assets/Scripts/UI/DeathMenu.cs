@@ -5,7 +5,7 @@ using UnityEngine;
 public class DeathMenu : MenuManager
 {
 
-    public DeathMenu Instance;
+    public static DeathMenu Instance { get; private set; }
 
     private void Awake()
     {
