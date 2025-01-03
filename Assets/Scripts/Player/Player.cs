@@ -281,7 +281,7 @@ public class Player : MonoBehaviour
     public void DestroyProjectiles()
     {
         spell.DestroyProjectiles();
-        passiveSpell.DestroyProjectiles();
+        if (passiveSpell != null) passiveSpell.DestroyProjectiles();
     }
 
     public void ReloadPlayer()

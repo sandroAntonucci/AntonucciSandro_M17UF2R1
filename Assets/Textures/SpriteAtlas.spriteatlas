@@ -503,6 +503,7 @@ SpriteAtlas:
     - d69f5d28580ab3f468bb43590bfc4caa: 1006375331
     - deecce3869fa78540a074cbc5863a2de: 21300000
     - 8b5923482f885a542a1fc4e64fec3a64: 21300000
+    - be2fa968af114d34689ca470ec480935: 21300000
     - 2ab79d88802f93a4cae2aca3782ee1b9: 21300000
     - e1318ea8235da814fa5836ae6aa948a6: 21300000
     - 750a26b8a601ee84b875944ffe3fd601: 21300000
@@ -2003,6 +2004,7 @@ SpriteAtlas:
   - {fileID: 1006375331, guid: d69f5d28580ab3f468bb43590bfc4caa, type: 3}
   - {fileID: 21300000, guid: deecce3869fa78540a074cbc5863a2de, type: 3}
   - {fileID: 21300000, guid: 8b5923482f885a542a1fc4e64fec3a64, type: 3}
+  - {fileID: 21300000, guid: be2fa968af114d34689ca470ec480935, type: 3}
   - {fileID: 21300000, guid: 2ab79d88802f93a4cae2aca3782ee1b9, type: 3}
   - {fileID: 21300000, guid: e1318ea8235da814fa5836ae6aa948a6, type: 3}
   - {fileID: 21300000, guid: 750a26b8a601ee84b875944ffe3fd601, type: 3}
@@ -3502,6 +3504,7 @@ SpriteAtlas:
   - PastorIdle_0
   - skull_v1_2
   - priest1_v2_1
+  - MeleeDagger
   - skeleton_v1_4
   - vampire_v1_1
   - priest2_v2_1

@@ -13,6 +13,7 @@ public class SpellOrbit : MonoBehaviour
     public Transform player;            // Reference to the player (center point)
 
     public bool followsInput = true;
+    public bool rotatesObject = false;
 
 
     private void Start()
@@ -25,11 +26,17 @@ public class SpellOrbit : MonoBehaviour
     private void Update()
     {
 
-        if (followsInput)
+        if (followsInput && !rotatesObject)
         {
             lookInput = GetLookInput();
 
             RotateAroundPlayer();
+        }
+        else if (followsInput && rotatesObject)
+        {
+            lookInput = GetLookInput();
+
+            RotateAndOrientAroundPlayer();
         }
         else
         {
@@ -77,6 +84,31 @@ public class SpellOrbit : MonoBehaviour
 
         // Set the object's position at the new location, keeping it at the orbitRadius distance 
         transform.position = player.position + offset;
+    }
+
+    private void RotateAndOrientAroundPlayer()
+    {
+        // If we have valid input (not zero)
+        if (lookInput != Vector2.zero)
+        {
+            // Calculate the angle from the player to the target direction (either mouse or right stick)
+            targetAngle = Mathf.Atan2(lookInput.y, lookInput.x) * Mathf.Rad2Deg; // Convert to degrees
+        }
+
+        // Smoothly interpolate the current angle towards the target angle
+        currentAngle = Mathf.MoveTowardsAngle(currentAngle, targetAngle, rotationSpeed * Time.deltaTime);
+
+        // Calculate the new position based on the current angle and orbit radius
+        float radianAngle = currentAngle * Mathf.Deg2Rad;
+        Vector3 offset = new Vector3(Mathf.Cos(radianAngle), Mathf.Sin(radianAngle), 0) * orbitRadius;
+
+        // Set the object's position at the new location, keeping it at the orbitRadius distance 
+        transform.position = player.position + offset;
+
+        // Rotate the object to face outward from the center (player)
+        Vector3 directionToPlayer = (player.position - transform.position).normalized; // Direction pointing to the center
+        float rotationAngle = Mathf.Atan2(directionToPlayer.y, directionToPlayer.x) * Mathf.Rad2Deg + 90f; // Adjust angle to align with object's forward direction
+        transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
     }
 
     private void RotateAroundPlayerWithoutInput()

@@ -27,6 +27,7 @@ public class PlayerSpawn : MonoBehaviour
 
     public void DisablePlayer()
     {
+        player.spell.gameObject.GetComponent<SpellOrbit>().enabled = false;
         player.rb.velocity = Vector2.zero;
         player.enabled = false;
         playerCollider.enabled = false;
@@ -35,6 +36,8 @@ public class PlayerSpawn : MonoBehaviour
 
     public void EnablePlayer()
     {
+
+        player.spell.gameObject.GetComponent<SpellOrbit>().enabled = true;
         triggerCollider.enabled = true;
         player.enabled = true;
         playerCollider.enabled = true;
