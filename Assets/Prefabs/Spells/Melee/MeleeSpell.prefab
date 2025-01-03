@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7780730759907830682}
   - component: {fileID: 5174584855438104090}
   - component: {fileID: 642202206741289428}
+  - component: {fileID: 2057346542482096612}
   m_Layer: 0
   m_Name: MeleeSpell
   m_TagString: Untagged
@@ -115,7 +116,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 675985635795078526}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -153,6 +154,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6638835, y: 1.7711546}
   m_EdgeRadius: 0
+--- !u!114 &2057346542482096612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 675985635795078526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65f073495ee32b45affabe4abc7e32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 747605683960878634}
+  damage: 0
 --- !u!1 &1724042890553143033
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,9 +492,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSpeed: 0
-  damage: 0
+  damage: 12
   projectileSpeed: 0
   range: 0
   projectile: {fileID: 0}
   anim: {fileID: 5174584855438104090}
-  hitbox: {fileID: 642202206741289428}

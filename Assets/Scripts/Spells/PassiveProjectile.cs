@@ -41,7 +41,7 @@ public class PassiveProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
+            collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage, true);
         }
 
         if (!collision.CompareTag("Player") && !collision.CompareTag("PlayerProjectile") && !collision.CompareTag("Room")  && !collision.CompareTag("EnemySpell") && !collision.CompareTag("Orb"))

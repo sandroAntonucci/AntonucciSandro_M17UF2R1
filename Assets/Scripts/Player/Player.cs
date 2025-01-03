@@ -110,6 +110,14 @@ public class Player : MonoBehaviour
 
     private IEnumerator Shoot()
     {
+
+        // If the player is using the flamethrower spell, we need to cast it differently
+        if (spell.GetComponent<FlameThrowerSpell>() != null)
+        {
+            spell.GetComponent<FlameThrowerSpell>().CastSpell();
+            yield return null;
+        }
+
         isFiring = true;
 
         while (isFiring) 
@@ -124,10 +132,14 @@ public class Player : MonoBehaviour
 
     private void StopShooting()
     {
-        isFiring = false; // This will exit the while loop in the Shoot coroutine
-    }
+        isFiring = false;
 
-    
+        if (spell.GetComponent<FlameThrowerSpell>() != null)
+        {
+            spell.GetComponent<FlameThrowerSpell>().StopSpell();
+        }
+
+    }
 
     private void Update()
     {

@@ -6,7 +6,6 @@ public class MeleeSpell : BaseSpell
 {
 
     [SerializeField] private Animator anim;
-    [SerializeField] private BoxCollider2D hitbox;
 
     public override void CastSpell()
     {

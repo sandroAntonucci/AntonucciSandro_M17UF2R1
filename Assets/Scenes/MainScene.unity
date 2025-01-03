@@ -806,6 +806,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 332751428}
   m_CullTransparentMesh: 1
+--- !u!1 &432446951 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5773276104931583240, guid: db71495874198c64aa108819baf6cb29, type: 3}
+  m_PrefabInstance: {fileID: 1781598600}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &446168602 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3672146846903271449, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+  m_PrefabInstance: {fileID: 5781805052406835862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04e4097f65293734db9e48b488facb79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &447347440
 GameObject:
   m_ObjectHideFlags: 0
@@ -1935,9 +1951,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1160037824}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: ContinueGame
+      - m_Target: {fileID: 1431661366}
+        m_TargetAssemblyTypeName: ChooseCharacter, Assembly-CSharp
+        m_MethodName: SorcererChosen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2141,17 +2157,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101877456}
   m_CullTransparentMesh: 1
---- !u!114 &1160037824 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1719061011713422960, guid: d17544f86fc4c0f4b81c12f2cfb885e5, type: 3}
-  m_PrefabInstance: {fileID: 609852231}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1918f4c14e9c3824ab46e97a64e87537, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1163911133
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2655,7 +2660,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.45882353, g: 0.7490196, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.47843137, b: 0.45882353, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2680,6 +2685,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284621732}
   m_CullTransparentMesh: 1
+--- !u!1 &1350204696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3600491750594288461, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+  m_PrefabInstance: {fileID: 5781805052406835862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1350204701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350204696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c65f073495ee32b45affabe4abc7e32e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spell: {fileID: 446168602}
+  damage: 0
 --- !u!1001 &1371458396
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2812,6 +2836,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 16101440}
   m_SourcePrefab: {fileID: 100100000, guid: 11925a304f837f74ba91cc7f71ffcf09, type: 3}
+--- !u!198 &1388787763 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7746094289921032251, guid: db71495874198c64aa108819baf6cb29, type: 3}
+  m_PrefabInstance: {fileID: 1781598600}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1431661361
 GameObject:
   m_ObjectHideFlags: 0
@@ -2938,7 +2967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mage: {fileID: 1775005894}
   rogue: {fileID: 4668070324484535883}
-  sorcerer: {fileID: 5796932045076089501, guid: 289226af92c95d7408da7b61e912f389, type: 3}
+  sorcerer: {fileID: 432446951}
   menuManager: {fileID: 316727712}
 --- !u!1 &1444635995
 GameObject:
@@ -3302,7 +3331,7 @@ Transform:
   m_GameObject: {fileID: 1504222961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 868.0103, y: 450.20425, z: 1.7791119}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3537,6 +3566,71 @@ Rigidbody2D:
   m_CorrespondingSourceObject: {fileID: 346002756771866386, guid: a916acba77e70ff4caf73388bc2354f9, type: 3}
   m_PrefabInstance: {fileID: 1526650767}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1781598600
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3697988951562160083, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: flameThrower
+      value: 
+      objectReference: {fileID: 1388787763}
+    - target: {fileID: 5773276104931583240, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_Name
+      value: Sorcerer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5773276104931583240, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8288775432055084667, guid: db71495874198c64aa108819baf6cb29, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: db71495874198c64aa108819baf6cb29, type: 3}
 --- !u!1 &1943490798
 GameObject:
   m_ObjectHideFlags: 0
@@ -3840,10 +3934,57 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3494686590750019559, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 26a640974b7da684fab552ab79c5c116, type: 2}
+    - target: {fileID: 3494686590750019559, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3494686590750019559, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 1088
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600491750594288461, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672146846903271449, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: damage
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3672146846903271449, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: attackSpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5943572880487049014, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_TagString
+      value: Spell
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770055472904358299, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770055472904358299, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6770055472904358299, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7995363022723214168, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      propertyPath: orbitRadius
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3600491750594288461, guid: af30ca69395eb5b49944928f958935ce, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1350204701}
   m_SourcePrefab: {fileID: 100100000, guid: af30ca69395eb5b49944928f958935ce, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -3861,3 +4002,4 @@ SceneRoots:
   - {fileID: 804014366}
   - {fileID: 1526650767}
   - {fileID: 5781805052406835862}
+  - {fileID: 1781598600}

@@ -50,14 +50,14 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // Applies damage to the enemy
-    public void ApplyDamage(float damageApplied)
+    public void ApplyDamage(float damageApplied, bool particlesEnabled)
     {
 
         health -= damageApplied;
 
         damageSound.PlayRandomSound();
         damageFlash.Flash();
-        damageParticles.Play();
+        if (particlesEnabled) damageParticles.Play();
 
         healthBar.UpdateHealthBar(health, maxHealth);
 

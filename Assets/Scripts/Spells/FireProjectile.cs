@@ -43,7 +43,7 @@ public class FireProjectile : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-            collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage);
+            collision.gameObject.GetComponent<Enemy>().ApplyDamage(damage, true);
 
             if(collision.gameObject.GetComponent<KnockbackFeedback>() != null)
 

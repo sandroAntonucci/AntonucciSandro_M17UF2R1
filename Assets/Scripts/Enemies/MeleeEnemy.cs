@@ -20,6 +20,7 @@ public class MeleeEnemy : Enemy
 
     private void Move()
     {
+        if (player == null) return;
 
         Vector2 direction = player.position - transform.position;
         rb.velocity = direction.normalized * speed;
