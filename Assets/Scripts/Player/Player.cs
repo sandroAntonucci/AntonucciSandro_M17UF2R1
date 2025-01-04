@@ -201,6 +201,8 @@ public class Player : MonoBehaviour
 
     public IEnumerator Die()
     {
+        rb.velocity = Vector2.zero;
+        playerControls.Disable();
         deathParticles.Play();
         spriteRenderer.enabled = false; 
 

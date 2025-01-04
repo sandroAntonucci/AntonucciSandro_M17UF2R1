@@ -21,6 +21,8 @@ public abstract class Enemy : MonoBehaviour
 
     public List<GameObject> powerOrbs;
 
+    private bool isDying = false;
+
     public int[] rangesToDrop;
 
     public Transform player;
@@ -50,14 +52,18 @@ public abstract class Enemy : MonoBehaviour
     }
 
     // Applies damage to the enemy
-    public void ApplyDamage(float damageApplied, bool particlesEnabled)
+    public void ApplyDamage(float damageApplied, bool effectsEnabled)
     {
+        if (isDying) return;
 
         health -= damageApplied;
 
-        damageSound.PlayRandomSound();
-        damageFlash.Flash();
-        if (particlesEnabled) damageParticles.Play();
+        if (effectsEnabled)
+        {
+            damageSound.PlayRandomSound();
+            damageFlash.Flash();
+            damageParticles.Play();
+        }
 
         healthBar.UpdateHealthBar(health, maxHealth);
 
@@ -89,6 +95,9 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
+
+        isDying = true;
+
         // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms)
         if (!isBossMinion) DropPower();
 

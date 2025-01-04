@@ -86,7 +86,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 2231
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerQuant: 2
+  isHealthOrb: 0
   floatingMovement: {fileID: 575774757305728763}
   playerPosition: {x: 0, y: 0}
   playerInRange: 0
