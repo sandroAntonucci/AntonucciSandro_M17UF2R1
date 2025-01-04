@@ -17,12 +17,12 @@ public abstract class BaseSpell : MonoBehaviour
 
     public abstract void DestroyProjectiles();
 
-    public abstract void UpgradeSpellDamage(float upgradeValue);
+    public virtual void UpgradeSpellDamage(float upgradeValue) { }
 
-    public abstract void UpgradeSpellAttackSpeed(float upgradeValue);
+    public virtual void UpgradeSpellAttackSpeed(float upgradeValue) { }
 
-    public abstract void UpgradeSpellProjectileSpeed(float upgradeValue);
+    public virtual void UpgradeSpellProjectileSpeed(float upgradeValue) { }
 
-    public abstract void UpgradeSpellRange(float upgradeValue);
+    public virtual void UpgradeSpellRange(float upgradeValue) { }
 
 }

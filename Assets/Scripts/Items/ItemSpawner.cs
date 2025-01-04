@@ -2,26 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public class ItemSpawner : MonoBehaviour
 {
+    // ScriptableObject-based item lists
+    public List<ItemUpgrade> normalItems;
+    public List<ItemUpgrade> rareItems;
+    public List<ItemUpgrade> legendaryItems;
 
-    public List<GameObject> normalItems;
-    public List<GameObject> rareItems;
-    public List<GameObject> legendaryItems;
-
+    // UI and item assignment
     public TextMeshPro itemPriceTag;
+    public SpriteRenderer itemIcon;
 
-    public Transform parentTransform;
-
-    public ItemUpgrade itemUpgrade;
+    public ItemUpgrade currentItemUpgrade;
 
     public bool isFree;
 
-    public List<GameObject> ChooseRarity()
+    private void Start()
     {
+        SpawnItem(ChooseRarity());
+    }
 
+    private void SpawnItem(List<ItemUpgrade> items)
+    {
+        int randomItem = Random.Range(0, items.Count);
+        currentItemUpgrade = items[randomItem];
+
+        // Update the UI to display the item's data
+        itemPriceTag.text = isFree ? "" : currentItemUpgrade.upgradePrice.ToString();
+        itemIcon.sprite = currentItemUpgrade.upgradeIcon;
+        itemIcon.transform.position = gameObject.transform.position;
+    }
+
+    private List<ItemUpgrade> ChooseRarity()
+    {
         int randomRarity = Random.Range(0, 100);
 
         // 60% normal, 30% rare, 10% legendary
@@ -39,38 +54,24 @@ public class ItemSpawner : MonoBehaviour
         }
     }
 
-    public void SpawnItem(List<GameObject> items)
-    {
-        int randomItem = Random.Range(0, items.Count);
-
-        itemUpgrade = Instantiate(items[randomItem], parentTransform).GetComponent<ItemUpgrade>();
-        itemUpgrade.transform.localPosition = Vector3.zero; // Reset position relative to parent
-    }
-
-    void Start()
-    {
-        SpawnItem(ChooseRarity());
-        if(!isFree) itemPriceTag.text = itemUpgrade.upgradePrice.ToString();
-    }
-
-    public void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
+            Player player = collision.gameObject.GetComponent<Player>();
 
-            if (isFree)
+            if (isFree || (player != null && player.power >= currentItemUpgrade.upgradePrice))
             {
-                itemUpgrade.Upgrade();
-                Destroy(gameObject);
-            }
-            else if (collision.gameObject.GetComponent<Player>().power >= itemUpgrade.upgradePrice)
-            {
-                collision.gameObject.GetComponent<Player>().power -= itemUpgrade.upgradePrice;
-                collision.gameObject.GetComponent<Player>().EmitPowerAdded();
-                itemUpgrade.Upgrade();
+                if (!isFree)
+                {
+                    player.power -= currentItemUpgrade.upgradePrice;
+                    player.EmitPowerAdded();
+                }
+
+                // Apply the upgrade and "consume" the item
+                currentItemUpgrade.ApplyUpgrade();
                 Destroy(gameObject);
             }
         }
     }
-
 }

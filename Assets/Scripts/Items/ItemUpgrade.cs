@@ -2,22 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class ItemUpgrade : MonoBehaviour
-{
+[CreateAssetMenu(fileName = "NewItemUpgrade", menuName = "Upgrades/ItemUpgrade", order = 1)]
 
+public class ItemUpgrade : ScriptableObject
+{
     public BaseSpell spell;
 
-    // Upgrades spell depending on the upgrade type
     public float upgradeValue;
 
-    // Upgrade Info
-    public string upgradeName;
-    public string upgradeText;
     public int upgradePrice;
+
+    public Sprite upgradeIcon;
 
     public UpgradeType upgradeType;
 
-    public UpgradeCanvas upgradeCanvas;
+    public bool isPassiveUpgrade;
 
     public enum UpgradeType
     {
@@ -27,18 +26,23 @@ public abstract class ItemUpgrade : MonoBehaviour
         Range
     }
 
-    public virtual void Start()
+    public void ApplyUpgrade()
     {
-        upgradeCanvas = GameObject.FindGameObjectWithTag("UpgradeCanvas").GetComponent<UpgradeCanvas>();
-    }
 
-    public virtual void Upgrade()
-    {
+        if (isPassiveUpgrade)
+        {
+            spell = Player.Instance.passiveSpell;
+        }
+        else
+        {
+            spell = Player.Instance.spell;
+        }
+
+
         if (spell != null)
         {
             switch (upgradeType)
             {
-               
                 case UpgradeType.Damage:
                     spell.UpgradeSpellDamage(upgradeValue);
                     break;
@@ -46,21 +50,15 @@ public abstract class ItemUpgrade : MonoBehaviour
                 case UpgradeType.AttackSpeed:
                     spell.UpgradeSpellAttackSpeed(upgradeValue);
                     break;
-                
+
                 case UpgradeType.ProjectileSpeed:
                     spell.UpgradeSpellProjectileSpeed(upgradeValue);
                     break;
-                
+
                 case UpgradeType.Range:
                     spell.UpgradeSpellRange(upgradeValue);
                     break;
-
             }
-
-            upgradeCanvas.ShowCanvas(upgradeName, upgradeText);
-
-            Destroy(gameObject);
-
         }
     }
 }

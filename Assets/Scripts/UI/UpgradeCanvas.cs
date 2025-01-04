@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class UpgradeCanvas : MonoBehaviour
 {
+
+    public static UpgradeCanvas Instance { get; private set; }
+
     public Animator nameBannerAnimator;
     public Animator textBannerAnimator;
     public RectTransform nameBannerRect;
@@ -11,6 +14,18 @@ public class UpgradeCanvas : MonoBehaviour
     public TextMeshProUGUI upgradeText;
     public TextMeshProUGUI upgradeName;
     public Canvas upgradeCanvas;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
+    }
 
     public void ShowCanvas(string upgradeName, string upgradeText)
     {

@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9043683121398743256}
+  - component: {fileID: 5649949373858342260}
+  - component: {fileID: 4299464542448958129}
   m_Layer: 8
   m_Name: ItemPosition
   m_TagString: Untagged
@@ -32,6 +34,72 @@ Transform:
   - {fileID: 5807676822560837046}
   m_Father: {fileID: 4911830129690580358}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5649949373858342260
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817548320392842009}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: -1295769923
+  m_SortingLayer: 7
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 0
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!114 &4299464542448958129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817548320392842009}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b17d9ad2af4c9b240ba228e8611d0feb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitude: 0.5
+  frequency: 1
 --- !u!1 &1873767697774003422
 GameObject:
   m_ObjectHideFlags: 0
@@ -465,7 +533,7 @@ GameObject:
   - component: {fileID: 5974500033516006073}
   - component: {fileID: 4535245852195945233}
   m_Layer: 8
-  m_Name: Pedestal
+  m_Name: ItemPedestal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,32 +571,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalItems:
-  - {fileID: 3364856694354440247, guid: 7f31e88c3ed6a1f4bb9769c8eca2798d, type: 3}
-  - {fileID: 8703225582520397064, guid: de7b3b740a9971241a5c1682493e1566, type: 3}
-  - {fileID: 3364856694354440247, guid: 21f6d611c7913db469e08f11759e1c67, type: 3}
-  - {fileID: 3364856694354440247, guid: ef46fb246f0c3c5418e9d41fe1bb3d8e, type: 3}
-  - {fileID: 3364856694354440247, guid: 36171cbf8120a6941b06f26f147b115e, type: 3}
-  - {fileID: 3364856694354440247, guid: dca4e7f545657d942bdf7fc8c85de8b4, type: 3}
-  - {fileID: 3364856694354440247, guid: 2b6913834c1726149b14d35bd7e8e19e, type: 3}
+  - {fileID: 11400000, guid: 09ecbe3181d857848a7eeb187dddd7bd, type: 2}
   rareItems:
-  - {fileID: 3364856694354440247, guid: 3f1f05983e3bebc4cbb37edc0fad25ba, type: 3}
-  - {fileID: 8703225582520397064, guid: a76ad4c1cc0503a4ab008ab46f1eb9b0, type: 3}
-  - {fileID: 3364856694354440247, guid: c20d045ab7db35b49a7a5fdf9e300526, type: 3}
-  - {fileID: 3364856694354440247, guid: 397186f1ddd55034caded7385e4cd415, type: 3}
-  - {fileID: 3364856694354440247, guid: 56e7cd2ef6f03c24bbe073ce16e3476b, type: 3}
-  - {fileID: 3364856694354440247, guid: 7a92751b9d1dae5489d121d999201f07, type: 3}
-  - {fileID: 3364856694354440247, guid: 473e1db86aacdf84ea933da0980beab3, type: 3}
+  - {fileID: 11400000, guid: 09ecbe3181d857848a7eeb187dddd7bd, type: 2}
   legendaryItems:
-  - {fileID: 3364856694354440247, guid: f7e3a4915589a26428369a04d62c6586, type: 3}
-  - {fileID: 8703225582520397064, guid: bd15b1c3700a70440978d19075f5c6e8, type: 3}
-  - {fileID: 3364856694354440247, guid: 94732235eefa41244b375d36764c9a4a, type: 3}
-  - {fileID: 3364856694354440247, guid: bcc37ae1e7f1fb64ca08c26eee5ec06e, type: 3}
-  - {fileID: 3364856694354440247, guid: c16aa9ae1355bfd458337b4d8b9164bf, type: 3}
-  - {fileID: 3364856694354440247, guid: 85e15c7660b91ed4690c3616b72d22f3, type: 3}
-  - {fileID: 3364856694354440247, guid: 4969ab682f9274546b471a503efa1c4c, type: 3}
+  - {fileID: 11400000, guid: 09ecbe3181d857848a7eeb187dddd7bd, type: 2}
   itemPriceTag: {fileID: 2268747945966413147}
-  parentTransform: {fileID: 9043683121398743256}
-  itemUpgrade: {fileID: 0}
+  itemIcon: {fileID: 5649949373858342260}
+  currentItemUpgrade: {fileID: 0}
   isFree: 0
 --- !u!61 &4535245852195945233
 BoxCollider2D:
