@@ -445,7 +445,7 @@ MonoBehaviour:
   invincible: 0
   spell: {fileID: 3697988951562160083}
   passiveSpell: {fileID: 5573231386237454299}
-  invincibilityDuration: 0.6
+  invincibilityDuration: 1
   deathParticles: {fileID: 4781096960537389099}
   spriteRenderer: {fileID: 6122717209316239278}
   power: 0
@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 4128361518863269245, guid: 1db8a66b55f084e43a06d9a207b3b209, type: 3}
       propertyPath: flameThrower
       value: 
-      objectReference: {fileID: 8314318790327438231}
+      objectReference: {fileID: 0}
     - target: {fileID: 8004948761790750962, guid: 1db8a66b55f084e43a06d9a207b3b209, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.2
@@ -721,11 +721,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e7d38f794146a646b6cf1252f87f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!198 &8314318790327438231 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8753136567557599545, guid: 1db8a66b55f084e43a06d9a207b3b209, type: 3}
-  m_PrefabInstance: {fileID: 728184245114256046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1974863909156442350
 PrefabInstance:
   m_ObjectHideFlags: 0

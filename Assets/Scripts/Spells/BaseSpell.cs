@@ -11,18 +11,16 @@ public abstract class BaseSpell : MonoBehaviour
     public float projectileSpeed;
     public float range;
 
+    public Animator anim;
+
+    public BaseUpgrade spellUpgrade;
+
     public GameObject projectile;
 
     public abstract void CastSpell();
 
-    public abstract void DestroyProjectiles();
+    public virtual void DestroyProjectiles() { }
 
-    public virtual void UpgradeSpellDamage(float upgradeValue) { }
-
-    public virtual void UpgradeSpellAttackSpeed(float upgradeValue) { }
-
-    public virtual void UpgradeSpellProjectileSpeed(float upgradeValue) { }
-
-    public virtual void UpgradeSpellRange(float upgradeValue) { }
+   
 
 }

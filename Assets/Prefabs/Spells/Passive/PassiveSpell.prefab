@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4249979103356219877}
   - component: {fileID: 6210525639095588661}
   - component: {fileID: 2209423829416038115}
+  - component: {fileID: 3157276770647758987}
   m_Layer: 0
   m_Name: PassiveSpell
   m_TagString: PlayerProjectile
@@ -125,6 +126,7 @@ MonoBehaviour:
   damage: 0
   projectileSpeed: 0
   range: 5
+  spellUpgrade: {fileID: 3157276770647758987}
   projectile: {fileID: 0}
 --- !u!114 &2209423829416038115
 MonoBehaviour:
@@ -144,6 +146,19 @@ MonoBehaviour:
   currentAngle: 0
   player: {fileID: 0}
   followsInput: 0
+  rotatesObject: 0
+--- !u!114 &3157276770647758987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1433923527518002717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bae648d64e2da1749affda65c43653d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5078512798677218667
 GameObject:
   m_ObjectHideFlags: 0

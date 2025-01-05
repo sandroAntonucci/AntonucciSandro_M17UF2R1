@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 876282766940668691}
   - component: {fileID: 4529360898764565825}
   - component: {fileID: 7119374213576934883}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: PowerOrbTwo
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -354,3 +354,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.1
   frequency: 4
+  parentPosition: {fileID: 3525416721223254730}

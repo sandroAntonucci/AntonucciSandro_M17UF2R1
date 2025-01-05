@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 7907150256300844569}
   - component: {fileID: 5065739567099012782}
   - component: {fileID: 747605683960878634}
+  - component: {fileID: 3024786885798867640}
   m_Layer: 0
   m_Name: MeleeSpell
   m_TagString: Untagged
@@ -495,5 +496,18 @@ MonoBehaviour:
   damage: 12
   projectileSpeed: 0
   range: 0
-  projectile: {fileID: 0}
   anim: {fileID: 5174584855438104090}
+  spellUpgrade: {fileID: 3024786885798867640}
+  projectile: {fileID: 0}
+--- !u!114 &3024786885798867640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705027268072173829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec3599f7f536fa48926403899a1512c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

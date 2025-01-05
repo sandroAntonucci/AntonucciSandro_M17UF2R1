@@ -60,8 +60,8 @@ public abstract class Enemy : MonoBehaviour
 
         if (effectsEnabled)
         {
-            damageSound.PlayRandomSound();
             damageFlash.Flash();
+            damageSound.PlayRandomSound();
             damageParticles.Play();
         }
 

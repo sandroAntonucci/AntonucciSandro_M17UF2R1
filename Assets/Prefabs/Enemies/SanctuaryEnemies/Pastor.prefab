@@ -199,7 +199,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1410414314518810776}
@@ -305,7 +305,7 @@ MonoBehaviour:
   - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
   - {fileID: 3651600680213569310, guid: 78318457c2bc4b24d9a075cbf2f5fe61, type: 3}
   - {fileID: 3651600680213569310, guid: 89b2e5eba26249345899503e1ecac369, type: 3}
-  rangesToDrop: 64000000500000000f00000005000000
+  rangesToDrop: 64000000500000000f0000000a000000
   player: {fileID: 0}
   rb: {fileID: 1283797505449432860}
   damage: 10
@@ -475,7 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 4386947723330015259}
-  shootRate: 0.5
+  shootRate: 0.65
   delay: 0.5
   damage: 10
   projectileSpeed: 8

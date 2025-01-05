@@ -375,7 +375,7 @@ MonoBehaviour:
   player: {fileID: 0}
   rb: {fileID: 2568076097002720554}
   damage: 10
-  health: 55
+  health: 45
 --- !u!1 &2433323972175947322
 GameObject:
   m_ObjectHideFlags: 0

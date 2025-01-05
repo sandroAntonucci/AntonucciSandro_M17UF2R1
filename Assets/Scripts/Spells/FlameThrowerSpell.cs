@@ -5,7 +5,8 @@ using UnityEngine;
 public class FlameThrowerSpell : BaseSpell
 {
 
-    [SerializeField] private ParticleSystem flameThrower;
+    [SerializeField] public ParticleSystem flameThrower;
+    [SerializeField] public FlameThrower flameThrowerScript;    
 
     private bool isCasting = false;
 

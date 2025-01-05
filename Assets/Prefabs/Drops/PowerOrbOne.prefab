@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 824432841622244966}
   - component: {fileID: 457166817329200503}
   - component: {fileID: 8718765516909827242}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: PowerOrbOne
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -272,6 +272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.1
   frequency: 3
+  parentPosition: {fileID: 4502087236949768179}
 --- !u!1 &7372451619315384256
 GameObject:
   m_ObjectHideFlags: 0

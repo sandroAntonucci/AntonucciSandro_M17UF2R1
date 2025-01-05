@@ -10,6 +10,8 @@ public class ItemUpgrade : ScriptableObject
 
     public float upgradeValue;
 
+    public string upgradeName;
+
     public int upgradePrice;
 
     public Sprite upgradeIcon;
@@ -44,19 +46,19 @@ public class ItemUpgrade : ScriptableObject
             switch (upgradeType)
             {
                 case UpgradeType.Damage:
-                    spell.UpgradeSpellDamage(upgradeValue);
+                    spell.spellUpgrade.UpgradeSpellDamage(upgradeValue, upgradeName, spell);
                     break;
 
                 case UpgradeType.AttackSpeed:
-                    spell.UpgradeSpellAttackSpeed(upgradeValue);
+                    spell.spellUpgrade.UpgradeSpellAttackSpeed(upgradeValue, upgradeName, spell);
                     break;
 
                 case UpgradeType.ProjectileSpeed:
-                    spell.UpgradeSpellProjectileSpeed(upgradeValue);
+                    spell.spellUpgrade.UpgradeSpellProjectileSpeed(upgradeValue, upgradeName, spell);
                     break;
 
                 case UpgradeType.Range:
-                    spell.UpgradeSpellRange(upgradeValue);
+                    spell.spellUpgrade.UpgradeSpellRange(upgradeValue, upgradeName, spell);
                     break;
             }
         }

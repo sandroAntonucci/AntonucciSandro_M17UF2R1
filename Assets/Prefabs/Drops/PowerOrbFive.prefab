@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2514785360346462434}
   - component: {fileID: 5101802759641018204}
   - component: {fileID: 8106572282829262223}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: PowerOrbFive
   m_TagString: Orb
   m_Icon: {fileID: 0}
@@ -355,6 +355,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   amplitude: 0.1
   frequency: 4
+  parentPosition: {fileID: 3651600680213569310}
 --- !u!1001 &3022354775475739394
 PrefabInstance:
   m_ObjectHideFlags: 0

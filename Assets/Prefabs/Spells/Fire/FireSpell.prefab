@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 7907150256300844569}
   - component: {fileID: 106008671875018570}
   - component: {fileID: 5065739567099012782}
+  - component: {fileID: 8349214042547977367}
   m_Layer: 0
   m_Name: FireSpell
   m_TagString: Untagged
@@ -468,6 +469,7 @@ MonoBehaviour:
   currentAngle: 0
   player: {fileID: 0}
   followsInput: 1
+  rotatesObject: 0
 --- !u!114 &106008671875018570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,10 +482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e93c8dfd2a8f243947eb8ba96ed13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackSpeed: 0.5
-  damage: 8
-  projectileSpeed: 8
+  attackSpeed: 0.7
+  damage: 12
+  projectileSpeed: 10
   range: 0
+  anim: {fileID: 0}
+  spellUpgrade: {fileID: 8349214042547977367}
   projectile: {fileID: 2600593159096486721, guid: f5448b61853c1704a96637324c683811, type: 3}
   castSound: {fileID: 5065739567099012782}
 --- !u!114 &5065739567099012782
@@ -503,3 +507,15 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 74d1e2ce8ce6298478c32de3100cceb9, type: 3}
   - {fileID: 8300000, guid: 029f0fcb1f1334440b2d014b815fcd4f, type: 3}
   clip: {fileID: 0}
+--- !u!114 &8349214042547977367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7705027268072173829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9e59a642a7cea441a7437704fabe04a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

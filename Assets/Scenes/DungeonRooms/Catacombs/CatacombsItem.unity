@@ -4332,6 +4332,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5974500033516006073, guid: edc56b47f95b23a43abdb824df3a0470, type: 3}
+      propertyPath: isFree
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9014225174756485666, guid: edc56b47f95b23a43abdb824df3a0470, type: 3}
       propertyPath: m_Name
       value: Pedestal

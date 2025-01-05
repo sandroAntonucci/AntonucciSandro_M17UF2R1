@@ -8,19 +8,13 @@ public class FloatingMovement : MonoBehaviour
     public float frequency = 1f;
 
     // Initial position of the object
-    private Vector3 startPosition;
-
-    void Start()
-    {
-        // Store the initial position of the object
-        startPosition = transform.position;
-    }
+    [SerializeField] private GameObject parentPosition;
 
     void Update()
     {
-        // Calculate the new position
         float yOffset = Mathf.Sin(Time.time * frequency) * amplitude;
-        transform.position = startPosition + new Vector3(0, yOffset, 0);
+        transform.position = parentPosition.transform.position + new Vector3(0, yOffset, 0);
     }
+
 }
 

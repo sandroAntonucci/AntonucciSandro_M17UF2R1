@@ -317,7 +317,7 @@ MonoBehaviour:
   invincible: 0
   spell: {fileID: 835953582180150254}
   passiveSpell: {fileID: 4397562227430591214}
-  invincibilityDuration: 0.6
+  invincibilityDuration: 1
   deathParticles: {fileID: 4509051225231061967}
   spriteRenderer: {fileID: 4688541985133343877}
   power: 0

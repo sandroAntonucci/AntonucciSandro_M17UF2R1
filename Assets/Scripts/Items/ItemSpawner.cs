@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class ItemSpawner : MonoBehaviour
@@ -14,6 +15,11 @@ public class ItemSpawner : MonoBehaviour
     // UI and item assignment
     public TextMeshPro itemPriceTag;
     public SpriteRenderer itemIcon;
+
+    public GameObject legendaryEffect;
+    public GameObject normalLight;
+    public GameObject rareLight;
+    public GameObject legendaryLight;   
 
     public ItemUpgrade currentItemUpgrade;
 
@@ -42,14 +48,18 @@ public class ItemSpawner : MonoBehaviour
         // 60% normal, 30% rare, 10% legendary
         if (randomRarity < 60)
         {
+            normalLight.SetActive(true);
             return normalItems;
         }
         else if (randomRarity < 90)
         {
+            rareLight.SetActive(true);
             return rareItems;
         }
         else
         {
+            legendaryLight.SetActive(true);
+            legendaryEffect.SetActive(true);
             return legendaryItems;
         }
     }
