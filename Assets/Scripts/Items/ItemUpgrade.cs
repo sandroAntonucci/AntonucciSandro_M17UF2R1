@@ -61,6 +61,9 @@ public class ItemUpgrade : ScriptableObject
                     spell.spellUpgrade.UpgradeSpellRange(upgradeValue, upgradeName, spell);
                     break;
             }
+
+            InventoryCanvas.Instance.AddItem(upgradeIcon);
+
         }
     }
 }
