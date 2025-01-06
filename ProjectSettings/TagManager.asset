@@ -20,6 +20,7 @@ TagManager:
   - DeathCanvas
   - PauseCanvas
   - ChooseCharacterCanvas
+  - InventoryCanvas
   layers:
   - Default
   - TransparentFX

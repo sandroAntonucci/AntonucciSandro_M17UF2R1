@@ -44,6 +44,23 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void OpenOrCloseInventory()
+    {
+
+        Canvas inventory = GameObject.FindGameObjectWithTag("InventoryCanvas").GetComponent<Canvas>();
+        Player player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+        if (player == null) return;
+
+        if (inventory.enabled)
+        {
+            inventory.enabled = false;
+        }
+        else
+        {
+            inventory.enabled = true;
+        }
+    }
 
     public void LoadScene(string sceneName)
     {
@@ -75,9 +92,12 @@ public class GameManager : MonoBehaviour
             yield return null;
         }
 
-        // Disables Pausing
+        // Disables Pausing and inventory
         GameObject pauseCanvas = GameObject.FindGameObjectWithTag("PauseCanvas");
-        if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false; 
+        if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false;
+
+        GameObject inventoryCanvas = GameObject.FindGameObjectWithTag("InventoryCanvas");
+        if (inventoryCanvas != null) inventoryCanvas.GetComponent<InventoryCanvas>().enabled = false;
 
         // Minimum time to show the loading screen
         yield return new WaitForSeconds(3f);
@@ -104,9 +124,12 @@ public class GameManager : MonoBehaviour
             CameraController.Instance.GetComponent<Camera>().orthographicSize = 9;
         }
 
-        // Enables pausing
-        if (pauseCanvas != null && sceneName != "MainScene") pauseCanvas.GetComponent<PauseMenu>().enabled = true;
-
+        // Enables pausing and inventory
+        if (sceneName != "MainScene")
+        {
+            if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = true;
+            if (inventoryCanvas != null) inventoryCanvas.GetComponent<InventoryCanvas>().enabled = true;
+        }
 
     }
 
