@@ -7,7 +7,6 @@ public class KnekromancerBoss : Boss
 {
     [SerializeField] private CasterComponent casterComponent;
     [SerializeField] private EnemyWaveSpawner waveSpawner;
-    [SerializeField] private Animator anim;
 
     public UnityEvent OnBossDied;
 
@@ -25,18 +24,8 @@ public class KnekromancerBoss : Boss
 
     public override void Die()
     {
-        StartCoroutine(DieRoutine());
-    }
-
-    private IEnumerator DieRoutine()
-    {
-        anim.Play("Die");
-
-        // Wait for the death animation to finish
-        yield return new WaitForSeconds(0.8f);
-
         OnBossDied?.Invoke();
-
+        Debug.Log("This is executed");
         base.Die();
     }
 }

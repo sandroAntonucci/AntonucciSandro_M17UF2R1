@@ -9,7 +9,6 @@ public class SlimeBoss : Boss
 
     [SerializeField] private CasterComponent casterComponent;
     [SerializeField] private EnemyWaveSpawner waveSpawner;
-    [SerializeField] private Animator anim;
 
     private bool isSpawning = true;
 
@@ -30,6 +29,7 @@ public class SlimeBoss : Boss
 
     private IEnumerator Idle()
     {
+        if(isDying) yield break;
         dashComponent.canDash = false;
 
         if(anim != null) anim.Play("Idle");
@@ -51,6 +51,7 @@ public class SlimeBoss : Boss
 
     private IEnumerator DashAttack()
     {
+        if (isDying) yield break;
 
         // Stops caster attack patterns
         casterComponent.isActive = false;

@@ -17,7 +17,7 @@ public abstract class Enemy : MonoBehaviour
 
     [SerializeField] protected FloatingHealthbar healthBar;
 
-    [SerializeField] private Animator anim;
+    [SerializeField] protected Animator anim;
 
     protected Collider2D enemyCollider;
 
@@ -79,7 +79,7 @@ public abstract class Enemy : MonoBehaviour
             if (anim == null) Die();
             else
             {
-                if(rb.bodyType != RigidbodyType2D.Static) rb.velocity = Vector2.zero;
+                if (rb.bodyType != RigidbodyType2D.Static && rb != null) rb.velocity = Vector2.zero;
                 anim.Play("Death");
             }
         }

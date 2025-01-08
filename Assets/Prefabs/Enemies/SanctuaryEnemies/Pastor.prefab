@@ -300,6 +300,7 @@ MonoBehaviour:
   projectileCaster: {fileID: 7594021997106777857}
   isBossMinion: 0
   healthBar: {fileID: 0}
+  anim: {fileID: 1776054591811092700}
   powerOrbs:
   - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
   - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
@@ -475,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 4386947723330015259}
-  shootRate: 0.65
+  shootRate: 0.75
   delay: 0.5
   damage: 10
   projectileSpeed: 8

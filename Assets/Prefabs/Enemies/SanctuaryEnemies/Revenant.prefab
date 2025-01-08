@@ -405,6 +405,7 @@ MonoBehaviour:
   projectileCaster: {fileID: 0}
   isBossMinion: 0
   healthBar: {fileID: 0}
+  anim: {fileID: 2932978014775284468}
   powerOrbs:
   - {fileID: 4502087236949768179, guid: 7392acec5ad348e428adefa5bb29a656, type: 3}
   - {fileID: 3525416721223254730, guid: deedcc80e9fa89f49873a34fd8dbb706, type: 3}
@@ -415,7 +416,7 @@ MonoBehaviour:
   rb: {fileID: 8473109170028090035}
   damage: 10
   health: 45
-  speed: 3.4
+  speed: 3
 --- !u!114 &2935432823486842657
 MonoBehaviour:
   m_ObjectHideFlags: 0
