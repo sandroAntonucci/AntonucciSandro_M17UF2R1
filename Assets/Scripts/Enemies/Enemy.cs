@@ -71,12 +71,15 @@ public abstract class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
+
+            isDying = true;
             enemyCollider.enabled = false;
+            Destroy(healthBar.gameObject);
+
             if (anim == null) Die();
             else
             {
-                
-                isDying = true;
+                if(rb.bodyType != RigidbodyType2D.Static) rb.velocity = Vector2.zero;
                 anim.Play("Death");
             }
         }

@@ -47,4 +47,13 @@ public class InventoryCanvas : MonoBehaviour
         items.Add(item);
     }
 
+    public void ResetItems()
+    {
+        foreach (GameObject item in items)
+        {
+            Destroy(item);
+        }
+        items.Clear();
+    }
+
 }

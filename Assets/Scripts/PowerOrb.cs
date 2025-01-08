@@ -59,7 +59,7 @@ public class PowerOrb : MonoBehaviour
             dropCollider.enabled = false;
             Destroy(dropSprite);
             pickupEffect.SetActive(true);
-            Destroy(gameObject, 0.2f);
+            Destroy(gameObject, 0.3f);
         }
     }
 

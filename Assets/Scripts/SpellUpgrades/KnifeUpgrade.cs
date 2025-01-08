@@ -9,6 +9,7 @@ public class KnifeUpgrade : BaseUpgrade
     {
 
         MeleeSpell melee = (MeleeSpell)spell;
+        melee.damage += upgradeValue * 2f;
         melee.knife.damage += upgradeValue * 2f;
         UpgradeCanvas.Instance.ShowCanvas(upgradeName, "Knife Damage +" + upgradeValue);
     }

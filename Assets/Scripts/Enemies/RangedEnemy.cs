@@ -12,7 +12,7 @@ public class RangedEnemy : Enemy
 
     private void Update()
     {
-        if (!isSpawned) return;
+        if (!isSpawned || isDying) return;
 
         Move();
         FlipHorizontally();

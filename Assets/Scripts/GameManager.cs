@@ -108,6 +108,7 @@ public class GameManager : MonoBehaviour
         {
             if (Player.Instance != null) Destroy(Player.Instance.gameObject);
             if (pauseCanvas != null) pauseCanvas.GetComponent<PauseMenu>().enabled = false;
+            inventoryCanvas.GetComponent<InventoryCanvas>().ResetItems();
             Destroy(GameObject.FindGameObjectWithTag("MainCamera"));
         }
 

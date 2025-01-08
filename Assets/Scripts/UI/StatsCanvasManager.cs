@@ -75,25 +75,25 @@ public class StatsCanvasManager : MonoBehaviour
     public void UpdateStats(Player player)
     {
         spellDamageValue.text = player.spell.damage.ToString();
-        spellDamageValue.color = GetGradientColor(player.spell.damage, baseSpellDamage);
+        spellDamageValue.color = GetGradientColor(player.spell.damage, baseSpellDamage, false);
 
         spellAttackSpeedValue.text = player.spell.attackSpeed.ToString();
-        spellAttackSpeedValue.color = GetGradientColor(player.spell.attackSpeed, baseSpellAttackSpeed);
+        spellAttackSpeedValue.color = GetGradientColor(player.spell.attackSpeed, baseSpellAttackSpeed, true);
 
         spellProjectileSpeedValue.text = player.spell.projectileSpeed.ToString();
-        spellProjectileSpeedValue.color = GetGradientColor(player.spell.projectileSpeed, baseSpellProjectileSpeed);
+        spellProjectileSpeedValue.color = GetGradientColor(player.spell.projectileSpeed, baseSpellProjectileSpeed, false);
 
         passiveDamageValue.text = player.passiveSpell.damage.ToString();
-        passiveDamageValue.color = GetGradientColor(player.passiveSpell.damage, basePassiveDamage);
+        passiveDamageValue.color = GetGradientColor(player.passiveSpell.damage, basePassiveDamage, false);
 
         passiveAttackSpeedValue.text = player.passiveSpell.attackSpeed.ToString();
-        passiveAttackSpeedValue.color = GetGradientColor(player.passiveSpell.attackSpeed, basePassiveAttackSpeed);
+        passiveAttackSpeedValue.color = GetGradientColor(player.passiveSpell.attackSpeed, basePassiveAttackSpeed, true);
 
         passiveProjectileSpeedValue.text = player.passiveSpell.projectileSpeed.ToString();
-        passiveProjectileSpeedValue.color = GetGradientColor(player.passiveSpell.projectileSpeed, basePassiveProjectileSpeed);
+        passiveProjectileSpeedValue.color = GetGradientColor(player.passiveSpell.projectileSpeed, basePassiveProjectileSpeed, false);
 
         passiveRangeValue.text = player.passiveSpell.range.ToString();
-        passiveRangeValue.color = GetGradientColor(player.passiveSpell.range, basePassiveRange);
+        passiveRangeValue.color = GetGradientColor(player.passiveSpell.range, basePassiveRange, false);
     }
 
     public void SetBaseStats(Player player)
@@ -108,9 +108,13 @@ public class StatsCanvasManager : MonoBehaviour
         basePassiveRange = player.passiveSpell.range;
     }
 
-    private Color GetGradientColor(float value, float baseValue)
+    private Color GetGradientColor(float value, float baseValue, bool reverseUpgrade)
     {
-        float maxValue = baseValue * 3;
+
+        float maxValue;
+
+        if(reverseUpgrade) maxValue = baseValue / 2;
+        else maxValue = baseValue * 2;
 
         float normalizedValue = Mathf.Clamp01((value - baseValue) / (maxValue - baseValue));
 
