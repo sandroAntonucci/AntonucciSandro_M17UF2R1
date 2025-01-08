@@ -402,6 +402,7 @@ SpriteAtlas:
     - 400440b6f1133a149bf0c577eaf43868: -1599990534
     - 400440b6f1133a149bf0c577eaf43868: -1021054527
     - 400440b6f1133a149bf0c577eaf43868: -2112027740
+    - 4df6630733272d14094d4b97393067e6: 21300000
     - 9087ef07d9059a94f99c59d9e5c949e2: 21300000
     - 6733e8470f77f9d42a601f534adc8422: 1456410309
     - 6733e8470f77f9d42a601f534adc8422: -393273162
@@ -1553,6 +1554,11 @@ SpriteAtlas:
     - c3c3ea8f073637c44b6d446c111ed0d1: 325077790
     - 6462c09f3d69b2e48bb0206eb3b5f39d: 21300000
     - 6581d9afafe50cd428364c6fa5943748: 21300000
+    - 5f909daf2f0a1fa4d90ebc9ff53e6f43: -1764822573
+    - 5f909daf2f0a1fa4d90ebc9ff53e6f43: 1705405416
+    - 5f909daf2f0a1fa4d90ebc9ff53e6f43: 949064689
+    - 5f909daf2f0a1fa4d90ebc9ff53e6f43: -349226599
+    - 5f909daf2f0a1fa4d90ebc9ff53e6f43: -246563694
     - 1e35d0ef427cac04898e1218239e7609: 21300000
     - 67d1ebef6c67d7f4fa7b953368cee6d3: 21300000
   m_MasterAtlas: {fileID: 0}
@@ -1907,6 +1913,7 @@ SpriteAtlas:
   - {fileID: -1599990534, guid: 400440b6f1133a149bf0c577eaf43868, type: 3}
   - {fileID: -1021054527, guid: 400440b6f1133a149bf0c577eaf43868, type: 3}
   - {fileID: -2112027740, guid: 400440b6f1133a149bf0c577eaf43868, type: 3}
+  - {fileID: 21300000, guid: 4df6630733272d14094d4b97393067e6, type: 3}
   - {fileID: 21300000, guid: 9087ef07d9059a94f99c59d9e5c949e2, type: 3}
   - {fileID: 1456410309, guid: 6733e8470f77f9d42a601f534adc8422, type: 3}
   - {fileID: -393273162, guid: 6733e8470f77f9d42a601f534adc8422, type: 3}
@@ -3058,6 +3065,11 @@ SpriteAtlas:
   - {fileID: 325077790, guid: c3c3ea8f073637c44b6d446c111ed0d1, type: 3}
   - {fileID: 21300000, guid: 6462c09f3d69b2e48bb0206eb3b5f39d, type: 3}
   - {fileID: 21300000, guid: 6581d9afafe50cd428364c6fa5943748, type: 3}
+  - {fileID: -1764822573, guid: 5f909daf2f0a1fa4d90ebc9ff53e6f43, type: 3}
+  - {fileID: 1705405416, guid: 5f909daf2f0a1fa4d90ebc9ff53e6f43, type: 3}
+  - {fileID: 949064689, guid: 5f909daf2f0a1fa4d90ebc9ff53e6f43, type: 3}
+  - {fileID: -349226599, guid: 5f909daf2f0a1fa4d90ebc9ff53e6f43, type: 3}
+  - {fileID: -246563694, guid: 5f909daf2f0a1fa4d90ebc9ff53e6f43, type: 3}
   - {fileID: 21300000, guid: 1e35d0ef427cac04898e1218239e7609, type: 3}
   - {fileID: 21300000, guid: 67d1ebef6c67d7f4fa7b953368cee6d3, type: 3}
   m_PackedSpriteNamesToIndex:
@@ -3411,6 +3423,7 @@ SpriteAtlas:
   - lava-Sheet_10
   - lava-Sheet_13
   - lava-Sheet_12
+  - Empty
   - Golden Jewel
   - DungeonStarter_9
   - DungeonStarter_21
@@ -4562,6 +4575,11 @@ SpriteAtlas:
   - Props_184
   - skull_v1_3
   - skeleton_v1_3
+  - EyeDeath_4
+  - EyeDeath_1
+  - EyeDeath_0
+  - EyeDeath_3
+  - EyeDeath_2
   - priest3_v1_2
   - skeleton2_v2_2
   m_RenderDataMap: {}

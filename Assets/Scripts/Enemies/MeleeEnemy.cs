@@ -13,7 +13,7 @@ public class MeleeEnemy : Enemy
     private void Update()
     {
 
-        if (!isSpawned) return;
+        if (!isSpawned || isDying) return;
 
         Move();
     }

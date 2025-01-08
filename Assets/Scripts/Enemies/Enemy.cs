@@ -21,11 +21,9 @@ public abstract class Enemy : MonoBehaviour
 
     protected Collider2D enemyCollider;
 
-    
-
     public List<GameObject> powerOrbs;
 
-    private bool isDying = false;
+    protected bool isDying = false;
 
     public int[] rangesToDrop;
 
@@ -73,8 +71,14 @@ public abstract class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            isDying = true;
-            anim.Play("Death");
+            enemyCollider.enabled = false;
+            if (anim == null) Die();
+            else
+            {
+                
+                isDying = true;
+                anim.Play("Death");
+            }
         }
     } 
 
