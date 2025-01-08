@@ -10,18 +10,24 @@ public class PowerOrb : MonoBehaviour
 
     public bool isHealthOrb;
 
+    public Collider2D dropCollider;
+
     public FloatingMovement floatingMovement;
 
     public Vector2 playerPosition;
 
     public bool playerInRange = false;
 
+    public GameObject pickupEffect;
+    public GameObject dropSprite;
+
     public void FixedUpdate()
     {
         if (playerInRange)
         {
 
-            if(GameObject.FindGameObjectWithTag("Player") == null) return;
+            if (GameObject.FindGameObjectWithTag("Player") == null) return;
+            if (floatingMovement == null) return;
 
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
@@ -50,8 +56,12 @@ public class PowerOrb : MonoBehaviour
                 collision.collider.GetComponent<Player>().AddPower(powerQuant);
             }
 
-            Destroy(gameObject);
+            dropCollider.enabled = false;
+            Destroy(dropSprite);
+            pickupEffect.SetActive(true);
+            Destroy(gameObject, 0.2f);
         }
     }
+
 }
 

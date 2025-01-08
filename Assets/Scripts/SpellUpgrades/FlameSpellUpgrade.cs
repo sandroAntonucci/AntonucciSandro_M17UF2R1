@@ -9,6 +9,9 @@ public class FlameSpellUpgrade : BaseUpgrade
     {
         FlameThrowerSpell flameThrower = (FlameThrowerSpell)spell;
         flameThrower.flameThrowerScript.damage += upgradeValue / 20;
+        
+        flameThrower.damage += upgradeValue / 20;
+
         UpgradeCanvas.Instance.ShowCanvas(upgradeName, "Flame Damage +" + upgradeValue);
     }
 
@@ -19,6 +22,8 @@ public class FlameSpellUpgrade : BaseUpgrade
 
         flameThrower.flameThrower.startSize += upgradeValue * -2.5f;
 
+        flameThrower.attackSpeed += upgradeValue;
+
         UpgradeCanvas.Instance.ShowCanvas(upgradeName, "Flame Scale +" + -upgradeValue);
     }
 
@@ -28,6 +33,8 @@ public class FlameSpellUpgrade : BaseUpgrade
         FlameThrowerSpell flameThrower = (FlameThrowerSpell)spell;
 
         flameThrower.flameThrower.startSpeed += upgradeValue * 2.5f;
+
+        flameThrower.projectileSpeed += upgradeValue;
 
         UpgradeCanvas.Instance.ShowCanvas(upgradeName, "Flame Projectile Speed +" + upgradeValue);
     }

@@ -513,6 +513,10 @@ SpriteAtlas:
     - de732df8659b85f41939087524ea3887: 1062205096
     - de732df8659b85f41939087524ea3887: 1639597986
     - 7dcc4a294b1f1254c855a69c68cf8b1b: 21300000
+    - e6f741597966a624c9e0a9f733db0a2d: 282248685
+    - e6f741597966a624c9e0a9f733db0a2d: -1815091818
+    - e6f741597966a624c9e0a9f733db0a2d: 738523759
+    - e6f741597966a624c9e0a9f733db0a2d: -182293166
     - 9bee6559567bd4544a4ab51f7a344761: 21300000
     - 58893c59885361e42b16b161d052e693: 21300000
     - 526af27970c4bc84e9a92249021ef68b: 21300000
@@ -2014,6 +2018,10 @@ SpriteAtlas:
   - {fileID: 1062205096, guid: de732df8659b85f41939087524ea3887, type: 3}
   - {fileID: 1639597986, guid: de732df8659b85f41939087524ea3887, type: 3}
   - {fileID: 21300000, guid: 7dcc4a294b1f1254c855a69c68cf8b1b, type: 3}
+  - {fileID: 282248685, guid: e6f741597966a624c9e0a9f733db0a2d, type: 3}
+  - {fileID: -1815091818, guid: e6f741597966a624c9e0a9f733db0a2d, type: 3}
+  - {fileID: 738523759, guid: e6f741597966a624c9e0a9f733db0a2d, type: 3}
+  - {fileID: -182293166, guid: e6f741597966a624c9e0a9f733db0a2d, type: 3}
   - {fileID: 21300000, guid: 9bee6559567bd4544a4ab51f7a344761, type: 3}
   - {fileID: 21300000, guid: 58893c59885361e42b16b161d052e693, type: 3}
   - {fileID: 21300000, guid: 526af27970c4bc84e9a92249021ef68b, type: 3}
@@ -3514,6 +3522,10 @@ SpriteAtlas:
   - PastorSpawn_2
   - PastorSpawn_3
   - skeleton_v2_3
+  - PickupEffect_1
+  - PickupEffect_0
+  - PickupEffect_3
+  - PickupEffect_2
   - priest1_v1_1
   - Blue Potion
   - Purple Swords

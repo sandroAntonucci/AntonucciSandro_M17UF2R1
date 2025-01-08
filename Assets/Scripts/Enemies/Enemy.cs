@@ -17,7 +17,11 @@ public abstract class Enemy : MonoBehaviour
 
     [SerializeField] protected FloatingHealthbar healthBar;
 
+    [SerializeField] private Animator anim;
+
     protected Collider2D enemyCollider;
+
+    
 
     public List<GameObject> powerOrbs;
 
@@ -69,7 +73,8 @@ public abstract class Enemy : MonoBehaviour
 
         if (health <= 0)
         {
-            Die();
+            isDying = true;
+            anim.Play("Death");
         }
     } 
 
@@ -95,9 +100,6 @@ public abstract class Enemy : MonoBehaviour
 
     public virtual void Die()
     {
-
-        isDying = true;
-
         // Only drops power if the enemy is not a boss minion (made so you can't farm in boss rooms)
         if (!isBossMinion) DropPower();
 

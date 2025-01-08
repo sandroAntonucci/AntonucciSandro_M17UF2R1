@@ -15,6 +15,7 @@ public class ChooseCharacter : MonoBehaviour
         Destroy(rogue);
         Destroy(sorcerer);
         mage.SetActive(true);
+        StatsCanvasManager.Instance.SetMageStatsText();
         menuManager.PlayGame();
     }
 
@@ -23,6 +24,7 @@ public class ChooseCharacter : MonoBehaviour
         Destroy(mage);
         Destroy(sorcerer);
         rogue.SetActive(true);
+        StatsCanvasManager.Instance.SetRogueStatsText();
         menuManager.PlayGame();
     }
 
@@ -31,6 +33,7 @@ public class ChooseCharacter : MonoBehaviour
         Destroy(mage);
         Destroy(rogue);
         sorcerer.SetActive(true);
+        StatsCanvasManager.Instance.SetSorcererStatsText();
         menuManager.PlayGame();
     }
 

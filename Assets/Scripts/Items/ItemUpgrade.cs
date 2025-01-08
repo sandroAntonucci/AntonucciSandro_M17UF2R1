@@ -63,6 +63,7 @@ public class ItemUpgrade : ScriptableObject
             }
 
             InventoryCanvas.Instance.AddItem(upgradeIcon);
+            StatsCanvasManager.Instance.UpdateStats(Player.Instance);
 
         }
     }
