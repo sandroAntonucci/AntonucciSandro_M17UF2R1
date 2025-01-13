@@ -362,9 +362,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPlayed: {fileID: 3749035710985332384}
   clips:
-  - {fileID: 8300000, guid: a9e738ff01df67c42b4a0eebe7687657, type: 3}
-  - {fileID: 8300000, guid: 7e0467dbafd79c24d9c9b55dfe142aec, type: 3}
-  - {fileID: 8300000, guid: 4671db53699d5094d820e4edb117fa2c, type: 3}
+  - {fileID: 8300000, guid: 650c75d7be90b6d4abb9db8af8a9ef2e, type: 3}
+  - {fileID: 8300000, guid: b2b520216eb6fc74d8725a03bcd3ebb4, type: 3}
+  - {fileID: 8300000, guid: a9fc81bf78aa5b64494fec11f9763063, type: 3}
   clip: {fileID: 0}
 --- !u!1 &6030943882999491123
 GameObject:

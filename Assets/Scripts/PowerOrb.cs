@@ -33,7 +33,8 @@ public class PowerOrb : MonoBehaviour
 
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.1f);
+            gameAudioManager.PlayRandomSound();
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.2f);
         }
     }
 
@@ -60,9 +61,8 @@ public class PowerOrb : MonoBehaviour
 
             dropCollider.enabled = false;
             Destroy(dropSprite);
-            gameAudioManager.PlayRandomSound();
             pickupEffect.SetActive(true);
-            Destroy(gameObject, 0.3f);
+            Destroy(gameObject, 0.5f);
         }
     }
 
