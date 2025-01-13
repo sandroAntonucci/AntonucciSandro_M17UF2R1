@@ -44,8 +44,8 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.4
-  m_Pitch: 1
+  m_Volume: 0.1
+  m_Pitch: 1.2
   Loop: 0
   Mute: 0
   Spatialize: 0
@@ -406,9 +406,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPlayed: {fileID: 1018706343249303820}
   clips:
-  - {fileID: 8300000, guid: 650c75d7be90b6d4abb9db8af8a9ef2e, type: 3}
-  - {fileID: 8300000, guid: b2b520216eb6fc74d8725a03bcd3ebb4, type: 3}
-  - {fileID: 8300000, guid: a9fc81bf78aa5b64494fec11f9763063, type: 3}
+  - {fileID: 8300000, guid: 0aa5391c79c8dce44b40e3679a21b40a, type: 3}
+  - {fileID: 8300000, guid: 2c766cdcad5d53f4aa9ca78e5341b0ec, type: 3}
+  - {fileID: 8300000, guid: da13d59e791cf9d469bb07c22a818ab7, type: 3}
   clip: {fileID: 0}
 --- !u!1 &5664779892387363331
 GameObject:
