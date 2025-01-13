@@ -14,6 +14,8 @@ public class PowerOrb : MonoBehaviour
 
     public FloatingMovement floatingMovement;
 
+    public GameAudioManager gameAudioManager;
+
     public Vector2 playerPosition;
 
     public bool playerInRange = false;
@@ -58,6 +60,7 @@ public class PowerOrb : MonoBehaviour
 
             dropCollider.enabled = false;
             Destroy(dropSprite);
+            gameAudioManager.PlayRandomSound();
             pickupEffect.SetActive(true);
             Destroy(gameObject, 0.3f);
         }
