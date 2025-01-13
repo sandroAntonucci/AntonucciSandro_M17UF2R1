@@ -25,7 +25,6 @@ public class KnekromancerBoss : Boss
     public override void Die()
     {
         OnBossDied?.Invoke();
-        Debug.Log("This is executed");
         base.Die();
     }
 }

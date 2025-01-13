@@ -32,11 +32,13 @@ public class RangedEnemy : Enemy
         // Check if the enemy is far from the target
         if (Vector2.Distance(transform.position, player.position) > distanceToPlayer)
         {
+            projectileCaster.isShooting = false;
             Vector2 moveDirection = (player.position - transform.position).normalized;
             rb.velocity = moveDirection * 2f;
         }
         else
         {
+            projectileCaster.isShooting = true;
             rb.velocity = Vector2.zero; 
         }
     }

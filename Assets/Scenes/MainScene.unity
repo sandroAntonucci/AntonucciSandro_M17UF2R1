@@ -3446,7 +3446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 835953582180150254, guid: a916acba77e70ff4caf73388bc2354f9, type: 3}
       propertyPath: damage
-      value: 1000
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 835953582180150254, guid: a916acba77e70ff4caf73388bc2354f9, type: 3}
       propertyPath: attackSpeed
@@ -3613,9 +3613,17 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1087535517623054930, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
+      objectReference: {fileID: 0}
     - target: {fileID: 3660482088102068028, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4266750212098701762, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
       objectReference: {fileID: 0}
     - target: {fileID: 4310173293817734323, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
       propertyPath: m_Name
@@ -3624,6 +3632,10 @@ PrefabInstance:
     - target: {fileID: 4310173293817734323, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310173293817734323, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4310173293817734323, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
       propertyPath: m_TagString
@@ -3660,6 +3672,10 @@ PrefabInstance:
     - target: {fileID: 6758753786582616828, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4293848814
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427160295963485408, guid: fe6c5a8f8c062c24e9eff4a1e20bcf92, type: 3}
+      propertyPath: m_Color.a
+      value: 0.9019608
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4287,7 +4303,7 @@ PrefabInstance:
       objectReference: {fileID: 1350204704}
     - target: {fileID: 3672146846903271449, guid: af30ca69395eb5b49944928f958935ce, type: 3}
       propertyPath: damage
-      value: 1000
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3672146846903271449, guid: af30ca69395eb5b49944928f958935ce, type: 3}
       propertyPath: attackSpeed

@@ -476,7 +476,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4913771829183224224, guid: 374e2450e6db47743a369263b6f7b8ab, type: 3}
   shootPosition: {fileID: 4386947723330015259}
-  shootRate: 0.7
+  shootRate: 0.6
   delay: 0
   damage: 10
   projectileSpeed: 7

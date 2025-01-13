@@ -8,7 +8,7 @@ public class MeleeEnemy : Enemy
     [SerializeField] private float speed;
 
     private bool isFlipped = false;
-    private bool isSpawned = false;
+    protected bool isSpawned = false;
 
     private void Update()
     {
@@ -46,7 +46,7 @@ public class MeleeEnemy : Enemy
         isFlipped = !isFlipped;
     }
 
-    private void Spawn()
+    public virtual void Spawn()
     {
         enemyCollider.enabled = true;
         isSpawned = true;

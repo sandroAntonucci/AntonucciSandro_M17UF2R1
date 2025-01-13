@@ -21,6 +21,9 @@ TagManager:
   - PauseCanvas
   - ChooseCharacterCanvas
   - InventoryCanvas
+  - BossRoom
+  - ShopRoom
+  - ItemRoom
   layers:
   - Default
   - TransparentFX
