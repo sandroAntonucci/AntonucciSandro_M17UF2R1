@@ -15,6 +15,8 @@ public class PowerOrb : MonoBehaviour
     public FloatingMovement floatingMovement;
     public GameAudioManager gameAudioManager;
 
+    public AudioSource absorbSFX;
+
     public Vector2 playerPosition;
 
     public bool playerInRange = false;
@@ -32,7 +34,10 @@ public class PowerOrb : MonoBehaviour
 
             floatingMovement.enabled = false;
             playerPosition = GameObject.FindWithTag("Player").transform.position;
-            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.2f);
+            transform.position = Vector2.MoveTowards(transform.position, playerPosition, 0.15f);
+
+            if(!absorbSFX.isPlaying) absorbSFX.Play();
+
         }
     }
 

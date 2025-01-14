@@ -7,6 +7,8 @@ public class UpgradeCanvas : MonoBehaviour
 
     public static UpgradeCanvas Instance { get; private set; }
 
+    [SerializeField] private AudioSource upgradeSFX;
+
     public Animator nameBannerAnimator;
     public Animator textBannerAnimator;
     public RectTransform nameBannerRect;
@@ -31,6 +33,8 @@ public class UpgradeCanvas : MonoBehaviour
     {
         SetUpgradeName(upgradeName);
         SetUpgradeText(upgradeText);
+
+        upgradeSFX.Play();
 
         nameBannerAnimator.Play("ShowUpgradeNameAnim");
         textBannerAnimator.Play("ShowUpgradeAnim");
