@@ -3,7 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - Spell
+  - EnemySpell
+  - RoomController
+  - Room
+  - PlayerProjectile
+  - UpgradeCanvas
+  - Orb
+  - LevelCanvas
+  - GameManager
+  - LoadSceneCanvas
+  - FinalMenuCanvas
+  - PlayerInterface
+  - DeathCanvas
+  - PauseCanvas
+  - ChooseCharacterCanvas
+  - InventoryCanvas
+  - BossRoom
+  - ShopRoom
+  - ItemRoom
   layers:
   - Default
   - TransparentFX
@@ -11,12 +31,12 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - Items
+  - Block
+  - PlayerProjectile
+  - PlayerParticles
   - 
   - 
   - 
@@ -40,4 +60,34 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ground
+    uniqueID: 2736254729
+    locked: 0
+  - name: GroundDetails
+    uniqueID: 2618342543
+    locked: 0
+  - name: Door
+    uniqueID: 2785839871
+    locked: 0
+  - name: Objects
+    uniqueID: 1344434481
+    locked: 0
+  - name: Enemies
+    uniqueID: 1595339203
+    locked: 0
+  - name: Player
+    uniqueID: 3888668105
+    locked: 0
+  - name: Items
+    uniqueID: 2999197373
+    locked: 0
+  - name: Spells
+    uniqueID: 680864027
+    locked: 0
+  - name: Particles
+    uniqueID: 2498565323
+    locked: 0
+  - name: HealthBar
+    uniqueID: 3937577983
     locked: 0

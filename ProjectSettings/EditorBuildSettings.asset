@@ -6,6 +6,247 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  m_configObjects: {}
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/BasementStart.unity
+    guid: b2f9278082b2fb44c985a6b4ff06be63
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/BasementMain.unity
+    guid: 8b1f8f37240e3bd4298e397164516cfc
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/BasementItem.unity
+    guid: f04e1412d7b51284c93ae0012637c5cc
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/BasementShop.unity
+    guid: 0e9a63c0fb358e842938acc03165da95
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/BasementBoss.unity
+    guid: 7564041cf2a06f84089a99716c8d1ba6
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom0.unity
+    guid: 2a0a7675293cb8c44ae84bfb5abb1e38
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom1.unity
+    guid: 62047c8d53e858e4d963c69393c557c1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom2.unity
+    guid: 8f6a5b4b255407a4bbd45a606130ea6e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom3.unity
+    guid: 6666fde03b93ade46abc6d62191509a0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom4.unity
+    guid: f490a76dcc99f494eacce8eb3fadd232
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom5.unity
+    guid: dcef600968427f14fb5ef3155840a9e9
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom6.unity
+    guid: fccae0981ce18984f98933ba17fbcdf0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom7.unity
+    guid: 35886a8bf193dcb46a208d7de99c3f64
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom8.unity
+    guid: c99bbe83a387ac449a17fb3d653fc323
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom9.unity
+    guid: 9ac07a4f160e1394987381411dad1f8c
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom10.unity
+    guid: 1b9b27c57753a9b43a670d266f6c07db
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom11.unity
+    guid: 6be4ca2d86df7c14e9d4e0180a98090e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom12.unity
+    guid: efb0926455d5bb34285daee38c116a32
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom13.unity
+    guid: b537e837e5f6d81498c9bfcd6bbb2743
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom14.unity
+    guid: 83acf816353b05048a06c2d837feefc0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom15.unity
+    guid: 18ec32a0d2f566943a19c0667cf3d77e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom16.unity
+    guid: 3d3076fef47091247a9236480ac08258
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom17.unity
+    guid: fe5191c7aaa9c9c409f0e77350504c7b
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom18.unity
+    guid: 58ac69212b327404b86cbb606f127fe3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom19.unity
+    guid: ac74503f3ae6ef049b6f7dec42c493d1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Basement/RandomRoomsBasement/BasementRoom20.unity
+    guid: 409cfb956d881d14dbb50eadc064745c
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsStart.unity
+    guid: 73130c246c5fc70489e491e15d8a5208
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsMain.unity
+    guid: 6fd4cc6e17a08a74c806f407881254ad
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsItem.unity
+    guid: f3949cee9df44914ea16a9f9d9d47287
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsShop.unity
+    guid: 47dfc99ea00d22949ac710650c4e37ca
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/CatacombsBoss.unity
+    guid: d5466ec32a6dfbc49a52dfaafb598a28
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom0.unity
+    guid: 9dfedf60e13294f4db85797dc643dc1e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom1.unity
+    guid: 2ca8bc4cc82144d4394228aa82365af8
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom2.unity
+    guid: cef4088068e44934a985ee473e146588
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom3.unity
+    guid: c962bf83d65bffb40ad822d00b6f6eb5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom4.unity
+    guid: 8443d6dfc52929e41bf2c7b5f90b99bf
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom5.unity
+    guid: 57d6361b4f8ffcb428df8be3c13d025a
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom6.unity
+    guid: 2c96c4a2f22e1a141a9c59f9fb4c57f4
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom7.unity
+    guid: 578ec97a4ff4af94ea4a7bb951f46756
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom8.unity
+    guid: 70f6f6f446c29e641be168d8f03e5966
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom9.unity
+    guid: e6d398b038fe59f45ba19f308f5dc627
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom10.unity
+    guid: b015fa091907e0248a4cb839a409a352
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom11.unity
+    guid: 34330726069b42442b3feb89e6cb75d5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom12.unity
+    guid: 10c0788869f090a4aaebfaad2470a575
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom13.unity
+    guid: ec7f3d933f1012445b0127adc6822016
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom14.unity
+    guid: eff9fc1afbb5f2d499ce0dcfa36aa12a
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom15.unity
+    guid: 22f1df6ca000d19478a37a9fb5a15263
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom16.unity
+    guid: 8343ce01293bc8a47b181e97b9c21a7f
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom17.unity
+    guid: 843a683693d70c044b244c4c6ef2171f
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom18.unity
+    guid: b47eb9aa360b81242abb5e3f00d2b170
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom19.unity
+    guid: aad5fc1be7f275d409ce4368e975ab6e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Catacombs/RandomRoomsCatacombs/CatacombsRoom20.unity
+    guid: d748ba141ca5ee84f911cf2d85ccfdd2
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryMain.unity
+    guid: 5fee2e396b9f7754db279fbabf8a6118
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryStart.unity
+    guid: 853e14247cff7c4408dd24096ec255a3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryShop.unity
+    guid: 8063af856e5b78943af1c5c155de8a55
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryItem.unity
+    guid: 3f1aa0ddada779847b5c95260d8d7f18
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/SanctuaryBoss.unity
+    guid: 1def3f6b8e25fee4793fe98e5080189e
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom0.unity
+    guid: 7ada781f9cb0b7842bbb4adf7cc7dbcd
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom1.unity
+    guid: d20cbb1c67b10d54fabbb74283335dc5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom2.unity
+    guid: 2d431a77dd9717d40b7dd1fed9e1a056
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom3.unity
+    guid: 10c1c71471d31394995c02d2f0681712
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom4.unity
+    guid: 9265a86a2cbf83b46a96617fb3012b53
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom5.unity
+    guid: 338b936ca64689543a7407815b55cf64
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom6.unity
+    guid: a4c85b6bce0786e46a741c6c61dd3e60
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom7.unity
+    guid: 9d9964c2abd1b9c49b085bd6c4409fa6
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom8.unity
+    guid: 568bf9dc53f133f40b2650eb1fed5729
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom9.unity
+    guid: d48d8796324e3704d9532420780ea3b0
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom10.unity
+    guid: 500b02b2fd2894942b32f594c28ff2b5
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom11.unity
+    guid: 43bc2260461a2a94491eff7008911ba9
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom12.unity
+    guid: 3a65bc10edf83a14b8c12cc5ea28c143
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom13.unity
+    guid: 08502df432c09ee43a55eb09663a5aff
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom14.unity
+    guid: 70f7701fec2b35847a5b73edf9f57eb1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom15.unity
+    guid: 41145295d8bfdcb489f39ae7aa0adfa3
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom16.unity
+    guid: d77904daaf8f2d5419831e869022b719
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom17.unity
+    guid: d69cf6302be5d0843a2c45d74b2159e1
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom18.unity
+    guid: 15d20d378a606df41a507892004a2cab
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom19.unity
+    guid: a978d99b071eb5447b4fb0307e09bdcf
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Sanctuary/RandomRoomsCatacombs/SanctuaryRoom20.unity
+    guid: 86ab0fbdeed87344e864e3138cbf4e77
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Final Boss/FinalBossStart.unity
+    guid: 33579ca8c16362c4ab2ce6da0164e720
+  - enabled: 1
+    path: Assets/Scenes/DungeonRooms/Final Boss/FinalBossMain.unity
+    guid: 0fad2aa09e6cc854d9520079b7bbebda
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: 4ce035beb634dcf4fa7b994b19620c10, type: 2}
