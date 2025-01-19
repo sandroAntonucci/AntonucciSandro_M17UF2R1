@@ -2,10 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class FireProjectile : MonoBehaviour
 {
 
-    [SerializeField] private AudioSource hitAudio;
+    [SerializeField] private GameAudioManager fireCrash;
+    [SerializeField] private UnityEngine.Rendering.Universal.Light2D light2D;
+
 
     public float projectileSpeed = 10f;
     public float damage = 10f;
@@ -27,7 +30,9 @@ public class FireProjectile : MonoBehaviour
     {
 
         if (rb != null)
-        { 
+        {
+
+            light2D.enabled = true;
 
             // Updates stats
             projectileSpeed = caster.projectileSpeed;
@@ -55,16 +60,24 @@ public class FireProjectile : MonoBehaviour
         {
             // Reset object state to rotation
             rb.velocity = Vector2.zero;
+            fireCrash.PlayRandomSound();
             anim.Play("Crash");
-            hitAudio.PlayOneShot(hitAudio.clip, 1f);
 
         }
     }
 
-    private void ResetPool()
+    private IEnumerator ResetPool()
     {
+
         // Makes the object invisible and inactive
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        light2D.enabled = false;
+
+        while (fireCrash.audioPlayed.isPlaying) 
+        {
+            yield return null;
+        }
+
         gameObject.SetActive(false);
 
         // Add the spell back to the player's stack

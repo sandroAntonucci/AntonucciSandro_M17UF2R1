@@ -431,9 +431,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioPlayed: {fileID: 6697604810456012282}
   clips:
-  - {fileID: 8300000, guid: 2661f251434813c458823c256a0dc6b6, type: 3}
-  - {fileID: 8300000, guid: dcfbc6581769f1c409f19b273ed96c30, type: 3}
-  - {fileID: 8300000, guid: 7a41293effc19174bb1a09707c5a0780, type: 3}
+  - {fileID: 8300000, guid: f6a45dd0959508443ab92d9ae8d05cd7, type: 3}
+  - {fileID: 8300000, guid: f6a45dd0959508443ab92d9ae8d05cd7, type: 3}
+  - {fileID: 8300000, guid: f6a45dd0959508443ab92d9ae8d05cd7, type: 3}
   clip: {fileID: 0}
 --- !u!114 &899208710022021659
 MonoBehaviour:
@@ -734,7 +734,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0

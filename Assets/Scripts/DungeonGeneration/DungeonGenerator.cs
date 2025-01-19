@@ -4,6 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class DungeonGenerator : MonoBehaviour
 {
 
@@ -42,8 +43,6 @@ public class DungeonGenerator : MonoBehaviour
 
     private void SpawnRooms(IEnumerable<Vector2Int> rooms)
     {
-        
-
         roomController.LoadRoom("Start", 0, 0);
 
         // If the current world is the final boss room, do not load any other rooms
@@ -54,26 +53,27 @@ public class DungeonGenerator : MonoBehaviour
 
         int numberOfRooms = 0;
 
-        EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
+        #if UNITY_EDITOR
+                EditorBuildSettingsScene[] scenes = EditorBuildSettings.scenes;
 
-        foreach (EditorBuildSettingsScene scene in scenes)
-        {
-            if (scene.path.Contains(roomController.currentWorldName + "Room"))
-            {
-                numberOfRooms++;
-            }
-        }
+                foreach (EditorBuildSettingsScene scene in scenes)
+                {
+                    if (scene.path.Contains(roomController.currentWorldName + "Room"))
+                    {
+                        numberOfRooms++;
+                    }
+                }
+        #endif
 
         foreach (Vector2Int roomLocation in rooms)
         {
-
             // Loads a random room starting from 0 to the number of rooms in the scene build settings
             string sceneName = "Room" + Random.Range(0, numberOfRooms);
 
             roomController.LoadRoom(sceneName, roomLocation.x, roomLocation.y);
-
         }
     }
+
 
 
 }

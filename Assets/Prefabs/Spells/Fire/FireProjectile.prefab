@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 4324199189206564833}
   - component: {fileID: 673962272596986064}
   - component: {fileID: 1963236015588412930}
+  - component: {fileID: 6605581413368251172}
   m_Layer: 10
   m_Name: FireProjectile
   m_TagString: PlayerProjectile
@@ -240,7 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f65f6b1d16f60174582e888bb6c6a49c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitAudio: {fileID: 7440571230849393606}
+  fireCrash: {fileID: 6605581413368251172}
+  light2D: {fileID: 1871928612574647741}
   projectileSpeed: 8
   damage: 8
   projectileKnockback: 50
@@ -275,6 +277,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &6605581413368251172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600593159096486721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00ff1c678a20e404990583ee9372a806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioPlayed: {fileID: 7440571230849393606}
+  clips:
+  - {fileID: 8300000, guid: f698860456014df4c8d7fbecef27b5e5, type: 3}
+  - {fileID: 8300000, guid: 6cfbffbe671bf6b4d9bf04696236c14e, type: 3}
+  - {fileID: 8300000, guid: 5988dc7626ab4344faba2f419656d8c7, type: 3}
+  clip: {fileID: 0}
 --- !u!1 &4464942016834527952
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +339,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 96b1d266956e1a1438c44561c6f9b4a9, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.3
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0
